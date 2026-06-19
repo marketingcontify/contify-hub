@@ -83,24 +83,25 @@
     .tag-more{display:inline-block;padding:5px 12px;border:1px solid #C6C6C6;border-radius:4px;font-size:13px;font-weight:600;color:#525252;background:#fff}
 
     /* QUICK STATS BANNER */
-    .stats-banner{background:linear-gradient(99.62deg,#0072C3 0%,#00539A 100.4%);padding:16px 0}
-    .stats-inner{display:flex;gap:32px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-    .stat-pill{text-align:center;flex:1;min-width:100px}
-    .stat-pill .sv{color:#fff;font-size:22px;font-weight:800;display:block;line-height:1.2}
-    .stat-pill .sl{color:rgba(255,255,255,.6);font-size:11px;font-weight:500;margin-top:2px;display:block}
-    .stats-cta{display:flex;gap:10px;align-items:center;flex-shrink:0}
+    .stats-banner{background:#F2F4F8;border-bottom:1px solid #DDE1E6;padding:14px 0}
+    .stats-inner{display:flex;gap:0;align-items:center;justify-content:flex-start;flex-wrap:wrap;max-width:1200px;margin:0 auto;padding:0 24px}
+    .stat-pill{text-align:center;padding:8px 24px;border-right:1px solid #DDE1E6}
+    .stat-pill:last-of-type{border-right:none}
+    .stat-pill .sv{color:#0072C3;font-size:20px;font-weight:800;display:block;line-height:1.2}
+    .stat-pill .sl{color:#697077;font-size:11px;font-weight:500;margin-top:2px;display:block}
+    .stats-cta{margin-left:auto;display:flex;gap:10px;align-items:center;flex-shrink:0}
 
-    /* STICKY NAV */
-    .section-nav{background:#F4F4F4;border-bottom:1px solid #DDE1E6;position:sticky;top:75px;z-index:50;overflow-x:auto}
-    .section-nav-inner{display:flex;gap:4px;max-width:1200px;margin:0 auto;padding:6px 24px;justify-content:flex-start}
-    .section-nav a{padding:8px 16px;font-size:13px;font-weight:600;color:#525252;white-space:nowrap;border-radius:6px;transition:all .15s}
-    .section-nav a:hover{color:#161616;background:rgba(0,0,0,.06);text-decoration:none}
-    .section-nav a.active{color:#fff;background:#0072C3}
+    /* LEFT SIDEBAR NAV */
+    .section-nav{display:none}
 
     /* LAYOUT */
-    .page-layout{display:flex;gap:24px;max-width:1200px;margin:0 auto;padding:32px 24px 48px}
-    .main-col{flex:1;min-width:0}
-    .side-col{width:320px;flex-shrink:0}
+    .page-layout{display:flex;gap:0;max-width:1200px;margin:0 auto;padding:0 24px 48px}
+    .left-nav{width:200px;flex-shrink:0;padding:24px 0;position:sticky;top:75px;align-self:flex-start;height:fit-content;border-right:1px solid #E8E8E8}
+    .left-nav a{display:block;padding:8px 16px;font-size:13px;font-weight:500;color:#525252;border-left:3px solid transparent;transition:all .15s;margin-bottom:1px}
+    .left-nav a:hover{color:#0072C3;background:#F4F7FB;text-decoration:none}
+    .left-nav a.active{color:#0072C3;font-weight:600;border-left-color:#0072C3;background:#EDF5FF}
+    .main-col{flex:1;min-width:0;padding:24px 0 0 24px}
+    .side-col{width:300px;flex-shrink:0;padding:24px 0 0 24px}
 
     /* SECTION CARD */
     .sec-card{background:#fff;border:1px solid #DDE1E6;border-radius:8px;margin-bottom:24px;overflow:hidden}
@@ -303,23 +304,22 @@
 
 <!-- QUICK STATS BANNER -->
 <div class="stats-banner">
-  <div class="container">
-    <div class="stats-inner">
-      <div class="stat-pill"><span class="sv">$350B</span><span class="sl">Revenue (FY25)</span></div>
-      <div class="stat-pill"><span class="sv">182,502</span><span class="sl">Employees</span></div>
-      <div class="stat-pill"><span class="sv">~$2.3T</span><span class="sl">Market Cap</span></div>
-      <div class="stat-pill"><span class="sv">142</span><span class="sl">Signals / week</span></div>
-      <div class="stat-pill"><span class="sv" style="color:#3CF3FF">+14%</span><span class="sl">YoY Growth</span></div>
-      <div class="stats-cta">
-        <a href="#" class="btn-cta-sm" onclick="openModal();return false">Track this company</a>
-      </div>
+  <div class="stats-inner">
+    <div class="stat-pill"><span class="sv">$350B</span><span class="sl">Revenue (FY25)</span></div>
+    <div class="stat-pill"><span class="sv">182,502</span><span class="sl">Employees</span></div>
+    <div class="stat-pill"><span class="sv">~$2.3T</span><span class="sl">Market Cap</span></div>
+    <div class="stat-pill"><span class="sv">142</span><span class="sl">Signals / week</span></div>
+    <div class="stat-pill"><span class="sv" style="color:#198038">+14%</span><span class="sl">YoY Growth</span></div>
+    <div class="stats-cta">
+      <a href="#" class="btn-cta-sm" onclick="openModal();return false">Track this company</a>
     </div>
   </div>
 </div>
 
-<!-- STICKY SECTION NAV -->
-<nav class="section-nav">
-  <div class="section-nav-inner">
+<!-- PAGE LAYOUT -->
+<div class="page-layout">
+  <!-- LEFT SIDEBAR NAV -->
+  <nav class="left-nav">
     <a href="#overview" class="active" onclick="scrollToSec('overview',this)">Overview</a>
     <a href="#events" onclick="scrollToSec('events',this)">Business Events</a>
     <a href="#leadership" onclick="scrollToSec('leadership',this)">Leadership</a>
@@ -332,11 +332,7 @@
     <a href="#announcements" onclick="scrollToSec('announcements',this)">Announcements</a>
     <a href="#customers" onclick="scrollToSec('customers',this)">Customers</a>
     <a href="#hq" onclick="scrollToSec('hq',this)">Headquarters</a>
-  </div>
-</nav>
-
-<!-- PAGE LAYOUT -->
-<div class="page-layout">
+  </nav>
   <div class="main-col">
 
     <!-- 1. COMPANY OVERVIEW -->
@@ -806,19 +802,19 @@ function scrollToSec(id,el){
   var offset=160;
   var y=target.getBoundingClientRect().top+window.pageYOffset-offset;
   window.scrollTo({top:y,behavior:'smooth'});
-  document.querySelectorAll('.section-nav a').forEach(function(a){a.classList.remove('active')});
+  document.querySelectorAll('.left-nav a').forEach(function(a){a.classList.remove('active')});
   el.classList.add('active');
 }
 
 // Highlight section nav on scroll
 var sections=document.querySelectorAll('.sec-card[id]');
-var navLinks=document.querySelectorAll('.section-nav a');
+var navLinks=document.querySelectorAll('.left-nav a');
 window.addEventListener('scroll',function(){
   var scrollPos=window.scrollY+180;
   sections.forEach(function(sec){
     if(sec.offsetTop<=scrollPos&&(sec.offsetTop+sec.offsetHeight)>scrollPos){
       navLinks.forEach(function(a){a.classList.remove('active')});
-      var active=document.querySelector('.section-nav a[href="#'+sec.id+'"]');
+      var active=document.querySelector('.left-nav a[href="#'+sec.id+'"]');
       if(active)active.classList.add('active');
     }
   });
