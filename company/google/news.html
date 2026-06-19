@@ -100,13 +100,21 @@ a { text-decoration: none; color: inherit; }
 .company-meta { font-size: 12px; color: #6B7280; margin-top: 1px; }
 
 /* Sub-nav */
-.subnav{background:#F4F4F4;border-bottom:1px solid #DDE1E6;position:sticky;top:75px;z-index:50;overflow-x:auto;display:flex;gap:4px;max-width:1200px;margin:0 auto;padding:6px 24px;justify-content:flex-start}
+.subnav{display:none}
 .subnav a{padding:8px 16px;font-size:13px;font-weight:600;color:#525252;white-space:nowrap;border-radius:6px;transition:all .15s}
 .subnav a:hover{color:#161616;background:rgba(0,0,0,.06);text-decoration:none}
 .subnav a.active{color:#fff;background:#0072C3}
 
+/* LEFT SIDEBAR NAV */
+.left-nav{width:200px;flex-shrink:0;padding:24px 0;position:sticky;top:75px;align-self:flex-start;height:fit-content;border-right:1px solid #E8E8E8}
+.left-nav a{display:block;padding:8px 16px;font-size:13px;font-weight:500;color:#525252;border-left:3px solid transparent;transition:all .15s;margin-bottom:1px}
+.left-nav a:hover{color:#0072C3;background:#F4F7FB;text-decoration:none}
+.left-nav a.active{color:#0072C3;font-weight:600;border-left-color:#0072C3;background:#EDF5FF}
+
 /* Main Layout */
-.main-wrap { max-width: 1320px; margin: 0 auto; padding: 28px 48px 60px; display: grid; grid-template-columns: 1fr 340px; gap: 28px; }
+.main-wrap { max-width: 1320px; margin: 0 auto; padding: 28px 48px 60px; display: flex; gap: 0; }
+.main-wrap main { flex: 1; min-width: 0; padding: 24px 0 0 24px; }
+.main-wrap .sidebar { padding: 24px 0 0 24px; }
 
 /* Filter Bar */
 .filter-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; flex-wrap: wrap; }
@@ -218,8 +226,14 @@ a { text-decoration: none; color: inherit; }
 .footer-bottom a:hover { color: #3CF3FF; }
 
 /* Responsive */
+@media (max-width: 768px) {
+  .left-nav { display: none; }
+  .subnav { display: block; background: #F4F4F4; border-bottom: 1px solid #DDE1E6; position: sticky; top: 75px; z-index: 50; overflow-x: auto; }
+  .main-wrap main { padding: 24px 0 0 0; }
+  .main-wrap .sidebar { padding: 24px 0 0 0; }
+}
 @media (max-width: 1024px) {
-  .main-wrap { grid-template-columns: 1fr; padding: 20px 24px 48px; }
+  .main-wrap { flex-direction: column; padding: 20px 24px 48px; }
   .navbar { padding: 0 24px; }
   .breadcrumb-bar { padding: 12px 24px; }
   .company-bar { padding: 0 24px; }
@@ -351,6 +365,20 @@ a { text-decoration: none; color: inherit; }
 
 <!-- Main Content -->
 <div class="main-wrap">
+  <nav class="left-nav">
+    <a href="./">Overview</a>
+    <a href="announcements">Announcements</a>
+    <a href="events">Events</a>
+    <a href="competitors">Competitors</a>
+    <a href="partnerships">Partnerships</a>
+    <a href="mergers-acquisitions">M&amp;A</a>
+    <a href="investments">Investments</a>
+    <a href="deals">Deals</a>
+    <a href="leadership">Leadership</a>
+    <a href="news" class="active">News</a>
+    <a href="publications">Publications</a>
+    <a href="customers">Customers</a>
+  </nav>
   <main>
     <!-- Page Header -->
     <div style="margin-bottom:24px;">

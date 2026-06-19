@@ -87,14 +87,22 @@ a:hover{color:#00539A}
 .badge-public{background:#DEFBE6;color:#198038}
 
 /* Sub Nav */
-.sub-nav{background:#F4F4F4;border-bottom:1px solid #DDE1E6;position:sticky;top:75px;z-index:50;overflow-x:auto}
+.sub-nav{display:none}
 .sub-nav-inner{display:flex;gap:4px;max-width:1200px;margin:0 auto;padding:6px 24px;justify-content:flex-start}
 .sub-nav a{padding:8px 16px;font-size:13px;font-weight:600;color:#525252;white-space:nowrap;border-radius:6px;transition:all .15s}
 .sub-nav a:hover{color:#161616;background:rgba(0,0,0,.06);text-decoration:none}
 .sub-nav a.active{color:#fff;background:#0072C3}
 
+/* LEFT SIDEBAR NAV */
+.left-nav{width:200px;flex-shrink:0;padding:24px 0;position:sticky;top:75px;align-self:flex-start;height:fit-content;border-right:1px solid #E8E8E8}
+.left-nav a{display:block;padding:8px 16px;font-size:13px;font-weight:500;color:#525252;border-left:3px solid transparent;transition:all .15s;margin-bottom:1px}
+.left-nav a:hover{color:#0072C3;background:#F4F7FB;text-decoration:none}
+.left-nav a.active{color:#0072C3;font-weight:600;border-left-color:#0072C3;background:#EDF5FF}
+
 /* Main Layout */
-.main-container{max-width:1280px;margin:0 auto;padding:32px 48px;display:grid;grid-template-columns:1fr 360px;gap:32px}
+.main-container{max-width:1280px;margin:0 auto;padding:32px 48px;display:flex;gap:0}
+.content-area{flex:1;min-width:0;padding:24px 0 0 24px}
+.sidebar{padding:24px 0 0 24px;width:360px;flex-shrink:0}
 
 /* Stats Header */
 .stats-header{background:linear-gradient(135deg,#00539A,#0072C3);border-radius:12px;padding:32px;color:#fff;margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
@@ -181,8 +189,12 @@ a:hover{color:#00539A}
 .footer-col a:hover{color:#3CF3FF}
 .footer-bottom{max-width:1280px;margin:24px auto 0;padding-top:24px;border-top:1px solid #393F44;display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:8px}
 
+@media(max-width:768px){
+  .left-nav{display:none}
+  .sub-nav{display:block;background:#F4F4F4;border-bottom:1px solid #DDE1E6;position:sticky;top:75px;z-index:50;overflow-x:auto}
+}
 @media(max-width:1024px){
-  .main-container{grid-template-columns:1fr;padding:24px}
+  .main-container{flex-direction:column;padding:24px}
   .navbar{padding:0 24px}
   .breadcrumb-bar,.company-bar,.sub-nav{padding-left:24px;padding-right:24px}
   .footer-inner{grid-template-columns:1fr 1fr}
@@ -264,6 +276,20 @@ a:hover{color:#00539A}
 
 <!-- Main Content -->
 <div class="main-container">
+  <nav class="left-nav">
+    <a href="./">Overview</a>
+    <a href="announcements">Announcements</a>
+    <a href="events">Events</a>
+    <a href="competitors">Competitors</a>
+    <a href="partnerships">Partnerships</a>
+    <a href="mergers-acquisitions" class="active">M&amp;A</a>
+    <a href="investments">Investments</a>
+    <a href="deals">Deals</a>
+    <a href="leadership">Leadership</a>
+    <a href="news">News</a>
+    <a href="publications">Publications</a>
+    <a href="customers">Customers</a>
+  </nav>
   <div class="content-area">
     <!-- Stats Header -->
     <div class="stats-header">

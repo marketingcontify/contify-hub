@@ -82,15 +82,23 @@ a{text-decoration:none;color:inherit}
 .company-meta{font-size:13px;color:#697077;margin-left:auto;display:flex;gap:16px;align-items:center}
 .company-meta span{display:flex;align-items:center;gap:4px}
 
-/* Sub Nav */
-.sub-nav{background:#F4F4F4;border-bottom:1px solid #DDE1E6;position:sticky;top:75px;z-index:50;overflow-x:auto}
+/* Sub Nav (hidden on desktop, shown on mobile) */
+.sub-nav{display:none}
 .sub-nav-inner{display:flex;gap:4px;max-width:1200px;margin:0 auto;padding:6px 24px;justify-content:flex-start}
 .sub-nav a{padding:8px 16px;font-size:13px;font-weight:600;color:#525252;white-space:nowrap;border-radius:6px;transition:all .15s}
 .sub-nav a:hover{color:#161616;background:rgba(0,0,0,.06);text-decoration:none}
 .sub-nav a.active{color:#fff;background:#0072C3}
 
+/* LEFT SIDEBAR NAV */
+.left-nav{width:200px;flex-shrink:0;padding:24px 0;position:sticky;top:75px;align-self:flex-start;height:fit-content;border-right:1px solid #E8E8E8}
+.left-nav a{display:block;padding:8px 16px;font-size:13px;font-weight:500;color:#525252;border-left:3px solid transparent;transition:all .15s;margin-bottom:1px}
+.left-nav a:hover{color:#0072C3;background:#F4F7FB;text-decoration:none}
+.left-nav a.active{color:#0072C3;font-weight:600;border-left-color:#0072C3;background:#EDF5FF}
+
 /* Page Layout */
-.page-wrap{max-width:1280px;margin:0 auto;padding:32px 48px;display:grid;grid-template-columns:1fr 340px;gap:32px}
+.page-wrap{max-width:1280px;margin:0 auto;padding:0 48px 48px;display:flex;gap:0}
+.page-wrap main{flex:1;min-width:0;padding:24px 0 0 24px}
+.page-wrap .sidebar{padding:24px 0 0 24px}
 
 /* Page Header */
 .page-header{margin-bottom:8px}
@@ -196,9 +204,13 @@ a{text-decoration:none;color:inherit}
 .footer-bottom a:hover{color:#3CF3FF}
 
 @media(max-width:1024px){
-  .page-wrap{grid-template-columns:1fr;padding:24px 20px}
+  .page-wrap{padding:24px 20px}
   .navbar{padding:0 20px}
   .breadcrumb-bar,.company-bar,.sub-nav{padding:0 20px}
+}
+@media(max-width:768px){
+  .left-nav{display:none}
+  .sub-nav{display:block;background:#F4F4F4;border-bottom:1px solid #DDE1E6;position:sticky;top:75px;z-index:50;overflow-x:auto}
 }
 @media(max-width:640px){
   .page-header h1{font-size:22px}
@@ -277,6 +289,20 @@ a{text-decoration:none;color:inherit}
 
 <!-- Main Content -->
 <div class="page-wrap">
+  <nav class="left-nav">
+    <a href="./">Overview</a>
+    <a href="announcements">Announcements</a>
+    <a href="events" class="active">Events</a>
+    <a href="competitors">Competitors</a>
+    <a href="partnerships">Partnerships</a>
+    <a href="mergers-acquisitions">M&amp;A</a>
+    <a href="investments">Investments</a>
+    <a href="deals">Deals</a>
+    <a href="leadership">Leadership</a>
+    <a href="news">News</a>
+    <a href="publications">Publications</a>
+    <a href="customers">Customers</a>
+  </nav>
   <main>
     <!-- Page Header -->
     <div class="page-header">
