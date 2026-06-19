@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>M&A Tracker — 187 Deals, $42B Value | Contify Intelligence</title>
+<meta name="description" content="Track 187 global M&A deals worth $42B this month. Top 10 deals table, sector breakdown, acquirer rankings, and geographic heatmap.">
+<link rel="icon" type="image/svg+xml" href="https://www.contify.com/wp-content/uploads/2021/04/roundel-contify-cyan-dark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","name":"M&A Tracker","url":"https://www.contify.com/d/insights/ma-tracker.html","breadcrumb":{"@id":"#bc"}},{"@type":"BreadcrumbList","@id":"#bc","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.contify.com/"},{"@type":"ListItem","position":2,"name":"Discover"},{"@type":"ListItem","position":3,"name":"Insights","item":"https://www.contify.com/d/insights/"},{"@type":"ListItem","position":4,"name":"M&A Tracker"}]}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Geist',sans-serif;color:#161616;background:#fff;line-height:1.5}a{text-decoration:none;color:inherit}
+.strip-banner{background:#8a3ffc;color:#fff;text-align:center;padding:8px 16px;font-size:12px;font-weight:500}.strip-banner a{color:#FFCD3F;text-decoration:underline;margin-left:6px}
+.navbar{background:linear-gradient(99.62deg,#0072C3 0%,#00539A 100.4%);height:75px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.nav-logo img{height:32px}.nav-links{display:flex;align-items:center;gap:28px}.nav-links a{color:rgba(255,255,255,.88);font-size:13.5px;font-weight:500}.nav-links a:hover{color:#fff}
+.nav-cta{background:#FFCD3F;color:#161616!important;font-weight:700!important;padding:9px 20px;border-radius:6px;font-size:13px!important}
+.sub-nav{background:#F4F4F4;border-bottom:1px solid #DDE1E6;position:sticky;top:75px;z-index:50;overflow-x:auto}
+.sub-nav-inner{display:flex;gap:4px;max-width:1200px;margin:0 auto;padding:6px 24px}
+.sub-nav a{padding:8px 16px;font-size:13px;font-weight:600;color:#525252;white-space:nowrap;border-radius:6px;transition:all .15s;display:inline-block}
+.sub-nav a:hover{color:#161616;background:rgba(0,0,0,.06)}.sub-nav a.active{color:#fff;background:#8a3ffc}
+.hero{background:linear-gradient(135deg,#1a0033 0%,#4a0080 50%,#6929c4 100%);padding:56px 32px 48px;position:relative;overflow:hidden}
+.hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:20px;font-size:12.5px;color:rgba(255,255,255,.62)}.breadcrumb a{color:rgba(255,255,255,.62)}.breadcrumb span{color:rgba(255,255,255,.38)}
+.hero-text h1{font-size:36px;font-weight:800;color:#fff;margin-bottom:8px}
+.hero-text p{font-size:15px;color:rgba(255,255,255,.76);max-width:560px;line-height:1.65;margin-bottom:20px}
+.hero-stats{display:flex;gap:18px;flex-wrap:wrap}
+.stat-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:16px 20px;min-width:120px;text-align:center}
+.stat-num{font-size:28px;font-weight:800;color:#FFCD3F;display:block}.stat-label{font-size:11px;color:rgba(255,255,255,.68);font-weight:500;margin-top:2px}
+.main-wrap{max-width:1200px;margin:0 auto;padding:44px 24px;display:grid;grid-template-columns:1fr 300px;gap:40px}
+@media(max-width:900px){.main-wrap{grid-template-columns:1fr}}
+.section-label{font-size:11px;font-weight:700;color:#8a3ffc;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.section-title{font-size:22px;font-weight:700;color:#161616;margin-bottom:4px}.section-sub{font-size:13.5px;color:#525252;margin-bottom:22px}
+
+/* Summary stats bar */
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:36px}
+@media(max-width:600px){.stats-bar{grid-template-columns:repeat(2,1fr)}}
+.stats-bar-item{background:#F4F4F4;border-radius:10px;padding:18px;text-align:center;border:1px solid #DDE1E6}
+.stats-bar-num{font-size:26px;font-weight:800;color:#161616;display:block}
+.stats-bar-label{font-size:12px;color:#525252;margin-top:4px}
+.stats-bar-change{font-size:11.5px;margin-top:4px}.up{color:#24a148}.down{color:#da1e28}
+
+/* Table */
+.deals-table{width:100%;border-collapse:collapse;margin-bottom:36px;font-size:13px}
+.deals-table th{background:#F4F4F4;padding:11px 14px;text-align:left;font-size:11.5px;font-weight:700;color:#525252;text-transform:uppercase;letter-spacing:.06em;border-bottom:2px solid #DDE1E6}
+.deals-table td{padding:13px 14px;border-bottom:1px solid #F4F4F4;vertical-align:top}
+.deals-table tr:hover td{background:#FAFAFA}
+.deal-rank{font-weight:700;color:#8a3ffc;font-size:14px}
+.deal-acquirer{font-weight:700;color:#161616}
+.deal-target{color:#0072C3;font-weight:600}
+.deal-sector-tag{background:#f6f2ff;color:#8a3ffc;font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:12px}
+.deal-value{font-weight:800;color:#161616;font-size:14px}
+.deal-status{font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:12px}
+.status-completed{background:#defbe6;color:#24a148}
+.status-pending{background:#fff2e8;color:#ff832b}
+.status-announced{background:#edf5ff;color:#0e62fe}
+
+/* Chart */
+.chart-section{background:#F4F4F4;border-radius:12px;padding:24px;margin-bottom:36px}
+.chart-title{font-size:15px;font-weight:700;color:#161616;margin-bottom:18px}
+.chart-bar-group{display:flex;flex-direction:column;gap:10px}
+.chart-row{display:flex;align-items:center;gap:12px}
+.chart-label{font-size:12.5px;color:#525252;width:120px;text-align:right;font-weight:500}
+.chart-bar-wrap{flex:1;background:#DDE1E6;border-radius:4px;height:22px;overflow:hidden}
+.chart-bar{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:11px;font-weight:700;color:#fff}
+.chart-count{font-size:12px;font-weight:700;color:#161616;width:52px}
+
+.sidebar-card{background:#F4F4F4;border-radius:12px;padding:20px;margin-bottom:20px}
+.sidebar-card h3{font-size:14px;font-weight:700;color:#161616;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #DDE1E6}
+.filter-select{width:100%;padding:8px 10px;border:1px solid #DDE1E6;border-radius:6px;font-size:13px;font-family:'Geist',sans-serif;background:#fff;color:#161616;margin-bottom:10px}
+.quick-link{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid #DDE1E6;font-size:13px;color:#161616;transition:color .15s}.quick-link:last-child{border-bottom:none}.quick-link:hover{color:#8a3ffc}
+.quick-link-count{background:#8a3ffc;color:#fff;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:20px}
+.sidebar-cta{background:linear-gradient(135deg,#4a0080,#6929c4);border-radius:12px;padding:22px;text-align:center}
+.sidebar-cta h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}.sidebar-cta p{font-size:12.5px;color:rgba(255,255,255,.78);margin-bottom:16px;line-height:1.5}
+.btn-yellow{background:#FFCD3F;color:#161616;font-weight:700;font-size:13px;padding:10px 20px;border-radius:6px;border:none;cursor:pointer;font-family:'Geist',sans-serif;display:inline-block}
+.insight-item{padding:10px 0;border-bottom:1px solid #DDE1E6;font-size:13px}.insight-item:last-child{border-bottom:none}.insight-item strong{display:block;color:#161616;margin-bottom:2px}.insight-item span{color:#525252;font-size:12px}
+.gated-section{background:#F4F4F4;border:2px dashed #DDE1E6;border-radius:12px;padding:40px 32px;text-align:center;margin-top:8px;position:relative;overflow:hidden}
+.gated-section::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 0%,rgba(244,244,244,.95) 40%);pointer-events:none}
+.gated-blur{filter:blur(4px);opacity:.4;pointer-events:none;font-size:13px;color:#525252;line-height:2;margin-bottom:20px}.gated-overlay{position:relative;z-index:2}.gated-overlay h3{font-size:18px;font-weight:700;color:#161616;margin-bottom:8px}.gated-overlay p{font-size:13.5px;color:#525252;margin-bottom:20px}.lock-icon{font-size:28px;margin-bottom:10px;display:block}
+.cta-banner{background:linear-gradient(99.62deg,#4a0080 0%,#6929c4 100%);padding:52px 32px;text-align:center;margin-top:64px}
+.cta-banner h2{font-size:28px;font-weight:800;color:#fff;margin-bottom:10px}.cta-banner p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:26px}
+.cta-dual{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn-outline-white{border:2px solid rgba(255,255,255,.6);color:#fff;font-weight:600;font-size:14px;padding:11px 24px;border-radius:6px;display:inline-block}
+footer{background:#161616;color:rgba(255,255,255,.6);padding:48px 32px 28px}.footer-inner{max-width:1200px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand img{height:28px;margin-bottom:14px;filter:brightness(10)}.footer-brand p{font-size:13px;line-height:1.7;max-width:240px}
+.footer-col h4{font-size:12px;font-weight:700;color:#fff;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}.footer-col a{display:block;font-size:13px;color:rgba(255,255,255,.55);margin-bottom:8px}.footer-col a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:12px}.footer-bottom a{color:rgba(255,255,255,.45);margin-left:18px}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:999;align-items:center;justify-content:center}.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:16px;padding:36px;max-width:460px;width:90%;position:relative;animation:modalIn .2s ease}
+@keyframes modalIn{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+.modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;cursor:pointer;color:#525252}.modal h2{font-size:20px;font-weight:800;color:#161616;margin-bottom:8px}.modal p{font-size:13.5px;color:#525252;margin-bottom:20px;line-height:1.6}
+.modal input{width:100%;padding:10px 13px;border:1px solid #DDE1E6;border-radius:6px;font-size:14px;font-family:'Geist',sans-serif;margin-bottom:12px;color:#161616}
+.modal .btn-yellow{width:100%;padding:12px;font-size:14px}.modal-tag{background:#f6f2ff;color:#8a3ffc;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;margin-bottom:14px;display:inline-block}
+</style>
+</head>
+<body>
+
+<div class="strip-banner">M&A Tracker: 187 deals tracked in June 2026 totalling $42B — 23% increase versus May. <a href="global-ci-report.html">See Full Report →</a></div>
+
+<nav class="navbar">
+  <a href="https://www.contify.com/" class="nav-logo"><img src="https://www.contify.com/wp-content/uploads/2026/02/contify-logo.svg" alt="Contify"></a>
+  <div class="nav-links">
+    <a href="https://www.contify.com/platform/">Platform</a><a href="https://www.contify.com/solutions/">Solutions</a><a href="https://www.contify.com/resources/">Resources</a>
+    <a href="index.html" style="color:#FFCD3F;font-weight:700">Discover</a><a href="https://www.contify.com/pricing/">Pricing</a>
+    <a href="https://www.contify.com/request-a-demo/" class="nav-cta">Request Demo</a>
+  </div>
+</nav>
+
+<div class="sub-nav"><div class="sub-nav-inner">
+  <a href="index.html">All Insights</a><a href="weekly-digest.html">Weekly Digest</a><a href="ma-tracker.html" class="active">M&A Tracker</a><a href="partnership-tracker.html">Partnerships</a><a href="funding-roundup.html">Funding Round-up</a><a href="global-ci-report.html">Global CI Report</a>
+</div></div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb"><a href="https://www.contify.com/">Home</a><span>›</span><a href="#">Discover</a><span>›</span><a href="index.html">Insights</a><span>›</span><span style="color:rgba(255,255,255,.9)">M&A Tracker</span></div>
+    <div class="hero-text">
+      <h1>M&amp;A Tracker</h1>
+      <p>187 global mergers and acquisitions tracked in June 2026 with a combined value of $42B. Sector breakdown, deal size distribution, acquirer league tables, and geographic analysis.</p>
+      <div class="hero-stats">
+        <div class="stat-card"><span class="stat-num">187</span><span class="stat-label">Deals This Month</span></div>
+        <div class="stat-card"><span class="stat-num">$42B</span><span class="stat-label">Total Value</span></div>
+        <div class="stat-card"><span class="stat-num">↑23%</span><span class="stat-label">vs May 2026</span></div>
+        <div class="stat-card"><span class="stat-num">$224M</span><span class="stat-label">Avg Deal Size</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="main-wrap">
+  <div>
+    <div class="stats-bar">
+      <div class="stats-bar-item"><span class="stats-bar-num">187</span><span class="stats-bar-label">Total Deals</span><div class="stats-bar-change up">↑ 23% vs May</div></div>
+      <div class="stats-bar-item"><span class="stats-bar-num">$42B</span><span class="stats-bar-label">Deal Value</span><div class="stats-bar-change up">↑ 31% vs May</div></div>
+      <div class="stats-bar-item"><span class="stats-bar-num">$224M</span><span class="stats-bar-label">Avg Deal Size</span><div class="stats-bar-change up">↑ 6% vs May</div></div>
+      <div class="stats-bar-item"><span class="stats-bar-num">62</span><span class="stats-bar-label">Cross-Border</span><div class="stats-bar-change up">↑ 18% vs May</div></div>
+    </div>
+
+    <div class="section-label">Top Deals</div>
+    <h2 class="section-title">Top 10 M&A Deals — June 2026</h2>
+    <p class="section-sub">Ranked by deal value. Includes announced, pending regulatory approval, and completed transactions.</p>
+
+    <table class="deals-table">
+      <thead>
+        <tr>
+          <th>#</th><th>Acquirer</th><th>Target</th><th>Sector</th><th>Value</th><th>Geography</th><th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="deal-rank">01</td><td class="deal-acquirer">QatarEnergy / TotalEnergies</td><td class="deal-target">LNG Supply JV</td><td><span class="deal-sector-tag">Energy</span></td><td class="deal-value">$95B*</td><td>🇶🇦 Qatar / 🇪🇺 EU</td><td><span class="deal-status status-completed">Completed</span></td></tr>
+        <tr><td class="deal-rank">02</td><td class="deal-acquirer">ADNOC</td><td class="deal-target">Covestro</td><td><span class="deal-sector-tag">Chemicals</span></td><td class="deal-value">$11.4B</td><td>🇦🇪 UAE / 🇩🇪 DE</td><td><span class="deal-status status-completed">Completed</span></td></tr>
+        <tr><td class="deal-rank">03</td><td class="deal-acquirer">Microsoft</td><td class="deal-target">Inflection AI Enterprise</td><td><span class="deal-sector-tag">AI / Tech</span></td><td class="deal-value">$4.2B</td><td>🇺🇸 USA</td><td><span class="deal-status status-announced">Announced</span></td></tr>
+        <tr><td class="deal-rank">04</td><td class="deal-acquirer">GoTo Group</td><td class="deal-target">TikTok Shop Indonesia</td><td><span class="deal-sector-tag">e-Commerce</span></td><td class="deal-value">Rp 23T (~$1.4B)</td><td>🇮🇩 Indonesia</td><td><span class="deal-status status-completed">Completed</span></td></tr>
+        <tr><td class="deal-rank">05</td><td class="deal-acquirer">HSBC</td><td class="deal-target">SVB UK Commercial Div.</td><td><span class="deal-sector-tag">Banking</span></td><td class="deal-value">£7.2B</td><td>🇬🇧 UK</td><td><span class="deal-status status-completed">Completed</span></td></tr>
+        <tr><td class="deal-rank">06</td><td class="deal-acquirer">DP World</td><td class="deal-target">Santos Brasil</td><td><span class="deal-sector-tag">Logistics</span></td><td class="deal-value">$2.1B</td><td>🇦🇪 UAE / 🇧🇷 Brazil</td><td><span class="deal-status status-pending">Pending</span></td></tr>
+        <tr><td class="deal-rank">07</td><td class="deal-acquirer">Deutsche Bank</td><td class="deal-target">Arabesque S-Ray</td><td><span class="deal-sector-tag">ESG / Data</span></td><td class="deal-value">€640M</td><td>🇩🇪 Germany / 🇬🇧 UK</td><td><span class="deal-status status-announced">Announced</span></td></tr>
+        <tr><td class="deal-rank">08</td><td class="deal-acquirer">HDFC Bank</td><td class="deal-target">CreditBee (49%)</td><td><span class="deal-sector-tag">Fintech</span></td><td class="deal-value">₹2,800 Cr</td><td>🇮🇳 India</td><td><span class="deal-status status-pending">Pending</span></td></tr>
+        <tr><td class="deal-rank">09</td><td class="deal-acquirer">Sea Limited</td><td class="deal-target">Anteraja</td><td><span class="deal-sector-tag">Logistics</span></td><td class="deal-value">$320M</td><td>🇮🇩 Indonesia</td><td><span class="deal-status status-completed">Completed</span></td></tr>
+        <tr><td class="deal-rank">10</td><td class="deal-acquirer">Google / Alphabet</td><td class="deal-target">Endor Labs</td><td><span class="deal-sector-tag">Cybersecurity</span></td><td class="deal-value">$850M</td><td>🇺🇸 USA</td><td><span class="deal-status status-announced">Announced</span></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:11px;color:#8D8D8D;margin-top:-24px;margin-bottom:32px">* $95B represents the total contract value over 27 years, not a single-period deal value.</p>
+
+    <div class="chart-section">
+      <div class="chart-title">M&A by Sector — June 2026 (Deal Count)</div>
+      <div class="chart-bar-group">
+        <div class="chart-row"><div class="chart-label">Technology / AI</div><div class="chart-bar-wrap"><div class="chart-bar" style="width:72%;background:#8a3ffc">48</div></div><div class="chart-count">48</div></div>
+        <div class="chart-row"><div class="chart-label">Financial Svcs</div><div class="chart-bar-wrap"><div class="chart-bar" style="width:58%;background:#0072C3">39</div></div><div class="chart-count">39</div></div>
+        <div class="chart-row"><div class="chart-label">Energy</div><div class="chart-bar-wrap"><div class="chart-bar" style="width:44%;background:#ff832b">29</div></div><div class="chart-count">29</div></div>
+        <div class="chart-row"><div class="chart-label">Healthcare</div><div class="chart-bar-wrap"><div class="chart-bar" style="width:34%;background:#24a148">23</div></div><div class="chart-count">23</div></div>
+        <div class="chart-row"><div class="chart-label">Logistics / Supply</div><div class="chart-bar-wrap"><div class="chart-bar" style="width:28%;background:#0e62fe">19</div></div><div class="chart-count">19</div></div>
+        <div class="chart-row"><div class="chart-label">Consumer / Retail</div><div class="chart-bar-wrap"><div class="chart-bar" style="width:21%;background:#da1e28">14</div></div><div class="chart-count">14</div></div>
+        <div class="chart-row"><div class="chart-label">Other</div><div class="chart-bar-wrap"><div class="chart-bar" style="width:23%;background:#6929c4">15</div></div><div class="chart-count">15</div></div>
+      </div>
+    </div>
+
+    <div class="gated-section">
+      <div class="gated-blur">
+        <p>Top Acquirers League Table · MEGA-DEAL pipeline: 12 deals >$1B in due diligence across Tech, Energy, Pharma...</p>
+        <p>Cross-border M&A heatmap · Sector valuation multiples (EV/EBITDA by industry) · Regulatory risk tracker by jurisdiction...</p>
+      </div>
+      <div class="gated-overlay"><span class="lock-icon">🔒</span><h3>Access Full M&A Database</h3><p>See all 187 deals with acquirer league tables, valuation multiples, pipeline deals in due diligence, and regulatory risk tracker.</p><button class="btn-yellow" onclick="document.getElementById('demoModal').classList.add('open')">Unlock Full Access</button></div>
+    </div>
+  </div>
+
+  <aside>
+    <div class="sidebar-card"><h3>Filter M&A Data</h3>
+      <select class="filter-select"><option>All Sectors</option><option>Technology / AI</option><option>Financial Services</option><option>Energy</option><option>Healthcare</option><option>Logistics</option></select>
+      <select class="filter-select"><option>All Geographies</option><option>USA</option><option>Europe</option><option>India</option><option>Middle East</option><option>SE Asia</option></select>
+      <select class="filter-select"><option>All Deal Sizes</option><option>&gt;$1B Mega-deals</option><option>$100M–$1B</option><option>$10M–$100M</option><option>&lt;$10M</option></select>
+      <select class="filter-select"><option>All Status</option><option>Completed</option><option>Announced</option><option>Pending Approval</option></select>
+    </div>
+    <div class="sidebar-card"><h3>Deals by Geography</h3>
+      <a href="../geo/usa.html" class="quick-link">🇺🇸 USA <span class="quick-link-count">87</span></a>
+      <a href="../geo/uk.html" class="quick-link">🇬🇧 UK <span class="quick-link-count">41</span></a>
+      <a href="../geo/india.html" class="quick-link">🇮🇳 India <span class="quick-link-count">34</span></a>
+      <a href="../geo/germany.html" class="quick-link">🇩🇪 Germany <span class="quick-link-count">38</span></a>
+      <a href="../geo/uae.html" class="quick-link">🇦🇪 UAE <span class="quick-link-count">22</span></a>
+      <a href="../geo/southeast-asia.html" class="quick-link">🌏 SE Asia <span class="quick-link-count">29</span></a>
+    </div>
+    <div class="sidebar-cta"><h3>M&A Alerts for Your Sector</h3><p>Get instant alerts when competitors in your space announce acquisitions — before the news cycle catches up.</p><button class="btn-yellow" onclick="document.getElementById('demoModal').classList.add('open')">Set Up Alerts</button></div>
+    <div class="sidebar-card" style="margin-top:20px"><h3>M&A Insights</h3>
+      <div class="insight-item"><strong>AI Consolidation Wave</strong><span>48 AI-related M&A deals — highest month on record since 2022</span></div>
+      <div class="insight-item"><strong>Cross-Border Rise</strong><span>62 cross-border deals (33% of total) — up from 18% in Jan 2026</span></div>
+      <div class="insight-item"><strong>Mega-Deal Pipeline</strong><span>12 deals >$1B in due diligence — watch Energy and Pharma sectors</span></div>
+    </div>
+  </aside>
+</div>
+
+<div class="cta-banner">
+  <h2>Track M&A Before the News Breaks</h2>
+  <p>Contify detects M&A signals — financial filings, board announcements, regulatory submissions — days before mainstream coverage.</p>
+  <div class="cta-dual">
+    <button class="btn-yellow" onclick="document.getElementById('demoModal').classList.add('open')">Request a Demo</button>
+    <a href="https://www.contify.com/platform/" class="btn-outline-white">Explore Platform</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="https://www.contify.com/wp-content/uploads/2026/02/contify-logo.svg" alt="Contify"><p>Market and competitive intelligence platform trusted by global enterprises.</p></div>
+      <div class="footer-col"><h4>Platform</h4><a href="https://www.contify.com/platform/">Overview</a><a href="https://www.contify.com/features/">Features</a></div>
+      <div class="footer-col"><h4>Insights</h4><a href="index.html">All Insights</a><a href="ma-tracker.html">M&A Tracker</a><a href="funding-roundup.html">Funding Round-up</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="https://www.contify.com/about/">About</a><a href="https://www.contify.com/blog/">Blog</a><a href="https://www.contify.com/contact/">Contact</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Contify. All rights reserved.</span><div><a href="https://www.contify.com/privacy-policy/">Privacy</a><a href="https://www.contify.com/terms-of-service/">Terms</a></div></div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="demoModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('demoModal').classList.remove('open')">×</button>
+    <div class="modal-tag">Free Demo · No Credit Card</div>
+    <h2>Access Full M&A Intelligence</h2>
+    <p>See all 187 deals, acquirer league tables, pipeline deals, and set up M&A alerts for your competitive set.</p>
+    <input type="text" placeholder="Your full name"><input type="email" placeholder="Work email address"><input type="text" placeholder="Company name">
+    <button class="btn-yellow">Book My Free Demo →</button>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trending Insights & Intelligence Reports | Contify</title>
+<meta name="description" content="Access Contify's curated competitive intelligence reports — M&A Tracker, Funding Round-up, Weekly Digest, Partnership Tracker, and Global CI Report.">
+<link rel="icon" type="image/svg+xml" href="https://www.contify.com/wp-content/uploads/2021/04/roundel-contify-cyan-dark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","name":"Trending & Insights","description":"Curated competitive intelligence reports and trackers","url":"https://www.contify.com/d/insights/","breadcrumb":{"@id":"#bc"}},{"@type":"BreadcrumbList","@id":"#bc","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.contify.com/"},{"@type":"ListItem","position":2,"name":"Discover"},{"@type":"ListItem","position":3,"name":"Insights"}]}]}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Geist',sans-serif;color:#161616;background:#fff;line-height:1.5}a{text-decoration:none;color:inherit}
+.strip-banner{background:#6929c4;color:#fff;text-align:center;padding:8px 16px;font-size:12px;font-weight:500}.strip-banner a{color:#FFCD3F;text-decoration:underline;margin-left:6px}
+.navbar{background:linear-gradient(99.62deg,#0072C3 0%,#00539A 100.4%);height:75px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.nav-logo img{height:32px}.nav-links{display:flex;align-items:center;gap:28px}.nav-links a{color:rgba(255,255,255,.88);font-size:13.5px;font-weight:500}.nav-links a:hover{color:#fff}
+.nav-cta{background:#FFCD3F;color:#161616!important;font-weight:700!important;padding:9px 20px;border-radius:6px;font-size:13px!important}
+.sub-nav{background:#F4F4F4;border-bottom:1px solid #DDE1E6;position:sticky;top:75px;z-index:50;overflow-x:auto}
+.sub-nav-inner{display:flex;gap:4px;max-width:1200px;margin:0 auto;padding:6px 24px}
+.sub-nav a{padding:8px 16px;font-size:13px;font-weight:600;color:#525252;white-space:nowrap;border-radius:6px;transition:all .15s;display:inline-block}
+.sub-nav a:hover{color:#161616;background:rgba(0,0,0,.06)}.sub-nav a.active{color:#fff;background:#6929c4}
+.hero{background:linear-gradient(135deg,#1a0033 0%,#4a0080 50%,#6929c4 100%);padding:64px 32px 56px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60px;right:-80px;width:420px;height:420px;border-radius:50%;background:rgba(105,41,196,.3);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-100px;left:10%;width:280px;height:280px;border-radius:50%;background:rgba(138,63,252,.2);pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:20px;font-size:12.5px;color:rgba(255,255,255,.62)}.breadcrumb a{color:rgba(255,255,255,.62)}.breadcrumb a:hover{color:#fff}.breadcrumb span{color:rgba(255,255,255,.38)}
+.hero h1{font-size:42px;font-weight:800;color:#fff;margin-bottom:14px;letter-spacing:-.02em;line-height:1.15}
+.hero-sub{font-size:17px;color:rgba(255,255,255,.78);max-width:600px;margin-bottom:32px;line-height:1.6}
+.hero-stats{display:flex;gap:32px;flex-wrap:wrap}
+.stat-pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:40px;padding:10px 22px;display:flex;align-items:center;gap:10px}
+.stat-num{font-size:22px;font-weight:800;color:#FFCD3F}.stat-label{font-size:12px;color:rgba(255,255,255,.72);font-weight:500}
+.main-wrap{max-width:1200px;margin:0 auto;padding:48px 24px;display:grid;grid-template-columns:1fr 300px;gap:40px}
+@media(max-width:900px){.main-wrap{grid-template-columns:1fr}}
+.section-label{font-size:11px;font-weight:700;color:#6929c4;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.section-title{font-size:24px;font-weight:700;color:#161616;margin-bottom:6px}
+.section-sub{font-size:14px;color:#525252;margin-bottom:28px}
+
+/* Report Cards */
+.report-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;margin-bottom:48px}
+.report-card{border:1px solid #DDE1E6;border-radius:14px;overflow:hidden;transition:all .22s;background:#fff;display:flex;flex-direction:column}
+.report-card:hover{border-color:#6929c4;box-shadow:0 8px 28px rgba(105,41,196,.14);transform:translateY(-4px)}
+.report-card-header{padding:24px 22px 16px;border-bottom:1px solid #F4F4F4}
+.report-icon{font-size:32px;margin-bottom:12px;display:block}
+.report-type-badge{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:10px;display:inline-block}
+.badge-weekly{background:#EFF4FB;color:#0072C3}
+.badge-tracker{background:#f6f2ff;color:#6929c4}
+.badge-report{background:#defbe6;color:#24a148}
+.badge-funding{background:#fff2e8;color:#ff832b}
+.badge-partnership{background:#edf5ff;color:#0e62fe}
+.report-card h3{font-size:18px;font-weight:700;color:#161616;margin-bottom:6px;line-height:1.3}
+.report-card p{font-size:13px;color:#525252;line-height:1.6}
+.report-card-body{padding:16px 22px 22px;flex:1;display:flex;flex-direction:column;gap:12px}
+.report-stat-row{display:flex;gap:16px;flex-wrap:wrap}
+.report-stat{text-align:center;flex:1}
+.report-stat-num{font-size:20px;font-weight:800;color:#161616;display:block}
+.report-stat-label{font-size:11px;color:#525252;font-weight:500}
+.report-card-link{display:inline-flex;align-items:center;gap:6px;color:#6929c4;font-size:13px;font-weight:700;margin-top:auto;padding-top:4px;transition:gap .15s}
+.report-card:hover .report-card-link{gap:10px}
+.report-card-link.blue{color:#0072C3}
+.report-card-link.green{color:#24a148}
+.report-card-link.orange{color:#ff832b}
+.report-card-link.indigo{color:#0e62fe}
+
+/* Featured report */
+.featured-report{background:linear-gradient(135deg,#1a0033,#4a0080);border-radius:16px;padding:36px;margin-bottom:32px;display:flex;gap:32px;align-items:center;flex-wrap:wrap}
+.featured-report-text h2{font-size:26px;font-weight:800;color:#fff;margin-bottom:10px}
+.featured-report-text p{font-size:14px;color:rgba(255,255,255,.78);line-height:1.6;margin-bottom:18px;max-width:480px}
+.featured-badge{background:#FFCD3F;color:#161616;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;display:inline-block;margin-bottom:12px}
+.btn-yellow{background:#FFCD3F;color:#161616;font-weight:700;font-size:13px;padding:10px 20px;border-radius:6px;border:none;cursor:pointer;font-family:'Geist',sans-serif;display:inline-block;transition:opacity .15s}
+.btn-yellow:hover{opacity:.88}
+.featured-stats{display:flex;gap:20px;flex-wrap:wrap}
+.featured-stat{background:rgba(255,255,255,.12);border-radius:8px;padding:14px 18px;text-align:center}
+.featured-stat-num{font-size:24px;font-weight:800;color:#FFCD3F;display:block}
+.featured-stat-label{font-size:11px;color:rgba(255,255,255,.68);font-weight:500}
+
+/* Sidebar */
+.sidebar-card{background:#F4F4F4;border-radius:12px;padding:20px;margin-bottom:20px}
+.sidebar-card h3{font-size:14px;font-weight:700;color:#161616;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #DDE1E6}
+.filter-select{width:100%;padding:8px 10px;border:1px solid #DDE1E6;border-radius:6px;font-size:13px;font-family:'Geist',sans-serif;background:#fff;color:#161616;margin-bottom:10px}
+.quick-link{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid #DDE1E6;font-size:13px;color:#161616;transition:color .15s}.quick-link:last-child{border-bottom:none}.quick-link:hover{color:#6929c4}
+.quick-link-count{background:#6929c4;color:#fff;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:20px}
+.sidebar-cta{background:linear-gradient(135deg,#4a0080,#6929c4);border-radius:12px;padding:22px;text-align:center}
+.sidebar-cta h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}.sidebar-cta p{font-size:12.5px;color:rgba(255,255,255,.78);margin-bottom:16px;line-height:1.5}
+.new-badge{background:#FFCD3F;color:#161616;font-size:10px;font-weight:700;padding:1px 7px;border-radius:10px;margin-left:6px}
+.gated-section{background:#F4F4F4;border:2px dashed #DDE1E6;border-radius:12px;padding:40px 32px;text-align:center;margin-top:8px;position:relative;overflow:hidden}
+.gated-section::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 0%,rgba(244,244,244,.95) 40%);pointer-events:none}
+.gated-blur{filter:blur(4px);opacity:.4;pointer-events:none;font-size:13px;color:#525252;line-height:2.2;margin-bottom:20px}.gated-overlay{position:relative;z-index:2}.gated-overlay h3{font-size:18px;font-weight:700;color:#161616;margin-bottom:8px}.gated-overlay p{font-size:13.5px;color:#525252;margin-bottom:20px}.lock-icon{font-size:28px;margin-bottom:10px;display:block}
+.cta-banner{background:linear-gradient(99.62deg,#4a0080 0%,#6929c4 100%);padding:52px 32px;text-align:center;margin-top:64px}
+.cta-banner h2{font-size:30px;font-weight:800;color:#fff;margin-bottom:10px}.cta-banner p{font-size:16px;color:rgba(255,255,255,.8);margin-bottom:28px}
+.cta-dual{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn-outline-white{border:2px solid rgba(255,255,255,.6);color:#fff;font-weight:600;font-size:14px;padding:11px 24px;border-radius:6px;transition:all .15s;display:inline-block}
+.btn-outline-white:hover{background:rgba(255,255,255,.1);border-color:#fff}
+footer{background:#161616;color:rgba(255,255,255,.6);padding:48px 32px 28px}.footer-inner{max-width:1200px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
+.footer-brand img{height:28px;margin-bottom:14px;filter:brightness(10)}.footer-brand p{font-size:13px;line-height:1.7;max-width:240px}
+.footer-col h4{font-size:12px;font-weight:700;color:#fff;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}.footer-col a{display:block;font-size:13px;color:rgba(255,255,255,.55);margin-bottom:8px}.footer-col a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:12px}.footer-bottom a{color:rgba(255,255,255,.45);margin-left:18px}.footer-bottom a:hover{color:#fff}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:999;align-items:center;justify-content:center}.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:16px;padding:36px;max-width:460px;width:90%;position:relative;animation:modalIn .2s ease}
+@keyframes modalIn{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+.modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;cursor:pointer;color:#525252}.modal h2{font-size:20px;font-weight:800;color:#161616;margin-bottom:8px}.modal p{font-size:13.5px;color:#525252;margin-bottom:20px;line-height:1.6}
+.modal input{width:100%;padding:10px 13px;border:1px solid #DDE1E6;border-radius:6px;font-size:14px;font-family:'Geist',sans-serif;margin-bottom:12px;color:#161616}
+.modal .btn-yellow{width:100%;padding:12px;font-size:14px}.modal-tag{background:#f6f2ff;color:#6929c4;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;margin-bottom:14px;display:inline-block}
+</style>
+</head>
+<body>
+
+<div class="strip-banner">
+  New: Global CI Report — June 2026 edition is live. Covering 45 markets, 11,200+ events, 6 sector spotlights.
+  <a href="global-ci-report.html">Read now →</a>
+</div>
+
+<nav class="navbar">
+  <a href="https://www.contify.com/" class="nav-logo"><img src="https://www.contify.com/wp-content/uploads/2026/02/contify-logo.svg" alt="Contify"></a>
+  <div class="nav-links">
+    <a href="https://www.contify.com/platform/">Platform</a><a href="https://www.contify.com/solutions/">Solutions</a><a href="https://www.contify.com/resources/">Resources</a>
+    <a href="index.html" style="color:#FFCD3F;font-weight:700">Discover</a><a href="https://www.contify.com/pricing/">Pricing</a>
+    <a href="https://www.contify.com/request-a-demo/" class="nav-cta">Request Demo</a>
+  </div>
+</nav>
+
+<div class="sub-nav">
+  <div class="sub-nav-inner">
+    <a href="index.html" class="active">All Insights</a>
+    <a href="weekly-digest.html">Weekly Digest</a>
+    <a href="ma-tracker.html">M&A Tracker</a>
+    <a href="partnership-tracker.html">Partnerships</a>
+    <a href="funding-roundup.html">Funding Round-up</a>
+    <a href="global-ci-report.html">Global CI Report</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="https://www.contify.com/">Home</a><span>›</span>
+      <a href="#">Discover</a><span>›</span>
+      <span style="color:rgba(255,255,255,.9)">Insights</span>
+    </div>
+    <h1>Trending &amp; Insights</h1>
+    <p class="hero-sub">Curated intelligence reports, deal trackers, and sector analysis — synthesised from 11,200+ global business events tracked by Contify every month.</p>
+    <div class="hero-stats">
+      <div class="stat-pill"><span class="stat-num">11,200+</span><span class="stat-label">Events Analysed / Month</span></div>
+      <div class="stat-pill"><span class="stat-num">5</span><span class="stat-label">Report Types</span></div>
+      <div class="stat-pill"><span class="stat-num">45+</span><span class="stat-label">Markets Covered</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="main-wrap">
+  <div>
+
+    <!-- Featured Report -->
+    <div class="featured-report">
+      <div class="featured-report-text">
+        <div class="featured-badge">New — June 2026 Edition</div>
+        <h2>Global CI Report</h2>
+        <p>Our flagship monthly intelligence report synthesising 11,200+ events across 45 markets. Includes executive summary, 6 sector spotlights, M&A heatmap, and funding league tables.</p>
+        <a href="global-ci-report.html" class="btn-yellow">Read Report →</a>
+      </div>
+      <div class="featured-stats">
+        <div class="featured-stat"><span class="featured-stat-num">11,200</span><span class="featured-stat-label">Events Covered</span></div>
+        <div class="featured-stat"><span class="featured-stat-num">45</span><span class="featured-stat-label">Markets</span></div>
+        <div class="featured-stat"><span class="featured-stat-num">6</span><span class="featured-stat-label">Sector Spotlights</span></div>
+      </div>
+    </div>
+
+    <div class="section-label">Browse Intelligence Reports</div>
+    <h2 class="section-title">Curated Insight Collections</h2>
+    <p class="section-sub">Each report is updated weekly or monthly with fresh intelligence extracted from Contify's 500,000+ source tracking network.</p>
+
+    <div class="report-grid">
+
+      <a href="weekly-digest.html" class="report-card">
+        <div class="report-card-header">
+          <span class="report-icon">📋</span>
+          <div class="report-type-badge badge-weekly">Weekly · Updated Every Monday</div>
+          <h3>Weekly Intel Digest</h3>
+          <p>The top 20 competitive intelligence events from the past 7 days — curated and contextualised by our analyst team.</p>
+        </div>
+        <div class="report-card-body">
+          <div class="report-stat-row">
+            <div class="report-stat"><span class="report-stat-num">20</span><span class="report-stat-label">Top Events</span></div>
+            <div class="report-stat"><span class="report-stat-num">45+</span><span class="report-stat-label">Markets</span></div>
+            <div class="report-stat"><span class="report-stat-num">PDF</span><span class="report-stat-label">Download</span></div>
+          </div>
+          <div class="report-card-link blue">Read Digest <span>→</span></div>
+        </div>
+      </a>
+
+      <a href="ma-tracker.html" class="report-card">
+        <div class="report-card-header">
+          <span class="report-icon">🤝</span>
+          <div class="report-type-badge badge-tracker">Monthly Tracker</div>
+          <h3>M&amp;A Tracker</h3>
+          <p>187 deals tracked this month totalling $42B in value. Sector breakdown, deal size distribution, and top acquirer rankings.</p>
+        </div>
+        <div class="report-card-body">
+          <div class="report-stat-row">
+            <div class="report-stat"><span class="report-stat-num">187</span><span class="report-stat-label">Deals/Month</span></div>
+            <div class="report-stat"><span class="report-stat-num">$42B</span><span class="report-stat-label">Total Value</span></div>
+          </div>
+          <div class="report-card-link">View M&amp;A Tracker <span>→</span></div>
+        </div>
+      </a>
+
+      <a href="partnership-tracker.html" class="report-card">
+        <div class="report-card-header">
+          <span class="report-icon">🔗</span>
+          <div class="report-type-badge badge-partnership">Monthly Tracker</div>
+          <h3>Partnership Tracker</h3>
+          <p>342 strategic partnerships and alliances tracked globally this month — tech, pharma, energy and cross-sector deals.</p>
+        </div>
+        <div class="report-card-body">
+          <div class="report-stat-row">
+            <div class="report-stat"><span class="report-stat-num">342</span><span class="report-stat-label">Partnerships/Mo</span></div>
+            <div class="report-stat"><span class="report-stat-num">↑18%</span><span class="report-stat-label">vs Last Month</span></div>
+          </div>
+          <div class="report-card-link indigo">View Partnerships <span>→</span></div>
+        </div>
+      </a>
+
+      <a href="funding-roundup.html" class="report-card">
+        <div class="report-card-header">
+          <span class="report-icon">💰</span>
+          <div class="report-type-badge badge-funding">Weekly · Updated Fridays</div>
+          <h3>Funding Round-up</h3>
+          <p>$14.2B raised this week across 312 rounds globally. Series A–D, IPOs, and debt financing tracked across 45 markets.</p>
+        </div>
+        <div class="report-card-body">
+          <div class="report-stat-row">
+            <div class="report-stat"><span class="report-stat-num">$14.2B</span><span class="report-stat-label">This Week</span></div>
+            <div class="report-stat"><span class="report-stat-num">312</span><span class="report-stat-label">Rounds</span></div>
+          </div>
+          <div class="report-card-link orange">See Funding <span>→</span></div>
+        </div>
+      </a>
+
+      <a href="global-ci-report.html" class="report-card">
+        <div class="report-card-header">
+          <span class="report-icon">🌐</span>
+          <div class="report-type-badge badge-report">Monthly · June 2026</div>
+          <h3>Global CI Report</h3>
+          <p>Our flagship monthly synthesis covering all major market signals, sector trends, and geographic intelligence highlights.</p>
+        </div>
+        <div class="report-card-body">
+          <div class="report-stat-row">
+            <div class="report-stat"><span class="report-stat-num">11.2K</span><span class="report-stat-label">Events</span></div>
+            <div class="report-stat"><span class="report-stat-num">45</span><span class="report-stat-label">Markets</span></div>
+            <div class="report-stat"><span class="report-stat-num">6</span><span class="report-stat-label">Sectors</span></div>
+          </div>
+          <div class="report-card-link green">Read Report <span>→</span></div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Gated Section -->
+    <div class="gated-section">
+      <div class="gated-blur">
+        <p>Q2 2026 Regulatory Intelligence Brief · 284 regulatory events across 18 jurisdictions · GDPR, FCA, SEC enforcement tracker...</p>
+        <p>Leadership Change Report · 847 C-suite changes in June · CEO tenure analysis by sector · Succession pattern tracker...</p>
+        <p>Product Launch Intelligence · 1,240 launches tracked · Category disruption signals · Launch velocity by competitor...</p>
+      </div>
+      <div class="gated-overlay">
+        <span class="lock-icon">🔒</span>
+        <h3>Unlock 3 More Intelligence Reports</h3>
+        <p>Access the Regulatory Brief, Leadership Change Report, and Product Launch Intelligence. Available on Professional and Enterprise plans.</p>
+        <button class="btn-yellow" onclick="document.getElementById('demoModal').classList.add('open')">Unlock Full Access</button>
+      </div>
+    </div>
+  </div>
+
+  <aside>
+    <div class="sidebar-card">
+      <h3>Filter Reports</h3>
+      <select class="filter-select"><option>All Report Types</option><option>Weekly Trackers</option><option>Monthly Reports</option><option>Sector Reports</option><option>Geographic Reports</option></select>
+      <select class="filter-select"><option>All Sectors</option><option>Technology</option><option>Financial Services</option><option>Healthcare</option><option>Energy</option><option>Consumer</option></select>
+      <select class="filter-select"><option>All Geographies</option><option>Global</option><option>USA</option><option>India</option><option>UK</option><option>Europe</option><option>Middle East</option></select>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Quick Links</h3>
+      <a href="weekly-digest.html" class="quick-link">Weekly Intel Digest <span class="new-badge">New</span></a>
+      <a href="ma-tracker.html" class="quick-link">M&amp;A Tracker <span class="quick-link-count">187</span></a>
+      <a href="partnership-tracker.html" class="quick-link">Partnership Tracker <span class="quick-link-count">342</span></a>
+      <a href="funding-roundup.html" class="quick-link">Funding Round-up <span class="quick-link-count">312</span></a>
+      <a href="global-ci-report.html" class="quick-link">Global CI Report <span class="new-badge">Jun</span></a>
+    </div>
+
+    <div class="sidebar-cta">
+      <h3>Get Reports in Your Inbox</h3>
+      <p>Subscribe to weekly and monthly intelligence reports delivered straight to your team.</p>
+      <button class="btn-yellow" onclick="document.getElementById('demoModal').classList.add('open')">Subscribe Free</button>
+    </div>
+
+    <div class="sidebar-card" style="margin-top:20px">
+      <h3>Geographic Intelligence</h3>
+      <a href="../geo/index.html" class="quick-link">All Regions Hub</a>
+      <a href="../geo/usa.html" class="quick-link">🇺🇸 USA Signals</a>
+      <a href="../geo/india.html" class="quick-link">🇮🇳 India Signals</a>
+      <a href="../geo/uk.html" class="quick-link">🇬🇧 UK Signals</a>
+      <a href="../geo/middle-east.html" class="quick-link">🌍 Middle East</a>
+    </div>
+  </aside>
+</div>
+
+<div class="cta-banner">
+  <h2>Intelligence That Moves With You</h2>
+  <p>Get curated reports, custom alerts, and real-time competitive signals for your specific markets and competitors.</p>
+  <div class="cta-dual">
+    <button class="btn-yellow" onclick="document.getElementById('demoModal').classList.add('open')">Request a Demo</button>
+    <a href="https://www.contify.com/platform/" class="btn-outline-white">Explore Platform</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="https://www.contify.com/wp-content/uploads/2026/02/contify-logo.svg" alt="Contify"><p>Market and competitive intelligence platform trusted by global enterprises.</p></div>
+      <div class="footer-col"><h4>Platform</h4><a href="https://www.contify.com/platform/">Overview</a><a href="https://www.contify.com/features/">Features</a><a href="https://www.contify.com/integrations/">Integrations</a></div>
+      <div class="footer-col"><h4>Insights</h4><a href="index.html">All Insights</a><a href="weekly-digest.html">Weekly Digest</a><a href="ma-tracker.html">M&A Tracker</a><a href="funding-roundup.html">Funding Round-up</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="https://www.contify.com/about/">About</a><a href="https://www.contify.com/blog/">Blog</a><a href="https://www.contify.com/contact/">Contact</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Contify. All rights reserved.</span><div><a href="https://www.contify.com/privacy-policy/">Privacy</a><a href="https://www.contify.com/terms-of-service/">Terms</a></div></div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="demoModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('demoModal').classList.remove('open')">×</button>
+    <div class="modal-tag">Free Demo · No Credit Card</div>
+    <h2>Access All Intelligence Reports</h2>
+    <p>See how Contify's curated reports give your team a competitive edge — delivered weekly and monthly.</p>
+    <input type="text" placeholder="Your full name"><input type="email" placeholder="Work email address"><input type="text" placeholder="Company name">
+    <button class="btn-yellow">Book My Free Demo →</button>
+  </div>
+</div>
+</body>
+</html>

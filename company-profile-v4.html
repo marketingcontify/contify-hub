@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google LLC - Company Profile, Funding, News &amp; Signals | Contify</title>
+<meta name="description" content="Comprehensive company profile for Google LLC. Track funding, acquisitions, leadership, financial performance, news, and strategic signals powered by Contify.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.contify.com/company/google/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Google LLC",
+  "alternateName": "Google",
+  "url": "https://www.google.com",
+  "logo": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+  "description": "Google LLC is a global technology company specializing in internet-related services and products, including online advertising technologies, cloud computing, software, and hardware.",
+  "foundingDate": "1998-09-04",
+  "founder": [
+    {"@type": "Person", "name": "Larry Page"},
+    {"@type": "Person", "name": "Sergey Brin"}
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1600 Amphitheatre Parkway",
+    "addressLocality": "Mountain View",
+    "addressRegion": "CA",
+    "postalCode": "94043",
+    "addressCountry": "US"
+  },
+  "numberOfEmployees": {"@type": "QuantitativeValue", "value": 182502},
+  "sameAs": [
+    "https://www.linkedin.com/company/google",
+    "https://twitter.com/Google",
+    "https://www.facebook.com/Google"
+  ],
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Alphabet Inc.",
+    "url": "https://abc.xyz"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.contify.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Companies", "item": "https://www.contify.com/company/"},
+    {"@type": "ListItem", "position": 3, "name": "Google LLC", "item": "https://www.contify.com/company/google/"}
+  ]
+}
+</script>
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --blue: #0072C3;
+  --dark-blue: #00539A;
+  --yellow: #FFCD3F;
+  --teal: #3CF3FF;
+  --bg: #F4F4F4;
+  --card-bg: #ffffff;
+  --text: #161616;
+  --text-secondary: #525252;
+  --text-muted: #8D8D8D;
+  --shadow: 0 1px 3px rgba(0,0,0,.08);
+  --shadow-hover: 0 4px 12px rgba(0,0,0,.12);
+  --radius: 12px;
+  --nav-h: 75px;
+}
+
+body {
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; display: block; }
+
+/* ── STRIP BANNER ── */
+.strip-banner {
+  background: #161616;
+  color: #fff;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .2px;
+}
+.strip-banner a { color: var(--teal); font-weight: 600; }
+.strip-banner a:hover { color: #fff; }
+
+/* ── NAVBAR ── */
+.navbar {
+  height: var(--nav-h);
+  background: linear-gradient(99.62deg, #0072C3 0%, #00539A 100.4%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+}
+.nav-logo svg { height: 30px; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a {
+  color: rgba(255,255,255,.9);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color .2s;
+}
+.nav-links a:hover { color: #fff; text-decoration: none; }
+.nav-cta {
+  background: var(--yellow);
+  color: #161616;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all .2s;
+  border: none;
+  cursor: pointer;
+}
+.nav-cta:hover { background: #ffd85c; text-decoration: none; transform: translateY(-1px); }
+
+/* ── BREADCRUMB ── */
+.breadcrumb {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 16px 40px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.breadcrumb a { color: var(--text-secondary); }
+.breadcrumb span { margin: 0 6px; }
+
+/* ── COMPANY HERO HEADER ── */
+.company-hero {
+  background: linear-gradient(135deg, #001d3d 0%, #003566 40%, #0072C3 100%);
+  position: relative;
+  overflow: hidden;
+}
+.company-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(60,243,255,.12) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.company-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0,114,195,.2) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 48px 40px 32px;
+  position: relative;
+  z-index: 1;
+}
+.hero-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+.hero-logo {
+  width: 88px;
+  height: 88px;
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--blue);
+  flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,.2);
+}
+.hero-info { flex: 1; }
+.hero-info h1 {
+  color: #fff;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+.hero-info h1 .parent-org {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255,255,255,.6);
+  display: block;
+  margin-top: 4px;
+}
+.hero-desc {
+  color: rgba(255,255,255,.8);
+  font-size: 15px;
+  max-width: 720px;
+  margin: 12px 0 16px;
+  line-height: 1.65;
+}
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+.hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,.75);
+  font-size: 13px;
+}
+.hero-meta-item svg { opacity: .7; flex-shrink: 0; }
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.hero-tag {
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.85);
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(4px);
+}
+.hero-social {
+  display: flex;
+  gap: 12px;
+}
+.hero-social a {
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all .2s;
+}
+.hero-social a:hover { background: rgba(255,255,255,.2); transform: translateY(-1px); }
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+.btn-track {
+  background: var(--yellow);
+  color: #161616;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all .2s;
+}
+.btn-track:hover { background: #ffd85c; transform: translateY(-1px); }
+.btn-outline-white {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,.35);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all .2s;
+}
+.btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+
+/* Stats banner — integrated into hero */
+.stats-banner {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,.08);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 28px;
+  border: 1px solid rgba(255,255,255,.1);
+}
+.stat-item {
+  padding: 18px 20px;
+  text-align: center;
+  background: rgba(0,0,0,.15);
+  backdrop-filter: blur(8px);
+}
+.stat-value {
+  font-size: 26px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+}
+.stat-value .stat-trend {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4ADE80;
+  margin-left: 4px;
+}
+.stat-value .stat-trend.negative { color: #f87171; }
+.stat-label {
+  font-size: 12px;
+  color: rgba(255,255,255,.55);
+  font-weight: 500;
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+/* ── RELATED COMPANIES STRIP ── */
+.related-strip {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+.related-strip-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  margin-bottom: 10px;
+}
+.related-strip-list {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.related-strip-list::-webkit-scrollbar { height: 3px; }
+.related-strip-list::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+.related-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--card-bg);
+  padding: 8px 16px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  white-space: nowrap;
+  transition: all .2s;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+.related-chip:hover { box-shadow: var(--shadow-hover); text-decoration: none; color: var(--blue); transform: translateY(-1px); }
+.related-chip .chip-ico {
+  width: 28px;
+  height: 28px;
+  background: #e8f4fd;
+  color: var(--blue);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── SECTION NAV (horizontal sticky) ── */
+.section-nav-wrap {
+  background: var(--card-bg);
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 900;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.section-nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.section-nav::-webkit-scrollbar { display: none; }
+.section-nav a {
+  padding: 14px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all .2s;
+}
+.section-nav a:hover { color: var(--blue); text-decoration: none; }
+.section-nav a.active {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+  font-weight: 600;
+}
+
+/* ── MAIN GRID ── */
+.main-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 40px 100px;
+}
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.bento-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+.bento-card:hover { box-shadow: var(--shadow-hover); }
+.bento-full { grid-column: 1 / -1; }
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 0;
+}
+.card-header h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card-header h2 .card-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.card-header .view-all {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-header .view-all:hover { text-decoration: none; opacity: .8; }
+.card-body { padding: 16px 24px 24px; }
+
+/* Icon styles for cards */
+.ico-overview { background: #E8F4FD; color: #0072C3; }
+.ico-events { background: #FFF3CD; color: #856404; }
+.ico-leaders { background: #E8F5E9; color: #2E7D32; }
+.ico-conf { background: #F3E5F5; color: #7B1FA2; }
+.ico-layoffs { background: #FFEBEE; color: #C62828; }
+.ico-funding { background: #E0F2F1; color: #00695C; }
+.ico-acq { background: #FFF8E1; color: #F57F17; }
+.ico-finance { background: #E8EAF6; color: #283593; }
+.ico-news { background: #E1F5FE; color: #0277BD; }
+.ico-announce { background: #FCE4EC; color: #AD1457; }
+.ico-customers { background: #F1F8E9; color: #558B2F; }
+.ico-hq { background: #EFEBE9; color: #4E342E; }
+
+/* ── SECTION STYLES ── */
+
+/* Overview */
+.overview-text {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+.overview-text p { margin-bottom: 14px; }
+.overview-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+.overview-detail-item label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 4px;
+}
+.overview-detail-item span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Events list */
+.event-list { list-style: none; }
+.event-item {
+  padding: 14px 0;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.event-item:last-child { border-bottom: none; }
+.event-date-badge {
+  width: 48px;
+  height: 48px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.event-date-badge .edb-month {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.event-date-badge .edb-day {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+}
+.event-info { flex: 1; }
+.event-info a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+}
+.event-info a:hover { color: var(--blue); }
+.event-type {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 12px;
+  margin-top: 4px;
+}
+.event-type.acquisition { background: #FFF8E1; color: #F57F17; }
+.event-type.partnership { background: #E8F5E9; color: #2E7D32; }
+.event-type.product { background: #E8F4FD; color: #0072C3; }
+.event-type.expansion { background: #F3E5F5; color: #7B1FA2; }
+.event-type.regulatory { background: #FFEBEE; color: #C62828; }
+
+/* Leadership cards */
+.leader-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.leader-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 10px;
+  transition: background .2s;
+}
+.leader-card:hover { background: #f0f7ff; }
+.leader-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--blue);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.leader-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+.leader-role {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* Conference list */
+.conf-list { list-style: none; }
+.conf-item {
+  padding: 14px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+.conf-item:last-child { border-bottom: none; }
+.conf-item a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+.conf-item a:hover { color: var(--blue); }
+.conf-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  display: flex;
+  gap: 16px;
+}
+
+/* Layoff items */
+.layoff-list { list-style: none; }
+.layoff-item {
+  padding: 14px 0;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.layoff-item:last-child { border-bottom: none; }
+.layoff-count {
+  width: 52px;
+  height: 48px;
+  background: #FFF5F5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+  color: #C62828;
+  flex-shrink: 0;
+}
+.layoff-info { flex: 1; }
+.layoff-info .li-title { font-size: 14px; font-weight: 600; color: var(--text); }
+.layoff-info .li-date { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+/* Funding table */
+.funding-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.funding-table thead th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: var(--text-muted);
+  border-bottom: 2px solid #f0f0f0;
+  background: #fafafa;
+}
+.funding-table tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f5f5f5;
+  color: var(--text-secondary);
+}
+.funding-table tbody tr:hover { background: #f8fbff; }
+.funding-table .amount { font-weight: 700; color: var(--text); }
+
+/* Acquisitions */
+.acq-list { list-style: none; }
+.acq-item {
+  padding: 14px 0;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+.acq-item:last-child { border-bottom: none; }
+.acq-info { flex: 1; }
+.acq-info a { font-size: 14px; font-weight: 600; color: var(--text); }
+.acq-info a:hover { color: var(--blue); }
+.acq-info .acq-date { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.acq-amount {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--blue);
+  white-space: nowrap;
+}
+
+/* Financial overview */
+.finance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.finance-metric {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 16px;
+}
+.finance-metric .fm-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.finance-metric .fm-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+}
+.finance-metric .fm-change {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+.fm-change.positive { color: #16a34a; }
+.fm-change.negative { color: #dc2626; }
+
+/* News / Announcements */
+.news-list { list-style: none; }
+.news-item {
+  padding: 14px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+.news-item:last-child { border-bottom: none; }
+.news-item a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.45;
+}
+.news-item a:hover { color: var(--blue); }
+.news-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.news-source {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Customers */
+.customer-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+.customer-card {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 20px 16px;
+  text-align: center;
+  transition: all .2s;
+}
+.customer-card:hover { background: #f0f7ff; transform: translateY(-2px); }
+.customer-ico {
+  width: 48px;
+  height: 48px;
+  background: #e8f4fd;
+  color: var(--blue);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 auto 10px;
+}
+.customer-name { font-size: 13px; font-weight: 600; color: var(--text); }
+.customer-industry { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+/* HQ / Map */
+.hq-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.hq-info-panel {
+  padding: 24px;
+}
+.hq-address {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.hq-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.hq-detail label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  display: block;
+  margin-bottom: 2px;
+}
+.hq-detail span { font-size: 14px; font-weight: 600; color: var(--text); }
+.hq-map-panel {
+  min-height: 320px;
+  position: relative;
+}
+#hq-map { width: 100%; height: 100%; min-height: 320px; }
+
+/* ── GATED CONTENT ── */
+.gated-overlay {
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.95) 40%, #fff 100%);
+  padding: 60px 24px 24px;
+  margin-top: -60px;
+  position: relative;
+  text-align: center;
+}
+.gated-overlay p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+.gated-overlay .btn-gate {
+  background: var(--blue);
+  color: #fff;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all .2s;
+}
+.gated-overlay .btn-gate:hover { background: var(--dark-blue); }
+
+/* ── DUAL CTA ── */
+.dual-cta {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.cta-card {
+  border-radius: var(--radius);
+  padding: 40px;
+  text-align: center;
+}
+.cta-card.cta-primary {
+  background: linear-gradient(135deg, #0072C3 0%, #00539A 100%);
+  color: #fff;
+}
+.cta-card.cta-secondary {
+  background: linear-gradient(135deg, #161616 0%, #393939 100%);
+  color: #fff;
+}
+.cta-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+.cta-card p { font-size: 14px; opacity: .85; margin-bottom: 20px; max-width: 360px; margin-left: auto; margin-right: auto; }
+.cta-card .cta-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all .2s;
+  border: none;
+  cursor: pointer;
+}
+.cta-primary .cta-btn { background: var(--yellow); color: #161616; }
+.cta-primary .cta-btn:hover { background: #ffd85c; text-decoration: none; }
+.cta-secondary .cta-btn { background: #fff; color: #161616; }
+.cta-secondary .cta-btn:hover { background: #f0f0f0; text-decoration: none; }
+
+/* ── STICKY BOTTOM BAR ── */
+.sticky-track-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 -2px 12px rgba(0,0,0,.08);
+  z-index: 950;
+  transform: translateY(100%);
+  transition: transform .3s ease;
+}
+.sticky-track-bar.visible { transform: translateY(0); }
+.sticky-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sticky-company {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sticky-logo {
+  width: 36px;
+  height: 36px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+.sticky-name { font-size: 15px; font-weight: 700; }
+.sticky-actions { display: flex; gap: 10px; }
+.sticky-actions .btn-track { padding: 8px 24px; font-size: 13px; }
+.sticky-actions .btn-outline {
+  padding: 8px 20px;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+  transition: all .2s;
+}
+.sticky-actions .btn-outline:hover { border-color: var(--blue); color: var(--blue); }
+
+/* ── FOOTER ── */
+.footer {
+  background: #161616;
+  color: #fff;
+  padding: 60px 40px 30px;
+}
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-brand p { color: rgba(255,255,255,.6); font-size: 14px; line-height: 1.65; margin-top: 14px; max-width: 320px; }
+.footer h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; margin-bottom: 16px; color: rgba(255,255,255,.5); }
+.footer ul { list-style: none; }
+.footer ul li { margin-bottom: 10px; }
+.footer ul li a { color: rgba(255,255,255,.75); font-size: 14px; transition: color .2s; }
+.footer ul li a:hover { color: #fff; text-decoration: none; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: rgba(255,255,255,.4);
+}
+.footer-bottom a { color: rgba(255,255,255,.5); }
+.footer-bottom a:hover { color: #fff; }
+.footer-legal { display: flex; gap: 24px; }
+
+/* ── MODAL ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+.modal-box {
+  background: #fff;
+  border-radius: 16px;
+  width: 480px;
+  max-width: 90vw;
+  box-shadow: 0 20px 60px rgba(0,0,0,.2);
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: #f5f5f5;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: all .2s;
+}
+.modal-close:hover { background: #e0e0e0; color: var(--text); }
+.modal-header {
+  padding: 28px 28px 0;
+}
+.modal-header h3 { font-size: 20px; font-weight: 700; }
+.modal-header p { font-size: 14px; color: var(--text-secondary); margin-top: 6px; }
+.modal-body { padding: 24px 28px 28px; }
+.modal-body .form-group { margin-bottom: 16px; }
+.modal-body label { display: block; font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+.modal-body input, .modal-body select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color .2s;
+  outline: none;
+}
+.modal-body input:focus, .modal-body select:focus { border-color: var(--blue); }
+.modal-body .btn-submit {
+  width: 100%;
+  padding: 12px;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background .2s;
+  margin-top: 4px;
+}
+.modal-body .btn-submit:hover { background: var(--dark-blue); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .bento-grid { grid-template-columns: 1fr; }
+  .dual-cta { grid-template-columns: 1fr; }
+  .stats-banner { grid-template-columns: repeat(3, 1fr); }
+  .customer-grid { grid-template-columns: repeat(3, 1fr); }
+  .hq-inner { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: repeat(3, 1fr); }
+  .overview-details { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .navbar { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero-inner { padding: 32px 20px 24px; }
+  .hero-info h1 { font-size: 28px; }
+  .stats-banner { grid-template-columns: repeat(2, 1fr); }
+  .breadcrumb, .related-strip, .main-container { padding-left: 20px; padding-right: 20px; }
+  .customer-grid { grid-template-columns: repeat(2, 1fr); }
+  .leader-grid { grid-template-columns: 1fr; }
+  .finance-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .hero-actions { flex-direction: column; }
+  .hero-top { flex-direction: column; gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- STRIP BANNER -->
+<div class="strip-banner">
+  Contify named a Visionary in 2026 Gartner Magic Quadrant for Market &amp; Competitive Intelligence.
+  <a href="https://www.contify.com/gartner-magic-quadrant/">Read the report &rarr;</a>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <a href="https://www.contify.com/" class="nav-logo">
+    <svg viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="28" rx="6" fill="#fff"/><text x="6" y="21" font-size="18" font-weight="800" fill="#0072C3" font-family="Geist,sans-serif">C</text><text x="34" y="22" font-size="20" font-weight="700" fill="#fff" font-family="Geist,sans-serif">contify</text></svg>
+  </a>
+  <div class="nav-links">
+    <a href="https://www.contify.com/platform/">Platform</a>
+    <a href="https://www.contify.com/solutions/">Solutions</a>
+    <a href="https://www.contify.com/company/">Companies</a>
+    <a href="https://www.contify.com/resources/">Resources</a>
+    <a href="https://www.contify.com/pricing/">Pricing</a>
+    <a href="https://www.contify.com/demo/" class="nav-cta">Book a Demo</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb" aria-label="Breadcrumb">
+  <a href="https://www.contify.com/">Home</a><span>/</span>
+  <a href="https://www.contify.com/company/">Companies</a><span>/</span>
+  <strong>Google LLC</strong>
+</div>
+
+<!-- COMPANY HERO -->
+<section class="company-hero">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <div class="hero-logo">G</div>
+      <div class="hero-info">
+        <h1>
+          Google LLC
+          <span class="parent-org">Subsidiary of Alphabet Inc. (NASDAQ: GOOGL)</span>
+        </h1>
+        <p class="hero-desc">Google LLC is a global technology company specializing in internet-related services and products, including online advertising technologies, a search engine, cloud computing, software, and hardware. Founded in 1998 by Larry Page and Sergey Brin, Google's mission is to organize the world's information and make it universally accessible and useful.</p>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Mountain View, CA, USA
+          </div>
+          <div class="hero-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            Technology &bull; Internet Services
+          </div>
+          <div class="hero-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            Founded 1998
+          </div>
+          <div class="hero-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Public (NASDAQ: GOOGL)
+          </div>
+          <div class="hero-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            google.com
+          </div>
+        </div>
+        <div class="hero-tags">
+          <span class="hero-tag">Artificial Intelligence</span>
+          <span class="hero-tag">Cloud Computing</span>
+          <span class="hero-tag">Online Advertising</span>
+          <span class="hero-tag">Search Engine</span>
+          <span class="hero-tag">Hardware</span>
+          <span class="hero-tag">Big Data</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+          <div class="hero-social">
+            <a href="https://www.linkedin.com/company/google" title="LinkedIn" aria-label="Google LinkedIn profile"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://twitter.com/Google" title="X / Twitter" aria-label="Google X profile"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://www.facebook.com/Google" title="Facebook" aria-label="Google Facebook page"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="https://www.youtube.com/google" title="YouTube" aria-label="Google YouTube channel"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><polygon fill="#fff" points="9.545,15.568 15.818,12 9.545,8.432"/></svg></a>
+          </div>
+          <div class="hero-actions">
+            <button class="btn-track" onclick="openModal()">Track Google</button>
+            <button class="btn-outline-white" onclick="openModal()">Download Profile</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Banner (integrated in hero) -->
+    <div class="stats-banner">
+      <div class="stat-item">
+        <div class="stat-value">$307.4B<span class="stat-trend">+14%</span></div>
+        <div class="stat-label">Annual Revenue</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">182,502</div>
+        <div class="stat-label">Employees</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">$2.1T</div>
+        <div class="stat-label">Market Cap</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">347<span class="stat-trend">+23%</span></div>
+        <div class="stat-label">Signals / Week</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">+18.2%</div>
+        <div class="stat-label">YoY Growth</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED COMPANIES STRIP -->
+<div class="related-strip">
+  <div class="related-strip-label">Related Companies</div>
+  <div class="related-strip-list">
+    <a href="/company/microsoft/" class="related-chip"><span class="chip-ico">MS</span> Microsoft</a>
+    <a href="/company/amazon/" class="related-chip"><span class="chip-ico">AZ</span> Amazon</a>
+    <a href="/company/apple/" class="related-chip"><span class="chip-ico">AP</span> Apple</a>
+    <a href="/company/meta/" class="related-chip"><span class="chip-ico">ME</span> Meta Platforms</a>
+    <a href="/company/nvidia/" class="related-chip"><span class="chip-ico">NV</span> NVIDIA</a>
+    <a href="/company/openai/" class="related-chip"><span class="chip-ico">OA</span> OpenAI</a>
+    <a href="/company/salesforce/" class="related-chip"><span class="chip-ico">SF</span> Salesforce</a>
+    <a href="/company/oracle/" class="related-chip"><span class="chip-ico">OR</span> Oracle</a>
+    <a href="/company/ibm/" class="related-chip"><span class="chip-ico">IB</span> IBM</a>
+    <a href="/company/adobe/" class="related-chip"><span class="chip-ico">AD</span> Adobe</a>
+    <a href="/company/alphabet/" class="related-chip"><span class="chip-ico">AL</span> Alphabet Inc.</a>
+    <a href="/company/samsung/" class="related-chip"><span class="chip-ico">SA</span> Samsung</a>
+  </div>
+</div>
+
+<!-- SECTION NAV -->
+<div class="section-nav-wrap">
+  <div class="section-nav" id="sectionNav">
+    <a href="#overview" class="active">Overview</a>
+    <a href="#events">Business Events</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#conferences">Conferences</a>
+    <a href="#layoffs">Layoffs</a>
+    <a href="#funding">Funding</a>
+    <a href="#acquisitions">Acquisitions</a>
+    <a href="#financial">Financial</a>
+    <a href="#news">News</a>
+    <a href="#announcements">Announcements</a>
+    <a href="#customers">Customers</a>
+    <a href="#hq">Headquarters</a>
+  </div>
+</div>
+
+<!-- MAIN BENTO GRID -->
+<main class="main-container">
+  <div class="bento-grid">
+
+    <!-- ═══════ 1. COMPANY OVERVIEW — full width ═══════ -->
+    <section class="bento-card bento-full" id="overview">
+      <div class="card-header">
+        <h2><span class="card-icon ico-overview">OV</span> Company Overview</h2>
+      </div>
+      <div class="card-body">
+        <div class="overview-text">
+          <p>Google LLC, a wholly-owned subsidiary of Alphabet Inc., is the world's leading technology company with dominant positions in search, online advertising, cloud computing, and artificial intelligence. The company's search engine processes over 8.5 billion queries per day, commanding approximately 91.6% of the global search engine market share.</p>
+          <p>In 2025, Google significantly accelerated its AI strategy with the expansion of Gemini, its multimodal large language model, across all consumer products and enterprise services. Google Cloud Platform (GCP) achieved a $40 billion annualized revenue run rate, growing at 28% year-over-year, positioning it as the third-largest cloud infrastructure provider globally behind AWS and Microsoft Azure.</p>
+          <p>The company continues to invest heavily in hardware through its Pixel smartphone line, Tensor chip development, and quantum computing research via its Willow quantum processor. Google's advertising business, spanning Search, YouTube, and its Display Network, remains the primary revenue driver, generating over $237 billion in advertising revenue in the trailing twelve months.</p>
+        </div>
+        <div class="overview-details">
+          <div class="overview-detail-item">
+            <label>Legal Name</label>
+            <span>Google LLC</span>
+          </div>
+          <div class="overview-detail-item">
+            <label>Parent Organization</label>
+            <span>Alphabet Inc.</span>
+          </div>
+          <div class="overview-detail-item">
+            <label>CEO</label>
+            <span>Sundar Pichai</span>
+          </div>
+          <div class="overview-detail-item">
+            <label>Founded</label>
+            <span>September 4, 1998</span>
+          </div>
+          <div class="overview-detail-item">
+            <label>Headquarters</label>
+            <span>Mountain View, CA</span>
+          </div>
+          <div class="overview-detail-item">
+            <label>Stock Exchange</label>
+            <span>NASDAQ: GOOGL</span>
+          </div>
+          <div class="overview-detail-item">
+            <label>Industry</label>
+            <span>Technology / Internet</span>
+          </div>
+          <div class="overview-detail-item">
+            <label>SIC Code</label>
+            <span>7372 - Prepackaged Software</span>
+          </div>
+          <div class="overview-detail-item">
+            <label>Website</label>
+            <span><a href="https://www.google.com" target="_blank" rel="noopener">google.com</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ 2. BUSINESS EVENTS — left column ═══════ -->
+    <section class="bento-card" id="events">
+      <div class="card-header">
+        <h2><span class="card-icon ico-events">BE</span> Business Events</h2>
+        <a href="/company/google/events/" class="view-all">View all <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="card-body">
+        <ul class="event-list">
+          <li class="event-item">
+            <div class="event-date-badge"><span class="edb-month">Jun</span><span class="edb-day">12</span></div>
+            <div class="event-info">
+              <a href="/company/google/events/google-acquires-wiz-cybersecurity/">Google Completes $32B Acquisition of Wiz, Largest Deal in Company History</a>
+              <span class="event-type acquisition">Acquisition</span>
+            </div>
+          </li>
+          <li class="event-item">
+            <div class="event-date-badge"><span class="edb-month">Jun</span><span class="edb-day">06</span></div>
+            <div class="event-info">
+              <a href="/company/google/events/google-partners-samsung-xr-platform/">Google and Samsung Announce Joint XR Platform for Next-Gen Mixed Reality</a>
+              <span class="event-type partnership">Partnership</span>
+            </div>
+          </li>
+          <li class="event-item">
+            <div class="event-date-badge"><span class="edb-month">May</span><span class="edb-day">28</span></div>
+            <div class="event-info">
+              <a href="/company/google/events/gemini-2-ultra-launch/">Google Launches Gemini 2.0 Ultra with Enhanced Multimodal Reasoning</a>
+              <span class="event-type product">Product Launch</span>
+            </div>
+          </li>
+          <li class="event-item">
+            <div class="event-date-badge"><span class="edb-month">May</span><span class="edb-day">15</span></div>
+            <div class="event-info">
+              <a href="/company/google/events/google-cloud-japan-expansion/">Google Cloud Announces $4B Data Center Expansion in Japan</a>
+              <span class="event-type expansion">Expansion</span>
+            </div>
+          </li>
+          <li class="event-item">
+            <div class="event-date-badge"><span class="edb-month">May</span><span class="edb-day">03</span></div>
+            <div class="event-info">
+              <a href="/company/google/events/doj-antitrust-search-ruling/">DOJ Antitrust Ruling Orders Google to Offer Choice Screen for Default Search</a>
+              <span class="event-type regulatory">Regulatory</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════ 3. LEADERSHIP TEAM — right column ═══════ -->
+    <section class="bento-card" id="leadership">
+      <div class="card-header">
+        <h2><span class="card-icon ico-leaders">LT</span> Leadership Team</h2>
+      </div>
+      <div class="card-body">
+        <div class="leader-grid">
+          <div class="leader-card">
+            <div class="leader-avatar">SP</div>
+            <div>
+              <div class="leader-name">Sundar Pichai</div>
+              <div class="leader-role">CEO, Google &amp; Alphabet</div>
+            </div>
+          </div>
+          <div class="leader-card">
+            <div class="leader-avatar" style="background:#00695C;">RK</div>
+            <div>
+              <div class="leader-name">Ruth Porat</div>
+              <div class="leader-role">President &amp; CIO, Alphabet</div>
+            </div>
+          </div>
+          <div class="leader-card">
+            <div class="leader-avatar" style="background:#7B1FA2;">PH</div>
+            <div>
+              <div class="leader-name">Philipp Schindler</div>
+              <div class="leader-role">SVP &amp; CBO, Google</div>
+            </div>
+          </div>
+          <div class="leader-card">
+            <div class="leader-avatar" style="background:#C62828;">TK</div>
+            <div>
+              <div class="leader-name">Thomas Kurian</div>
+              <div class="leader-role">CEO, Google Cloud</div>
+            </div>
+          </div>
+          <div class="leader-card">
+            <div class="leader-avatar" style="background:#F57F17;">PB</div>
+            <div>
+              <div class="leader-name">Prabhakar Raghavan</div>
+              <div class="leader-role">SVP, Knowledge &amp; Info</div>
+            </div>
+          </div>
+          <div class="leader-card">
+            <div class="leader-avatar" style="background:#283593;">JD</div>
+            <div>
+              <div class="leader-name">Jeff Dean</div>
+              <div class="leader-role">Chief Scientist, Google DeepMind</div>
+            </div>
+          </div>
+          <div class="leader-card">
+            <div class="leader-avatar" style="background:#AD1457;">DH</div>
+            <div>
+              <div class="leader-name">Demis Hassabis</div>
+              <div class="leader-role">CEO, Google DeepMind</div>
+            </div>
+          </div>
+          <div class="leader-card">
+            <div class="leader-avatar" style="background:#558B2F;">HM</div>
+            <div>
+              <div class="leader-name">Hiroshi Lockheimer</div>
+              <div class="leader-role">SVP, Platforms &amp; Ecosystems</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ 4. CONFERENCES — left column ═══════ -->
+    <section class="bento-card" id="conferences">
+      <div class="card-header">
+        <h2><span class="card-icon ico-conf">IC</span> Industry Conferences</h2>
+        <a href="/company/google/events/" class="view-all">View all <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="card-body">
+        <ul class="conf-list">
+          <li class="conf-item">
+            <a href="/company/google/events/google-io-2026/">Google I/O 2026</a>
+            <div class="conf-meta">
+              <span>May 14-15, 2026</span>
+              <span>Shoreline Amphitheatre, Mountain View</span>
+            </div>
+          </li>
+          <li class="conf-item">
+            <a href="/company/google/events/google-cloud-next-2026/">Google Cloud Next '26</a>
+            <div class="conf-meta">
+              <span>Apr 9-11, 2026</span>
+              <span>Mandalay Bay, Las Vegas</span>
+            </div>
+          </li>
+          <li class="conf-item">
+            <a href="/company/google/events/ces-2026/">CES 2026</a>
+            <div class="conf-meta">
+              <span>Jan 7-10, 2026</span>
+              <span>Las Vegas Convention Center</span>
+            </div>
+          </li>
+          <li class="conf-item">
+            <a href="/company/google/events/neurips-2025/">NeurIPS 2025</a>
+            <div class="conf-meta">
+              <span>Dec 10-16, 2025</span>
+              <span>Vancouver Convention Centre</span>
+            </div>
+          </li>
+          <li class="conf-item">
+            <a href="/company/google/events/google-for-games-summit-2026/">Google for Games Developer Summit 2026</a>
+            <div class="conf-meta">
+              <span>Mar 18, 2026</span>
+              <span>Virtual Event</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════ 5. LAYOFFS — right column ═══════ -->
+    <section class="bento-card" id="layoffs">
+      <div class="card-header">
+        <h2><span class="card-icon ico-layoffs">LO</span> Layoffs &amp; Restructuring</h2>
+      </div>
+      <div class="card-body">
+        <ul class="layoff-list">
+          <li class="layoff-item">
+            <div class="layoff-count">~200</div>
+            <div class="layoff-info">
+              <div class="li-title">Google reduces headcount in Cloud sales division as part of AI-focused restructuring</div>
+              <div class="li-date">March 2026 &bull; Cloud Division</div>
+            </div>
+          </li>
+          <li class="layoff-item">
+            <div class="layoff-count">~150</div>
+            <div class="layoff-info">
+              <div class="li-title">Pixel hardware team restructured; roles shifted to AI-integrated device development</div>
+              <div class="li-date">January 2026 &bull; Hardware Division</div>
+            </div>
+          </li>
+          <li class="layoff-item">
+            <div class="layoff-count">1,000+</div>
+            <div class="layoff-info">
+              <div class="li-title">Google conducts performance-based reductions across engineering and corporate functions</div>
+              <div class="li-date">September 2025 &bull; Multiple Divisions</div>
+            </div>
+          </li>
+          <li class="layoff-item">
+            <div class="layoff-count">~300</div>
+            <div class="layoff-info">
+              <div class="li-title">Ads team reorganization consolidates roles following automation of campaign management</div>
+              <div class="li-date">July 2025 &bull; Advertising Division</div>
+            </div>
+          </li>
+        </ul>
+        <!-- Gated overlay -->
+        <div class="gated-overlay">
+          <p>Sign up to access the full layoff history and workforce analytics for Google.</p>
+          <button class="btn-gate" onclick="openModal()">Unlock Full Report</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ 6. FUNDING & INVESTMENTS — full width ═══════ -->
+    <section class="bento-card bento-full" id="funding">
+      <div class="card-header">
+        <h2><span class="card-icon ico-funding">FI</span> Funding &amp; Investments</h2>
+        <a href="/company/google/investments/" class="view-all">View all investments <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="card-body">
+        <table class="funding-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Company / Entity</th>
+              <th>Round</th>
+              <th>Amount</th>
+              <th>Sector</th>
+              <th>Co-Investors</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jun 2026</td>
+              <td><a href="/company/anthropic/">Anthropic</a></td>
+              <td>Series E</td>
+              <td class="amount">$2.0B</td>
+              <td>Artificial Intelligence</td>
+              <td>Spark Capital, Salesforce Ventures</td>
+            </tr>
+            <tr>
+              <td>Apr 2026</td>
+              <td><a href="/company/flipkart/">Flipkart</a></td>
+              <td>Late Stage</td>
+              <td class="amount">$700M</td>
+              <td>E-Commerce</td>
+              <td>Walmart, Tiger Global</td>
+            </tr>
+            <tr>
+              <td>Mar 2026</td>
+              <td><a href="/company/mistral-ai/">Mistral AI</a></td>
+              <td>Series B</td>
+              <td class="amount">$640M</td>
+              <td>Generative AI</td>
+              <td>Andreessen Horowitz, NVIDIA</td>
+            </tr>
+            <tr>
+              <td>Jan 2026</td>
+              <td><a href="/company/character-ai/">Character.AI</a></td>
+              <td>Growth Equity</td>
+              <td class="amount">$250M</td>
+              <td>AI / Consumer Tech</td>
+              <td>A16Z</td>
+            </tr>
+            <tr>
+              <td>Nov 2025</td>
+              <td><a href="/company/glean/">Glean</a></td>
+              <td>Series D</td>
+              <td class="amount">$200M</td>
+              <td>Enterprise AI Search</td>
+              <td>Sequoia, Kleiner Perkins</td>
+            </tr>
+            <tr>
+              <td>Sep 2025</td>
+              <td><a href="/company/replit/">Replit</a></td>
+              <td>Series C</td>
+              <td class="amount">$175M</td>
+              <td>Developer Tools / AI</td>
+              <td>A16Z, Craft Ventures</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ═══════ 7. STRATEGIC ACQUISITIONS — left column ═══════ -->
+    <section class="bento-card" id="acquisitions">
+      <div class="card-header">
+        <h2><span class="card-icon ico-acq">SA</span> Strategic Acquisitions</h2>
+        <a href="/company/google/mergers-acquisitions/" class="view-all">View all <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="card-body">
+        <ul class="acq-list">
+          <li class="acq-item">
+            <div class="acq-info">
+              <a href="/company/google/mergers-acquisitions/wiz-acquisition/">Wiz (Cybersecurity)</a>
+              <div class="acq-date">June 2026 &bull; Cloud Security</div>
+            </div>
+            <div class="acq-amount">$32.0B</div>
+          </li>
+          <li class="acq-item">
+            <div class="acq-info">
+              <a href="/company/google/mergers-acquisitions/cais-acquisition/">Cais Group (Data Analytics)</a>
+              <div class="acq-date">February 2026 &bull; AI Analytics</div>
+            </div>
+            <div class="acq-amount">$580M</div>
+          </li>
+          <li class="acq-item">
+            <div class="acq-info">
+              <a href="/company/google/mergers-acquisitions/photomath-integration/">Photomath (EdTech)</a>
+              <div class="acq-date">October 2025 &bull; Education</div>
+            </div>
+            <div class="acq-amount">$390M</div>
+          </li>
+          <li class="acq-item">
+            <div class="acq-info">
+              <a href="/company/google/mergers-acquisitions/mandiant-integration/">Mandiant (Cybersecurity)</a>
+              <div class="acq-date">Completed 2022 &bull; Security</div>
+            </div>
+            <div class="acq-amount">$5.4B</div>
+          </li>
+          <li class="acq-item">
+            <div class="acq-info">
+              <a href="/company/google/mergers-acquisitions/fitbit/">Fitbit (Wearables)</a>
+              <div class="acq-date">Completed 2021 &bull; Hardware</div>
+            </div>
+            <div class="acq-amount">$2.1B</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════ 8. FINANCIAL OVERVIEW — right column ═══════ -->
+    <section class="bento-card" id="financial">
+      <div class="card-header">
+        <h2><span class="card-icon ico-finance">FO</span> Financial Overview</h2>
+      </div>
+      <div class="card-body">
+        <div class="finance-grid">
+          <div class="finance-metric">
+            <div class="fm-label">Revenue (TTM)</div>
+            <div class="fm-value">$307.4B</div>
+            <div class="fm-change positive">+14.0% YoY</div>
+          </div>
+          <div class="finance-metric">
+            <div class="fm-label">Net Income (TTM)</div>
+            <div class="fm-value">$86.2B</div>
+            <div class="fm-change positive">+21.3% YoY</div>
+          </div>
+          <div class="finance-metric">
+            <div class="fm-label">Operating Margin</div>
+            <div class="fm-value">32.4%</div>
+            <div class="fm-change positive">+2.1pp YoY</div>
+          </div>
+          <div class="finance-metric">
+            <div class="fm-label">Free Cash Flow</div>
+            <div class="fm-value">$69.8B</div>
+            <div class="fm-change positive">+18.7% YoY</div>
+          </div>
+          <div class="finance-metric">
+            <div class="fm-label">Cloud Revenue</div>
+            <div class="fm-value">$41.2B</div>
+            <div class="fm-change positive">+28.4% YoY</div>
+          </div>
+          <div class="finance-metric">
+            <div class="fm-label">Ad Revenue</div>
+            <div class="fm-value">$237.9B</div>
+            <div class="fm-change positive">+10.8% YoY</div>
+          </div>
+        </div>
+        <!-- Gated overlay -->
+        <div class="gated-overlay">
+          <p>Access detailed financial breakdowns, quarterly trends, and segment analysis.</p>
+          <button class="btn-gate" onclick="openModal()">Unlock Financial Data</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ 9. COMPANY NEWS — left column ═══════ -->
+    <section class="bento-card" id="news">
+      <div class="card-header">
+        <h2><span class="card-icon ico-news">CN</span> Company News</h2>
+        <a href="/company/google/news/" class="view-all">View all <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="card-body">
+        <ul class="news-list">
+          <li class="news-item">
+            <a href="/company/google/news/google-gemini-2-enterprise-rollout/">Google Rolls Out Gemini 2.0 Enterprise Features Across Workspace Suite</a>
+            <div class="news-meta">
+              <span class="news-source">TechCrunch</span>
+              <span>Jun 16, 2026</span>
+            </div>
+          </li>
+          <li class="news-item">
+            <a href="/company/google/news/google-cloud-sovereign-ai-europe/">Google Cloud Launches Sovereign AI Solutions for European Government Clients</a>
+            <div class="news-meta">
+              <span class="news-source">Reuters</span>
+              <span>Jun 11, 2026</span>
+            </div>
+          </li>
+          <li class="news-item">
+            <a href="/company/google/news/waymo-expands-phoenix-la/">Waymo Expands Autonomous Ride-Hailing to Phoenix Suburbs and LA Metro</a>
+            <div class="news-meta">
+              <span class="news-source">The Verge</span>
+              <span>Jun 5, 2026</span>
+            </div>
+          </li>
+          <li class="news-item">
+            <a href="/company/google/news/pixel-10-leak-tensor-g5/">Pixel 10 Details Emerge: Custom Tensor G5 Chip with On-Device AI Processing</a>
+            <div class="news-meta">
+              <span class="news-source">Android Authority</span>
+              <span>May 29, 2026</span>
+            </div>
+          </li>
+          <li class="news-item">
+            <a href="/company/google/news/youtube-premium-ai-features/">YouTube Premium Introduces AI-Powered Chapter Summaries and Auto-Dubbing</a>
+            <div class="news-meta">
+              <span class="news-source">Bloomberg</span>
+              <span>May 22, 2026</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════ 10. OFFICIAL ANNOUNCEMENTS — right column ═══════ -->
+    <section class="bento-card" id="announcements">
+      <div class="card-header">
+        <h2><span class="card-icon ico-announce">OA</span> Official Announcements</h2>
+        <a href="/company/google/announcements/" class="view-all">View all <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="card-body">
+        <ul class="news-list">
+          <li class="news-item">
+            <a href="/company/google/announcements/google-annual-sustainability-report-2026/">Google Publishes 2026 Annual Sustainability Report, Achieves Carbon-Free Energy Goal</a>
+            <div class="news-meta">
+              <span class="news-source">Google Blog</span>
+              <span>Jun 14, 2026</span>
+            </div>
+          </li>
+          <li class="news-item">
+            <a href="/company/google/announcements/google-responsible-ai-framework-update/">Google Updates Responsible AI Framework with New Safety Benchmarks</a>
+            <div class="news-meta">
+              <span class="news-source">Google AI Blog</span>
+              <span>Jun 8, 2026</span>
+            </div>
+          </li>
+          <li class="news-item">
+            <a href="/company/google/announcements/q1-2026-earnings/">Alphabet Reports Q1 2026 Earnings: Revenue Up 15% to $82.6B</a>
+            <div class="news-meta">
+              <span class="news-source">Investor Relations</span>
+              <span>Apr 24, 2026</span>
+            </div>
+          </li>
+          <li class="news-item">
+            <a href="/company/google/announcements/android-16-developer-preview/">Android 16 Developer Preview 2 Released with Desktop Windowing Mode</a>
+            <div class="news-meta">
+              <span class="news-source">Android Developers Blog</span>
+              <span>Mar 20, 2026</span>
+            </div>
+          </li>
+          <li class="news-item">
+            <a href="/company/google/announcements/google-for-startups-ai-program/">Google for Startups Launches $50M AI-First Accelerator Program</a>
+            <div class="news-meta">
+              <span class="news-source">Google Blog</span>
+              <span>Feb 12, 2026</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════ 11. KEY CUSTOMERS — full width ═══════ -->
+    <section class="bento-card bento-full" id="customers">
+      <div class="card-header">
+        <h2><span class="card-icon ico-customers">KC</span> Key Customers &amp; Partners</h2>
+        <a href="/company/google/partnerships/" class="view-all">View all partnerships <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="card-body">
+        <div class="customer-grid">
+          <div class="customer-card">
+            <div class="customer-ico">WM</div>
+            <div class="customer-name">Walmart</div>
+            <div class="customer-industry">Retail</div>
+          </div>
+          <div class="customer-card">
+            <div class="customer-ico" style="background:#fff3cd;color:#856404;">PG</div>
+            <div class="customer-name">P&amp;G</div>
+            <div class="customer-industry">Consumer Goods</div>
+          </div>
+          <div class="customer-card">
+            <div class="customer-ico" style="background:#e8f5e9;color:#2e7d32;">UL</div>
+            <div class="customer-name">Unilever</div>
+            <div class="customer-industry">Consumer Goods</div>
+          </div>
+          <div class="customer-card">
+            <div class="customer-ico" style="background:#fce4ec;color:#ad1457;">TM</div>
+            <div class="customer-name">T-Mobile</div>
+            <div class="customer-industry">Telecommunications</div>
+          </div>
+          <div class="customer-card">
+            <div class="customer-ico" style="background:#e8eaf6;color:#283593;">GS</div>
+            <div class="customer-name">Goldman Sachs</div>
+            <div class="customer-industry">Financial Services</div>
+          </div>
+          <div class="customer-card">
+            <div class="customer-ico" style="background:#f3e5f5;color:#7b1fa2;">MY</div>
+            <div class="customer-name">Mayo Clinic</div>
+            <div class="customer-industry">Healthcare</div>
+          </div>
+          <div class="customer-card">
+            <div class="customer-ico" style="background:#e0f2f1;color:#00695c;">SP</div>
+            <div class="customer-name">Spotify</div>
+            <div class="customer-industry">Media & Entertainment</div>
+          </div>
+          <div class="customer-card">
+            <div class="customer-ico" style="background:#fff8e1;color:#f57f17;">SA</div>
+            <div class="customer-name">SAP</div>
+            <div class="customer-industry">Enterprise Software</div>
+          </div>
+          <div class="customer-card">
+            <div class="customer-ico" style="background:#ffebee;color:#c62828;">TG</div>
+            <div class="customer-name">Target</div>
+            <div class="customer-industry">Retail</div>
+          </div>
+          <div class="customer-card">
+            <div class="customer-ico" style="background:#e1f5fe;color:#0277bd;">AI</div>
+            <div class="customer-name">Airbus</div>
+            <div class="customer-industry">Aerospace</div>
+          </div>
+          <div class="customer-card">
+            <div class="customer-ico" style="background:#f1f8e9;color:#558b2f;">PF</div>
+            <div class="customer-name">Pfizer</div>
+            <div class="customer-industry">Pharmaceuticals</div>
+          </div>
+          <div class="customer-card">
+            <div class="customer-ico" style="background:#efebe9;color:#4e342e;">DB</div>
+            <div class="customer-name">Deutsche Bank</div>
+            <div class="customer-industry">Banking</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ 12. CORPORATE HEADQUARTERS — full width ═══════ -->
+    <section class="bento-card bento-full" id="hq">
+      <div class="card-header">
+        <h2><span class="card-icon ico-hq">HQ</span> Corporate Headquarters</h2>
+      </div>
+      <div class="hq-inner">
+        <div class="hq-info-panel">
+          <div class="card-body" style="padding:16px 0 0;">
+            <div class="hq-address">
+              <strong>Googleplex</strong><br>
+              1600 Amphitheatre Parkway<br>
+              Mountain View, CA 94043<br>
+              United States
+            </div>
+            <div class="hq-details-grid">
+              <div class="hq-detail">
+                <label>Phone</label>
+                <span>+1 (650) 253-0000</span>
+              </div>
+              <div class="hq-detail">
+                <label>Timezone</label>
+                <span>PT (UTC-8)</span>
+              </div>
+              <div class="hq-detail">
+                <label>Campus Size</label>
+                <span>3.1M sq ft</span>
+              </div>
+              <div class="hq-detail">
+                <label>Built</label>
+                <span>2004 (Expanded 2015)</span>
+              </div>
+              <div class="hq-detail">
+                <label>Global Offices</label>
+                <span>150+ locations</span>
+              </div>
+              <div class="hq-detail">
+                <label>Region</label>
+                <span>San Francisco Bay Area</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hq-map-panel">
+          <div id="hq-map"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ DUAL CTA ═══════ -->
+    <div class="dual-cta">
+      <div class="cta-card cta-primary">
+        <h3>Track Google Signals</h3>
+        <p>Get real-time alerts on funding, acquisitions, leadership changes, and strategic moves for Google and 900K+ companies.</p>
+        <a href="https://www.contify.com/demo/" class="cta-btn">Book a Demo</a>
+      </div>
+      <div class="cta-card cta-secondary">
+        <h3>Explore Contify Platform</h3>
+        <p>AI-powered market and competitive intelligence platform trusted by Fortune 500 companies worldwide.</p>
+        <a href="https://www.contify.com/platform/" class="cta-btn">See Platform</a>
+      </div>
+    </div>
+
+  </div><!-- end bento-grid -->
+</main>
+
+<!-- STICKY BOTTOM BAR -->
+<div class="sticky-track-bar" id="stickyBar">
+  <div class="sticky-inner">
+    <div class="sticky-company">
+      <div class="sticky-logo">G</div>
+      <div class="sticky-name">Google LLC</div>
+    </div>
+    <div class="sticky-actions">
+      <button class="btn-outline" onclick="openModal()">Download Profile</button>
+      <button class="btn-track" onclick="openModal()">Track Google</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-size:22px;font-weight:700;">contify</div>
+        <p>AI-powered market and competitive intelligence platform. Track competitors, monitor markets, and surface strategic signals from 900K+ companies.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="https://www.contify.com/platform/">Overview</a></li>
+          <li><a href="https://www.contify.com/news-api/">News API</a></li>
+          <li><a href="https://www.contify.com/company/">Company Profiles</a></li>
+          <li><a href="https://www.contify.com/integrations/">Integrations</a></li>
+          <li><a href="https://www.contify.com/pricing/">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="https://www.contify.com/competitive-intelligence/">Competitive Intelligence</a></li>
+          <li><a href="https://www.contify.com/market-intelligence/">Market Intelligence</a></li>
+          <li><a href="https://www.contify.com/sales-intelligence/">Sales Intelligence</a></li>
+          <li><a href="https://www.contify.com/strategic-intelligence/">Strategic Intelligence</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="https://www.contify.com/blog/">Blog</a></li>
+          <li><a href="https://www.contify.com/case-studies/">Case Studies</a></li>
+          <li><a href="https://www.contify.com/guides/">Guides</a></li>
+          <li><a href="https://www.contify.com/webinars/">Webinars</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://www.contify.com/about/">About Us</a></li>
+          <li><a href="https://www.contify.com/careers/">Careers</a></li>
+          <li><a href="https://www.contify.com/contact/">Contact</a></li>
+          <li><a href="https://www.contify.com/security/">Security</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Contify. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="https://www.contify.com/privacy-policy/">Privacy Policy</a>
+        <a href="https://www.contify.com/terms/">Terms of Service</a>
+        <a href="https://www.contify.com/cookie-policy/">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
+    <div class="modal-header">
+      <h3>Track Google LLC</h3>
+      <p>Get real-time intelligence signals, alerts, and reports delivered to your inbox.</p>
+    </div>
+    <div class="modal-body">
+      <form onsubmit="event.preventDefault(); closeModal(); alert('Thank you! We will be in touch shortly.');">
+        <div class="form-group">
+          <label for="modal-name">Full Name</label>
+          <input type="text" id="modal-name" placeholder="Jane Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="modal-email">Work Email</label>
+          <input type="email" id="modal-email" placeholder="jane@company.com" required>
+        </div>
+        <div class="form-group">
+          <label for="modal-company">Company</label>
+          <input type="text" id="modal-company" placeholder="Your company name">
+        </div>
+        <div class="form-group">
+          <label for="modal-role">Role</label>
+          <select id="modal-role">
+            <option value="">Select your role</option>
+            <option>Competitive Intelligence</option>
+            <option>Strategy / Corp Dev</option>
+            <option>Product Marketing</option>
+            <option>Sales / Business Development</option>
+            <option>Research / Analytics</option>
+            <option>Executive Leadership</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit">Start Tracking Google</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function() {
+  // ── MAP ──
+  try {
+    var map = L.map('hq-map', {
+      scrollWheelZoom: false,
+      attributionControl: true
+    }).setView([37.4220, -122.0841], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+
+    L.marker([37.4220, -122.0841]).addTo(map)
+      .bindPopup('<strong>Googleplex</strong><br>1600 Amphitheatre Parkway<br>Mountain View, CA 94043')
+      .openPopup();
+  } catch(e) { console.warn('Map failed to load:', e); }
+
+  // ── MODAL ──
+  window.openModal = function() {
+    document.getElementById('modalOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+  window.closeModal = function() {
+    document.getElementById('modalOverlay').classList.remove('active');
+    document.body.style.overflow = '';
+  };
+  document.getElementById('modalOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  // ── STICKY BOTTOM BAR ──
+  var stickyBar = document.getElementById('stickyBar');
+  var heroBottom = 0;
+  function updateHeroBottom() {
+    var hero = document.querySelector('.company-hero');
+    if (hero) heroBottom = hero.getBoundingClientRect().bottom + window.pageYOffset;
+  }
+  updateHeroBottom();
+  window.addEventListener('resize', updateHeroBottom);
+
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > heroBottom) {
+      stickyBar.classList.add('visible');
+    } else {
+      stickyBar.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  // ── SECTION NAV ACTIVE STATE ──
+  var navLinks = document.querySelectorAll('#sectionNav a');
+  var sections = [];
+  navLinks.forEach(function(link) {
+    var id = link.getAttribute('href').replace('#', '');
+    var el = document.getElementById(id);
+    if (el) sections.push({ id: id, el: el, link: link });
+  });
+
+  var navHeight = 75;
+  var sectionNavHeight = 48;
+  var totalOffset = navHeight + sectionNavHeight + 20;
+
+  function updateActiveNav() {
+    var scrollY = window.pageYOffset + totalOffset + 10;
+    var current = sections[0];
+    for (var i = 0; i < sections.length; i++) {
+      if (scrollY >= sections[i].el.offsetTop) {
+        current = sections[i];
+      }
+    }
+    navLinks.forEach(function(l) { l.classList.remove('active'); });
+    if (current) current.link.classList.add('active');
+  }
+
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+  updateActiveNav();
+
+  // ── SMOOTH SCROLL ──
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var id = this.getAttribute('href').replace('#', '');
+      var target = document.getElementById(id);
+      if (target) {
+        var top = target.offsetTop - totalOffset + 10;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

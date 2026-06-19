@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Browse by Industry | Contify Market Intelligence</title>
+<meta name="description" content="Explore Contify's market and competitive intelligence coverage across industries — IT, Healthcare, BFSI, Consulting, Manufacturing, Chemicals, Logistics, and Energy.">
+<link rel="icon" href="https://www.contify.com/wp-content/uploads/2021/04/roundel-contify-cyan-dark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"CollectionPage","name":"Browse by Industry","description":"Contify market intelligence coverage by industry","url":"https://www.contify.com/discover/industries/","breadcrumb":{"@id":"#breadcrumb"}},
+    {"@type":"BreadcrumbList","@id":"#breadcrumb","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.contify.com/"},
+      {"@type":"ListItem","position":2,"name":"Discover","item":"https://www.contify.com/discover/"},
+      {"@type":"ListItem","position":3,"name":"Industries"}
+    ]}
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Geist',sans-serif;color:#161616;background:#fff;line-height:1.5}
+a{text-decoration:none;color:inherit}
+
+/* Strip banner */
+.strip{background:#161616;color:#fff;text-align:center;font-size:13px;font-weight:500;padding:8px 24px;letter-spacing:.01em}
+.strip a{color:#FFCD3F;margin-left:6px}
+
+/* Navbar */
+.navbar{background:linear-gradient(99.62deg,#0072C3 0%,#00539A 100.4%);height:75px;display:flex;align-items:center;padding:0 32px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;width:100%}
+.nav-logo img{height:32px;display:block}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{color:rgba(255,255,255,.88);font-size:14px;font-weight:500;transition:color .15s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:#FFCD3F;color:#161616;font-size:13px;font-weight:700;padding:9px 20px;border-radius:6px;transition:background .15s}
+.nav-cta:hover{background:#f0be2a;color:#161616}
+
+/* Sub-nav */
+.sub-nav{background:#F4F4F4;border-bottom:1px solid #DDE1E6;position:sticky;top:75px;z-index:50;overflow-x:auto}
+.sub-nav-inner{display:flex;gap:4px;max-width:1200px;margin:0 auto;padding:6px 24px;justify-content:flex-start}
+.sub-nav a{padding:8px 16px;font-size:13px;font-weight:600;color:#525252;white-space:nowrap;border-radius:6px;transition:all .15s}
+.sub-nav a:hover{color:#161616;background:rgba(0,0,0,.06);text-decoration:none}
+.sub-nav a.active{color:#fff;background:#0072C3}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#052B44 0%,#0a4a6e 50%,#0d6699 100%);padding:72px 24px 64px;color:#fff;text-align:center}
+.breadcrumb{font-size:13px;color:rgba(255,255,255,.65);margin-bottom:20px}
+.breadcrumb a{color:rgba(255,255,255,.75);transition:color .15s}
+.breadcrumb a:hover{color:#fff}
+.breadcrumb span{margin:0 6px;opacity:.5}
+.hero h1{font-size:48px;font-weight:800;letter-spacing:-.02em;margin-bottom:16px;line-height:1.1}
+.hero p{font-size:18px;color:rgba(255,255,255,.8);max-width:600px;margin:0 auto 32px;font-weight:400}
+.hero-stats{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.hero-stat{text-align:center}
+.hero-stat .num{font-size:36px;font-weight:800;color:#FFCD3F;line-height:1}
+.hero-stat .lbl{font-size:13px;color:rgba(255,255,255,.7);margin-top:4px}
+
+/* Main content */
+.main{max-width:1200px;margin:0 auto;padding:56px 24px}
+.section-label{font-size:12px;font-weight:700;color:#0072C3;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.section-title{font-size:32px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px;color:#161616}
+.section-sub{font-size:16px;color:#525252;margin-bottom:40px}
+
+/* Industry grid */
+.industry-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.industry-card{border:1.5px solid #DDE1E6;border-radius:12px;padding:28px 24px;transition:all .2s;cursor:pointer;position:relative;overflow:hidden}
+.industry-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;border-radius:12px 12px 0 0}
+.industry-card:hover{border-color:#0072C3;box-shadow:0 8px 32px rgba(0,114,195,.12);transform:translateY(-2px)}
+.card-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px}
+.card-title{font-size:17px;font-weight:700;color:#161616;margin-bottom:6px}
+.card-desc{font-size:13px;color:#525252;line-height:1.5;margin-bottom:16px}
+.card-stats{display:flex;gap:16px}
+.card-stat{font-size:12px;color:#697077}
+.card-stat strong{display:block;font-size:15px;font-weight:700;color:#161616}
+.card-arrow{position:absolute;right:20px;top:50%;transform:translateY(-50%);color:#DDE1E6;font-size:18px;transition:color .2s}
+.industry-card:hover .card-arrow{color:#0072C3}
+
+/* IT */
+.c-it::before{background:linear-gradient(90deg,#0072C3,#4589ff)}
+.icon-it{background:#EDF5FF;color:#0072C3}
+/* Healthcare */
+.c-hc::before{background:linear-gradient(90deg,#24A148,#42be65)}
+.icon-hc{background:#DEFBE6;color:#24A148}
+/* BFSI */
+.c-bf::before{background:linear-gradient(90deg,#6929C4,#a56eff)}
+.icon-bf{background:#F6F2FF;color:#6929C4}
+/* Consulting */
+.c-co::before{background:linear-gradient(90deg,#FF832B,#ffb784)}
+.icon-co{background:#FFF2E8;color:#FF832B}
+/* Manufacturing */
+.c-mn::before{background:linear-gradient(90deg,#697077,#a2a9b0)}
+.icon-mn{background:#F2F4F8;color:#697077}
+/* Chemicals */
+.c-ch::before{background:linear-gradient(90deg,#009D9A,#3ddbd9)}
+.icon-ch{background:#D9FBFB;color:#009D9A}
+/* Logistics */
+.c-lg::before{background:linear-gradient(90deg,#BE95FF,#8a3ffc)}
+.icon-lg{background:#F6F2FF;color:#8a3ffc}
+/* Energy */
+.c-en::before{background:linear-gradient(90deg,#F1C21B,#ff832b)}
+.icon-en{background:#FEF6D6;color:#C48F00}
+
+/* CTA Banner */
+.cta-banner{background:linear-gradient(99.62deg,#0072C3 0%,#00539A 100.4%);padding:64px 24px;text-align:center;margin-top:80px}
+.cta-banner h2{font-size:36px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-.02em}
+.cta-banner p{font-size:16px;color:rgba(255,255,255,.8);margin-bottom:32px}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-yellow{background:#FFCD3F;color:#161616;font-size:15px;font-weight:700;padding:13px 28px;border-radius:7px;transition:background .15s;border:none;cursor:pointer}
+.btn-yellow:hover{background:#f0be2a}
+.btn-outline{background:transparent;color:#fff;font-size:15px;font-weight:600;padding:13px 28px;border-radius:7px;border:1.5px solid rgba(255,255,255,.5);transition:all .15s;cursor:pointer}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+
+/* Footer */
+footer{background:#161616;color:rgba(255,255,255,.7);padding:40px 24px;text-align:center;font-size:13px}
+footer a{color:rgba(255,255,255,.7);margin:0 8px}
+footer a:hover{color:#fff}
+
+/* Modal */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;align-items:center;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:14px;width:100%;max-width:460px;padding:36px;position:relative;box-shadow:0 24px 64px rgba(0,0,0,.22)}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:#697077;line-height:1}
+.modal h2{font-size:24px;font-weight:800;margin-bottom:6px;letter-spacing:-.02em}
+.modal p{font-size:14px;color:#525252;margin-bottom:24px}
+.form-row{margin-bottom:14px}
+.form-row label{display:block;font-size:12px;font-weight:600;color:#394146;margin-bottom:5px;letter-spacing:.03em}
+.form-row input{width:100%;padding:10px 14px;border:1.5px solid #DDE1E6;border-radius:7px;font-size:14px;font-family:'Geist',sans-serif;outline:none;transition:border .15s}
+.form-row input:focus{border-color:#0072C3}
+.modal-submit{width:100%;padding:13px;background:#0072C3;color:#fff;font-size:15px;font-weight:700;border:none;border-radius:7px;cursor:pointer;font-family:'Geist',sans-serif;margin-top:4px;transition:background .15s}
+.modal-submit:hover{background:#005da0}
+</style>
+</head>
+<body>
+
+<div class="strip">New: Contify now tracks 40,000+ companies across 8 industries. <a href="#" onclick="openModal();return false">Get early access &rarr;</a></div>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://www.contify.com/"><img src="https://www.contify.com/wp-content/uploads/2026/02/contify-logo.svg" alt="Contify"></a>
+    <div class="nav-links">
+      <a href="#">Platform</a>
+      <a href="#">Solutions</a>
+      <a href="#">Discover</a>
+      <a href="#">Resources</a>
+      <a href="#">Pricing</a>
+      <a href="#" onclick="openModal();return false" class="nav-cta">Book a Demo</a>
+    </div>
+  </div>
+</nav>
+
+<div class="sub-nav">
+  <div class="sub-nav-inner">
+    <a href="index.html" class="active">All Industries</a>
+    <a href="it-technology.html">IT &amp; Tech</a>
+    <a href="healthcare-pharma.html">Healthcare</a>
+    <a href="bfsi.html">BFSI</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="manufacturing.html">Manufacturing</a>
+    <a href="specialty-chemicals.html">Chemicals</a>
+    <a href="logistics.html">Logistics</a>
+    <a href="energy-utilities.html">Energy</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="breadcrumb">
+    <a href="https://www.contify.com/">Home</a><span>/</span>
+    <a href="#">Discover</a><span>/</span>
+    Industries
+  </div>
+  <h1>Browse by Industry</h1>
+  <p>Real-time market and competitive intelligence across every major sector — tracked, structured, and ready to act on.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num">40,000+</div><div class="lbl">Companies Tracked</div></div>
+    <div class="hero-stat"><div class="num">8</div><div class="lbl">Industry Verticals</div></div>
+    <div class="hero-stat"><div class="num">5,326</div><div class="lbl">Events / Month</div></div>
+    <div class="hero-stat"><div class="num">180+</div><div class="lbl">Countries Covered</div></div>
+  </div>
+</section>
+
+<main class="main">
+  <div class="section-label">All Verticals</div>
+  <h2 class="section-title">Select an Industry</h2>
+  <p class="section-sub">Dive into deep competitive intelligence for your sector — events, signals, company movements, and more.</p>
+
+  <div class="industry-grid">
+
+    <a href="it-technology.html" class="industry-card c-it">
+      <div class="card-icon icon-it">&#128187;</div>
+      <div class="card-title">IT &amp; Technology</div>
+      <div class="card-desc">Software, hardware, cloud, semiconductors, and enterprise tech companies globally.</div>
+      <div class="card-stats">
+        <div class="card-stat"><strong>12,400</strong>Companies</div>
+        <div class="card-stat"><strong>1,247/mo</strong>Events</div>
+      </div>
+      <div class="card-arrow">&#8594;</div>
+    </a>
+
+    <a href="healthcare-pharma.html" class="industry-card c-hc">
+      <div class="card-icon icon-hc">&#128138;</div>
+      <div class="card-title">Healthcare &amp; Pharma</div>
+      <div class="card-desc">Pharma, biotech, medtech, hospitals, and health insurance companies worldwide.</div>
+      <div class="card-stats">
+        <div class="card-stat"><strong>6,800</strong>Companies</div>
+        <div class="card-stat"><strong>834/mo</strong>Events</div>
+      </div>
+      <div class="card-arrow">&#8594;</div>
+    </a>
+
+    <a href="bfsi.html" class="industry-card c-bf">
+      <div class="card-icon icon-bf">&#127968;</div>
+      <div class="card-title">BFSI</div>
+      <div class="card-desc">Banking, financial services, insurance, fintech, and capital markets players.</div>
+      <div class="card-stats">
+        <div class="card-stat"><strong>8,200</strong>Companies</div>
+        <div class="card-stat"><strong>1,102/mo</strong>Events</div>
+      </div>
+      <div class="card-arrow">&#8594;</div>
+    </a>
+
+    <a href="consulting.html" class="industry-card c-co">
+      <div class="card-icon icon-co">&#128203;</div>
+      <div class="card-title">Management Consulting</div>
+      <div class="card-desc">Strategy, operations, IT consulting, and advisory firms across all tiers.</div>
+      <div class="card-stats">
+        <div class="card-stat"><strong>2,100</strong>Companies</div>
+        <div class="card-stat"><strong>312/mo</strong>Events</div>
+      </div>
+      <div class="card-arrow">&#8594;</div>
+    </a>
+
+    <a href="manufacturing.html" class="industry-card c-mn">
+      <div class="card-icon icon-mn">&#127981;</div>
+      <div class="card-title">Manufacturing</div>
+      <div class="card-desc">Industrial, automotive, aerospace, electronics, and consumer goods manufacturers.</div>
+      <div class="card-stats">
+        <div class="card-stat"><strong>5,600</strong>Companies</div>
+        <div class="card-stat"><strong>678/mo</strong>Events</div>
+      </div>
+      <div class="card-arrow">&#8594;</div>
+    </a>
+
+    <a href="specialty-chemicals.html" class="industry-card c-ch">
+      <div class="card-icon icon-ch">&#9879;&#65039;</div>
+      <div class="card-title">Specialty Chemicals</div>
+      <div class="card-desc">Specialty, performance, and fine chemicals; coatings, adhesives, and agrochemicals.</div>
+      <div class="card-stats">
+        <div class="card-stat"><strong>1,400</strong>Companies</div>
+        <div class="card-stat"><strong>198/mo</strong>Events</div>
+      </div>
+      <div class="card-arrow">&#8594;</div>
+    </a>
+
+    <a href="logistics.html" class="industry-card c-lg">
+      <div class="card-icon icon-lg">&#128666;</div>
+      <div class="card-title">Logistics &amp; Supply Chain</div>
+      <div class="card-desc">Freight, express delivery, 3PL, ports, and supply chain technology providers.</div>
+      <div class="card-stats">
+        <div class="card-stat"><strong>3,200</strong>Companies</div>
+        <div class="card-stat"><strong>421/mo</strong>Events</div>
+      </div>
+      <div class="card-arrow">&#8594;</div>
+    </a>
+
+    <a href="energy-utilities.html" class="industry-card c-en">
+      <div class="card-icon icon-en">&#9889;</div>
+      <div class="card-title">Energy &amp; Utilities</div>
+      <div class="card-desc">Oil &amp; gas, renewables, power utilities, and clean energy technology companies.</div>
+      <div class="card-stats">
+        <div class="card-stat"><strong>4,100</strong>Companies</div>
+        <div class="card-stat"><strong>534/mo</strong>Events</div>
+      </div>
+      <div class="card-arrow">&#8594;</div>
+    </a>
+
+  </div>
+</main>
+
+<div class="cta-banner">
+  <h2>Get Intelligence Across Every Industry</h2>
+  <p>Stop manually tracking competitors. Let Contify surface the signals that matter — automatically.</p>
+  <div class="cta-btns">
+    <button class="btn-yellow" onclick="openModal()">Book a Free Demo</button>
+    <button class="btn-outline" onclick="openModal()">Start Free Trial</button>
+  </div>
+</div>
+
+<footer>
+  <p style="margin-bottom:12px">
+    <a href="#">Platform</a><a href="#">Pricing</a><a href="#">Case Studies</a><a href="#">Blog</a><a href="#">Privacy Policy</a><a href="#">Terms</a>
+  </p>
+  <p>&copy; 2026 Contify. All rights reserved.</p>
+</footer>
+
+<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">&#10005;</button>
+    <h2>Book a Demo</h2>
+    <p>See how Contify tracks your industry in real time. Our team will reach out within 24 hours.</p>
+    <div class="form-row"><label>FULL NAME</label><input type="text" placeholder="Jane Smith"></div>
+    <div class="form-row"><label>WORK EMAIL</label><input type="email" placeholder="jane@company.com"></div>
+    <div class="form-row"><label>COMPANY</label><input type="text" placeholder="Acme Inc."></div>
+    <div class="form-row"><label>INDUSTRY</label><input type="text" placeholder="e.g. IT & Technology"></div>
+    <button class="modal-submit" onclick="closeModal()">Request Demo &rarr;</button>
+  </div>
+</div>
+
+<script>
+function openModal(){document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal()})
+</script>
+</body>
+</html>

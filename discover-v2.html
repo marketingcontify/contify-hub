@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Company Intelligence — Profiles, Events, Industry Signals | Contify</title>
+  <meta name="description" content="Explore 50,000+ company profiles, M&A deals, partnerships, funding rounds, leadership changes, and industry intelligence across 8 sectors and 8 geographies. Powered by Contify AI.">
+  <link rel="canonical" href="https://www.contify.com/d/">
+  <meta property="og:title" content="Discover Company Intelligence | Contify">
+  <meta property="og:description" content="50,000+ company profiles. Real-time M&A, partnerships, funding, leadership, and competitive intelligence across industries and geographies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.contify.com/d/">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"CollectionPage","name":"Discover Company Intelligence","description":"Explore 50,000+ company profiles, events, and industry signals.","url":"https://www.contify.com/d/","publisher":{"@type":"Organization","name":"Contify","url":"https://www.contify.com"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.contify.com/"},{"@type":"ListItem","position":2,"name":"Discover","item":"https://www.contify.com/d/"}]}}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://www.contify.com/wp-content/uploads/2021/04/roundel-contify-cyan-dark.svg" sizes="32x32">
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Geist',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fff;color:#161616;line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:#0072C3;text-decoration:none}a:hover{text-decoration:none!important}
+    img{max-width:100%;height:auto}
+    .container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+    /* STRIP */
+    .strip{background:#9AF4CF;color:#161616;font-size:13px;text-align:center;padding:8px 0;font-weight:500}
+    .strip a{color:#161616;text-decoration:underline;font-weight:700}
+
+    /* NAVBAR */
+    .header{background:linear-gradient(99.62deg,#0072C3 0%,#00539A 100.4%);position:sticky;top:0;z-index:100}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:75px;max-width:1200px;margin:0 auto}
+    .navbar__logo img{height:36px}
+    .navbar__nav{display:flex;gap:32px;align-items:center}
+    .navbar__nav a{color:#fff;font-size:15px;font-weight:500;opacity:.9;transition:opacity .15s}
+    .navbar__nav a:hover,.navbar__nav a.active{opacity:1}
+    .navbar__actions{display:flex;align-items:center;gap:10px}
+    .btn-login{color:#fff;font-size:14px;font-weight:500;opacity:.9;padding:8px 16px}
+    .btn-login:hover{opacity:1}
+    .btn-cta{background:#FFCD3F;color:#000;font-weight:600;font-size:15px;padding:12px 22px;border-radius:4px;border:none;cursor:pointer;display:inline-block;transition:background .15s}
+    .btn-cta:hover{background:#FDDC69}
+    .btn-cta-sm{background:#FFCD3F;color:#000;font-weight:600;font-size:14px;padding:10px 20px;border-radius:4px;border:none;cursor:pointer;display:inline-block}
+    .btn-cta-sm:hover{background:#FDDC69}
+    .btn-outline-white{display:inline-block;padding:11px 26px;border:1.5px solid #fff;color:#fff;border-radius:4px;font-size:14px;font-weight:600;transition:background .15s}
+    .btn-outline-white:hover{background:rgba(255,255,255,.1)}
+
+    /* HERO */
+    .hero{background:linear-gradient(99.62deg,#0072C3 0%,#00539A 100.4%);padding:56px 0 64px;position:relative;overflow:hidden}
+    .hero .bc{font-size:13px;color:rgba(255,255,255,.55);margin-bottom:20px;display:flex;gap:6px;align-items:center}
+    .hero .bc a{color:rgba(255,255,255,.65)}.hero .bc a:hover{color:#fff}
+    .hero .bc .sep{color:rgba(255,255,255,.35)}.hero .bc .cur{color:#fff;font-weight:500}
+    .hero h1{color:#fff;font-size:42px;font-weight:900;line-height:1.15;margin-bottom:12px;letter-spacing:-.03em;max-width:700px}
+    .hero h1 .accent{color:#3CF3FF}
+    .hero .hero-sub{color:rgba(255,255,255,.82);font-size:17px;line-height:1.65;margin-bottom:32px;max-width:640px}
+    .search-wrap{display:flex;align-items:center;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.22);border-radius:8px;padding:5px 5px 5px 18px;max-width:660px;transition:all .2s}
+    .search-wrap:focus-within{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.18)}
+    .search-wrap svg{flex-shrink:0;opacity:.5}
+    .search-wrap input{flex:1;background:none;border:none;color:#fff;font-size:15px;padding:11px 12px;outline:none;font-family:inherit}
+    .search-wrap input::placeholder{color:rgba(255,255,255,.45)}
+    .quick-links{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:14px;margin-bottom:32px}
+    .quick-links span{font-size:12px;color:rgba(255,255,255,.45);font-weight:500}
+    .quick-links a{font-size:12px;color:rgba(255,255,255,.78);background:rgba(255,255,255,.1);padding:4px 12px;border-radius:14px;font-weight:500;transition:all .15s}
+    .quick-links a:hover{background:rgba(255,255,255,.2);color:#fff}
+    .hero-stats{display:flex;gap:40px;flex-wrap:wrap}
+    .hero-stat .val{color:#fff;font-size:30px;font-weight:800;line-height:1;display:block}
+    .hero-stat .lbl{color:rgba(255,255,255,.55);font-size:12px;font-weight:500;margin-top:4px;display:block}
+
+    /* SECTION */
+    .sec{margin-bottom:56px}
+    .sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:12px}
+    .sec-head-left{display:flex;align-items:center;gap:12px}
+    .sec-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;font-weight:800;color:#fff}
+    .sec-head h2{font-size:24px;font-weight:800;color:#121619;letter-spacing:-.02em}
+    .sec-desc{font-size:15px;color:#525252;margin-bottom:24px;max-width:620px;line-height:1.55}
+    .link-all{font-size:13px;font-weight:600;color:#0072C3}
+    .link-all:hover{text-decoration:underline!important}
+
+    /* GRID */
+    .grid{display:grid;gap:16px}
+    .grid-4{grid-template-columns:repeat(4,1fr)}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-6{grid-template-columns:repeat(6,1fr)}
+
+    /* ICON BOX (Contify style — colored bg, white text/letter) */
+    .ico{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;font-weight:800;letter-spacing:-.02em}
+
+    /* COMPANY CARDS */
+    .ccard{background:#fff;border:1px solid #DDE1E6;border-radius:8px;padding:20px;display:flex;gap:14px;align-items:flex-start;transition:all .2s;color:#161616}
+    .ccard:hover{border-color:#0072C3;box-shadow:0 6px 20px rgba(0,114,195,.1);transform:translateY(-2px)}
+    .ccard h3{font-size:15px;font-weight:700;color:#121619;margin-bottom:3px;line-height:1.3}
+    .ccard p{font-size:13px;color:#525252;line-height:1.45;margin:0}
+    .ccard-count{font-size:12px;font-weight:600;color:#0072C3;margin-top:6px;display:inline-block}
+
+    /* EVENT CARDS */
+    .ecard{background:#fff;border:1px solid #DDE1E6;border-radius:8px;padding:22px;display:flex;flex-direction:column;transition:all .2s;color:#161616}
+    .ecard:hover{border-color:#0072C3;box-shadow:0 6px 20px rgba(0,114,195,.1);transform:translateY(-2px)}
+    .ecard h3{font-size:15px;font-weight:700;color:#121619;margin-bottom:4px}
+    .ecard p{font-size:13px;color:#525252;line-height:1.45;margin:0;flex-grow:1}
+    .ecard-foot{display:flex;gap:12px;align-items:center;margin-top:12px;padding-top:12px;border-top:1px solid #F2F4F8;font-size:12px;color:#8D8D8D}
+    .ecard-foot .up{color:#198038;font-weight:600}.ecard-foot .down{color:#da1e28;font-weight:600}
+
+    /* INDUSTRY CARDS */
+    .icard{background:#fff;border:1px solid #DDE1E6;border-radius:8px;padding:22px;display:flex;flex-direction:column;transition:all .2s;color:#161616}
+    .icard:hover{border-color:#0072C3;box-shadow:0 6px 20px rgba(0,114,195,.1);transform:translateY(-2px)}
+    .icard-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+    .icard h3{font-size:15px;font-weight:700;color:#121619}
+    .icard p{font-size:13px;color:#525252;line-height:1.45;margin:0;flex-grow:1}
+    .icard-foot{display:flex;gap:14px;margin-top:12px;padding-top:12px;border-top:1px solid #F2F4F8;font-size:12px;color:#8D8D8D}
+
+    /* GEO CARDS */
+    .gcard{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #DDE1E6;border-radius:8px;padding:18px 20px;color:#161616;transition:all .2s}
+    .gcard:hover{border-color:#0072C3;box-shadow:0 4px 14px rgba(0,114,195,.08);transform:translateY(-1px)}
+    .gcard h3{font-size:15px;font-weight:700;color:#121619;margin:0}
+    .gcard-sub{font-size:12px;color:#8D8D8D}
+    .gcard-arrow{margin-left:auto;font-size:16px;color:#C6C6C6;transition:color .15s}
+    .gcard:hover .gcard-arrow{color:#0072C3}
+
+    /* INSIGHT CARDS */
+    .rcard{background:#fff;border:1px solid #DDE1E6;border-radius:8px;padding:24px;display:flex;flex-direction:column;color:#161616;transition:all .2s}
+    .rcard:hover{border-color:#0072C3;box-shadow:0 6px 20px rgba(0,114,195,.1);transform:translateY(-2px)}
+    .rcard-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:14px;width:fit-content}
+    .rcard h3{font-size:17px;font-weight:700;color:#121619;margin-bottom:8px;line-height:1.35}
+    .rcard p{font-size:14px;color:#525252;line-height:1.55;flex-grow:1;margin:0 0 14px}
+    .rcard-latest{font-size:12px;color:#0072C3;font-weight:600;margin-top:auto}
+
+    /* TRENDING COMPANIES */
+    .fcard{background:#fff;border:1px solid #DDE1E6;border-radius:8px;padding:20px 16px;text-align:center;color:#161616;transition:all .2s}
+    .fcard:hover{border-color:#0072C3;box-shadow:0 6px 20px rgba(0,114,195,.1);transform:translateY(-2px)}
+    .fcard-logo{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;margin:0 auto 10px;color:#fff}
+    .fcard h3{font-size:14px;font-weight:700;margin-bottom:3px}
+    .fcard-ind{font-size:11px;color:#8D8D8D;display:block;margin-bottom:8px}
+    .fcard-row{display:flex;justify-content:center;gap:10px;font-size:11px;color:#525252}
+    .fcard-row strong{color:#0072C3}
+
+    /* RECENT SIGNALS FEED */
+    .signal-feed{margin-bottom:56px}
+    .signal-item{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid #F2F4F8}
+    .signal-item:first-child{padding-top:0}
+    .signal-item:last-child{border-bottom:none}
+    .signal-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:2px}
+    .signal-body{flex:1;min-width:0}
+    .signal-body h4{font-size:15px;font-weight:700;color:#121619;margin-bottom:3px;line-height:1.35}
+    .signal-body h4 a{color:#121619}.signal-body h4 a:hover{color:#0072C3}
+    .signal-body p{font-size:13px;color:#525252;line-height:1.5;margin:0}
+    .signal-meta{display:flex;gap:12px;margin-top:6px;font-size:12px;color:#8D8D8D;align-items:center}
+    .signal-meta a{color:#0072C3;font-weight:600}
+    .signal-dot{width:3px;height:3px;border-radius:50%;background:#C6C6C6;flex-shrink:0}
+    .signal-more{display:block;text-align:center;padding:16px;font-size:14px;font-weight:600;color:#0072C3;border:1px solid #DDE1E6;border-radius:8px;margin-top:16px;transition:all .15s}
+    .signal-more:hover{background:#F2FBFF;border-color:#0072C3}
+
+    /* CROSS-LINK HUB */
+    .cross-hub{background:#F2FBFF;border:1px solid #BAE6FF;border-radius:10px;padding:32px;margin-bottom:56px}
+    .cross-hub h2{font-size:22px;font-weight:800;color:#00539A;margin-bottom:6px;text-align:center}
+    .cross-hub>p{font-size:14px;color:#525252;text-align:center;margin-bottom:24px}
+    .cross-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .cross-link{background:#fff;border:1px solid #DDE1E6;border-radius:6px;padding:10px 14px;font-size:13px;font-weight:500;color:#0072C3;text-align:center;transition:all .15s}
+    .cross-link:hover{background:#0072C3;color:#fff;border-color:#0072C3}
+    .cross-link span{display:block;font-size:11px;color:#8D8D8D;font-weight:400;margin-top:2px}
+    .cross-link:hover span{color:rgba(255,255,255,.7)}
+
+    /* SIGNUP CTA */
+    .cta-banner{background:linear-gradient(135deg,#001D6E 0%,#00539A 50%,#0072C3 100%);padding:60px 0;text-align:center}
+    .cta-banner h2{color:#fff;font-size:30px;font-weight:800;margin-bottom:8px;letter-spacing:-.02em}
+    .cta-banner>p{color:rgba(255,255,255,.78);font-size:16px;margin-bottom:28px}
+    .cta-form{display:flex;gap:0;max-width:500px;margin:0 auto;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;padding:5px 5px 5px 18px}
+    .cta-form input{flex:1;background:none;border:none;color:#fff;font-size:15px;padding:11px 8px;outline:none;font-family:inherit;min-width:0}
+    .cta-form input::placeholder{color:rgba(255,255,255,.4)}
+    .cta-trust{margin-top:18px;font-size:13px;color:rgba(255,255,255,.45)}
+    .cta-trust strong{color:rgba(255,255,255,.7)}
+
+    /* DUAL CTA */
+    .dual-cta{display:flex}
+    .dual-cta>div{flex:1;padding:44px 32px;text-align:center}
+    .dual-cta .c1{background:#0072C3}
+    .dual-cta .c2{background:#00539A}
+    .dual-cta h4{font-size:26px;font-weight:700;color:#fff;margin-bottom:6px}
+    .dual-cta p{color:rgba(255,255,255,.8);font-size:14px;margin-bottom:18px}
+
+    /* FOOTER */
+    .footer{background:#161616;color:#f4f4f4;padding:48px 0 0}
+    .footer-grid{display:flex;gap:0;flex-wrap:wrap}
+    .footer-col{padding:0 16px}
+    .footer-col.about{flex:0 0 34%;max-width:34%}
+    .footer-col.links{flex:0 0 22%;max-width:22%}
+    .footer .desc{color:#8D8D8D;font-size:13px;line-height:1.6;margin:14px 0 18px}
+    .footer .ft-title{font-size:14px;font-weight:700;color:#f4f4f4;margin-bottom:14px}
+    .footer-link{display:block;padding:5px 0;font-size:13px;color:#DADADA;transition:color .15s}
+    .footer-link:hover{color:#fff;text-decoration:underline!important}
+    .footer-bottom{border-top:1px solid #393939;margin-top:36px;padding:18px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+    .footer-bottom p{font-size:12px;color:#8D8D8D;margin:0}
+    .footer-bottom a{color:#33b1ff;font-size:12px}
+
+    /* MODAL */
+    .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:1000;align-items:center;justify-content:center;padding:20px}
+    .modal-bg.open{display:flex}
+    .modal{background:#fff;border-radius:12px;padding:40px;max-width:440px;width:100%;position:relative;text-align:center}
+    .modal .x{position:absolute;top:14px;right:18px;background:none;border:none;font-size:28px;color:#8D8D8D;cursor:pointer;line-height:1}.modal .x:hover{color:#161616}
+    .modal h3{font-size:22px;font-weight:800;color:#121619;margin-bottom:8px}
+    .modal>p{font-size:14px;color:#525252;margin-bottom:20px;line-height:1.55}
+    .modal form{display:flex;flex-direction:column;gap:10px;text-align:left}
+    .modal input,.modal select{width:100%;padding:11px 14px;border:1px solid #DDE1E6;border-radius:6px;font-size:14px;font-family:inherit;background:#fff;color:#161616}
+    .modal input:focus,.modal select:focus{outline:2px solid #0072C3;border-color:transparent}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}.grid-6{grid-template-columns:repeat(3,1fr)}.cross-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:768px){.navbar__nav{display:none}.hero h1{font-size:30px}.hero-stats{gap:24px}.hero-stat .val{font-size:24px}.footer-col.about,.footer-col.links{flex:0 0 100%;max-width:100%;margin-bottom:24px}.footer-grid{flex-direction:column}.dual-cta{flex-direction:column}.cross-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.grid-4,.grid-3{grid-template-columns:1fr}.grid-6{grid-template-columns:repeat(2,1fr)}.cross-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+
+<!-- STRIP -->
+<div class="strip">Contify recognized as a Visionary in Gartner's 2026 Magic Quadrant for M&CI. <a href="#">Learn more &rarr;</a></div>
+
+<!-- NAVBAR -->
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar__logo"><a href="https://www.contify.com"><img src="https://www.contify.com/wp-content/uploads/2026/02/contify-logo.svg" alt="Contify" height="36"></a></div>
+    <div class="navbar__nav">
+      <a href="/platform/">Products</a>
+      <a href="/solutions/">Solutions</a>
+      <a href="/athena-ai/">Athena AI</a>
+      <a href="/resources/">Resources</a>
+      <a href="/how-it-works/">How It Works</a>
+      <a href="/d/" class="active">Discover</a>
+    </div>
+    <div class="navbar__actions">
+      <a href="/login/" class="btn-login">Log in</a>
+      <a href="/start-free-trial/" class="btn-cta">Free trial</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="bc">
+      <a href="/">Home</a><span class="sep">/</span>
+      <span class="cur">Discover</span>
+    </div>
+    <h1>Discover <span class="accent">Company Intelligence</span></h1>
+    <p class="hero-sub">Track 50,000+ companies across M&A, partnerships, funding, leadership changes, and more — powered by Contify's AI-native intelligence engine.</p>
+    <div class="search-wrap">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" placeholder="Search companies, events, industries..." id="heroSearch" autocomplete="off">
+      <button class="btn-cta-sm" type="button" onclick="doSearch()">Search</button>
+    </div>
+    <div class="quick-links">
+      <span>Trending:</span>
+      <a href="/company/google/">Google</a>
+      <a href="/company/microsoft/">Microsoft</a>
+      <a href="/company/tesla/">Tesla</a>
+      <a href="/company/openai/">OpenAI</a>
+      <a href="/d/events/mergers-acquisitions/">M&A Deals</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="val">50,000+</span><span class="lbl">Companies tracked</span></div>
+      <div class="hero-stat"><span class="val">2.4M+</span><span class="lbl">Intelligence signals / year</span></div>
+      <div class="hero-stat"><span class="val">8</span><span class="lbl">Event types</span></div>
+      <div class="hero-stat"><span class="val">38</span><span class="lbl">Countries covered</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<div class="container" style="padding-top:52px;padding-bottom:32px">
+
+<!-- 1. COMPANY SIGNALS -->
+<section class="sec" id="companies">
+  <div class="sec-head">
+    <div class="sec-head-left">
+      <div class="sec-icon" style="background:#0072C3">Co</div>
+      <h2>Company Signals</h2>
+    </div>
+    <a href="/d/companies/" class="link-all">View all companies &rarr;</a>
+  </div>
+  <p class="sec-desc">Explore curated lists of companies by industry leadership, market cap, and strategic importance.</p>
+  <div class="grid grid-4">
+    <a href="/d/companies/" class="ccard">
+      <div class="ico" style="background:#E5F6FF;color:#0072C3">All</div>
+      <div><h3>All Companies</h3><p>Browse the full directory of 50,000+ tracked companies</p><span class="ccard-count">50,000+ profiles</span></div>
+    </a>
+    <a href="/d/companies/top-tech/" class="ccard">
+      <div class="ico" style="background:#E8DAFF;color:#6929C4">IT</div>
+      <div><h3>Top Tech Companies</h3><p>Google, Microsoft, Apple, Meta, Amazon &amp; more</p><span class="ccard-count">2,400+ profiles</span></div>
+    </a>
+    <a href="/d/companies/top-healthcare/" class="ccard">
+      <div class="ico" style="background:#DEFBE6;color:#198038">HC</div>
+      <div><h3>Top Healthcare Companies</h3><p>Pfizer, J&amp;J, UnitedHealth, Roche &amp; more</p><span class="ccard-count">1,800+ profiles</span></div>
+    </a>
+    <a href="/d/companies/top-bfsi/" class="ccard">
+      <div class="ico" style="background:#D0E2FF;color:#0043CE">BF</div>
+      <div><h3>Top BFSI Companies</h3><p>JPMorgan, Goldman Sachs, HSBC, Visa &amp; more</p><span class="ccard-count">2,100+ profiles</span></div>
+    </a>
+    <a href="/d/companies/top-consulting/" class="ccard">
+      <div class="ico" style="background:#FFD6E8;color:#9F1853">MC</div>
+      <div><h3>Top Consulting Firms</h3><p>McKinsey, BCG, Bain, Deloitte, Accenture</p><span class="ccard-count">850+ profiles</span></div>
+    </a>
+    <a href="/d/companies/fortune-500/" class="ccard">
+      <div class="ico" style="background:#FFF1C2;color:#8E6A00">500</div>
+      <div><h3>Fortune 500 Tracker</h3><p>Track every Fortune 500 company in real time</p><span class="ccard-count">500 profiles</span></div>
+    </a>
+    <a href="/d/companies/unicorn/" class="ccard">
+      <div class="ico" style="background:#E8DAFF;color:#6929C4">$1B</div>
+      <div><h3>Unicorn Companies</h3><p>$1B+ startups — funding, growth &amp; exit signals</p><span class="ccard-count">1,400+ profiles</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- 2. BY EVENT TYPE -->
+<section class="sec" id="events">
+  <div class="sec-head">
+    <div class="sec-head-left">
+      <div class="sec-icon" style="background:#6929C4">Ev</div>
+      <h2>By Event Type</h2>
+    </div>
+    <a href="/d/events/" class="link-all">View all events &rarr;</a>
+  </div>
+  <p class="sec-desc">Track strategic business events as they happen — from M&A deals to leadership changes and regulatory shifts.</p>
+  <div class="grid grid-4">
+    <a href="/d/events/partnerships/" class="ecard">
+      <div class="ico" style="background:#D0E2FF;color:#0043CE;margin-bottom:12px">P&amp;A</div>
+      <h3>Partnerships &amp; Alliances</h3>
+      <p>Joint ventures, strategic alliances, channel partnerships</p>
+      <div class="ecard-foot"><span>342 this month</span><span class="up">+18%</span></div>
+    </a>
+    <a href="/d/events/mergers-acquisitions/" class="ecard">
+      <div class="ico" style="background:#E8DAFF;color:#6929C4;margin-bottom:12px">M&amp;A</div>
+      <h3>Mergers &amp; Acquisitions</h3>
+      <p>Acquisitions, mergers, divestitures, and takeovers</p>
+      <div class="ecard-foot"><span>187 this month</span><span class="up">+24%</span></div>
+    </a>
+    <a href="/d/events/funding/" class="ecard">
+      <div class="ico" style="background:#DEFBE6;color:#198038;margin-bottom:12px">F&amp;I</div>
+      <h3>Funding &amp; Investments</h3>
+      <p>Venture capital, PE rounds, IPOs, debt financing</p>
+      <div class="ecard-foot"><span>523 this month</span><span class="down">-6%</span></div>
+    </a>
+    <a href="/d/events/product-launches/" class="ecard">
+      <div class="ico" style="background:#A7F0BA;color:#0E6027;margin-bottom:12px">PL</div>
+      <h3>Product Launches</h3>
+      <p>New products, features, platform updates</p>
+      <div class="ecard-foot"><span>891 this month</span><span class="up">+31%</span></div>
+    </a>
+    <a href="/d/events/leadership-changes/" class="ecard">
+      <div class="ico" style="background:#FFD6E8;color:#9F1853;margin-bottom:12px">LC</div>
+      <h3>Leadership Changes</h3>
+      <p>CEO appointments, board changes, executive hires</p>
+      <div class="ecard-foot"><span>156 this month</span><span class="up">+8%</span></div>
+    </a>
+    <a href="/d/events/regulatory-updates/" class="ecard">
+      <div class="ico" style="background:#FFF1C2;color:#8E6A00;margin-bottom:12px">RU</div>
+      <h3>Regulatory Updates</h3>
+      <p>Compliance changes, government regulations, policy shifts</p>
+      <div class="ecard-foot"><span>98 this month</span><span class="up">+12%</span></div>
+    </a>
+    <a href="/d/events/cybersecurity/" class="ecard">
+      <div class="ico" style="background:#FFD6E8;color:#da1e28;margin-bottom:12px">CS</div>
+      <h3>Cybersecurity Incidents</h3>
+      <p>Data breaches, vulnerabilities, security events</p>
+      <div class="ecard-foot"><span>67 this month</span><span class="up">+42%</span></div>
+    </a>
+    <a href="/d/events/hiring-layoffs/" class="ecard">
+      <div class="ico" style="background:#BAE6FF;color:#00539A;margin-bottom:12px">H&amp;L</div>
+      <h3>Hiring &amp; Layoffs</h3>
+      <p>Mass hiring, workforce reduction, restructuring</p>
+      <div class="ecard-foot"><span>214 this month</span><span class="down">-15%</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- 3. BY INDUSTRY -->
+<section class="sec" id="industry">
+  <div class="sec-head">
+    <div class="sec-head-left">
+      <div class="sec-icon" style="background:#198038">Ind</div>
+      <h2>By Industry</h2>
+    </div>
+    <a href="/d/industry/" class="link-all">View all industries &rarr;</a>
+  </div>
+  <p class="sec-desc">Deep-dive into industry-specific intelligence — track events, competitors, and signals for your sector.</p>
+  <div class="grid grid-4">
+    <a href="/d/industry/it-technology/" class="icard">
+      <div class="icard-head"><div class="ico" style="background:#E8DAFF;color:#6929C4">IT</div><h3>IT &amp; Technology</h3></div>
+      <p>Software, hardware, cloud, AI, SaaS</p>
+      <div class="icard-foot"><span>12,400 companies</span><span>1,247 events/mo</span></div>
+    </a>
+    <a href="/d/industry/healthcare-pharma/" class="icard">
+      <div class="icard-head"><div class="ico" style="background:#DEFBE6;color:#198038">HC</div><h3>Healthcare &amp; Pharma</h3></div>
+      <p>Pharmaceuticals, biotech, medtech, hospitals</p>
+      <div class="icard-foot"><span>6,800 companies</span><span>834 events/mo</span></div>
+    </a>
+    <a href="/d/industry/bfsi/" class="icard">
+      <div class="icard-head"><div class="ico" style="background:#D0E2FF;color:#0043CE">BF</div><h3>BFSI</h3></div>
+      <p>Banking, financial services, insurance, fintech</p>
+      <div class="icard-foot"><span>8,200 companies</span><span>1,102 events/mo</span></div>
+    </a>
+    <a href="/d/industry/consulting/" class="icard">
+      <div class="icard-head"><div class="ico" style="background:#FFD6E8;color:#9F1853">MC</div><h3>Management Consulting</h3></div>
+      <p>Strategy, operations, digital transformation</p>
+      <div class="icard-foot"><span>2,100 companies</span><span>312 events/mo</span></div>
+    </a>
+    <a href="/d/industry/manufacturing/" class="icard">
+      <div class="icard-head"><div class="ico" style="background:#DDE1E6;color:#393939">MF</div><h3>Manufacturing</h3></div>
+      <p>Industrial, automotive, aerospace, electronics</p>
+      <div class="icard-foot"><span>5,600 companies</span><span>678 events/mo</span></div>
+    </a>
+    <a href="/d/industry/specialty-chemicals/" class="icard">
+      <div class="icard-head"><div class="ico" style="background:#FFF1C2;color:#8E6A00">SC</div><h3>Specialty Chemicals</h3></div>
+      <p>Polymers, coatings, agrochemicals, catalysts</p>
+      <div class="icard-foot"><span>1,400 companies</span><span>198 events/mo</span></div>
+    </a>
+    <a href="/d/industry/logistics/" class="icard">
+      <div class="icard-head"><div class="ico" style="background:#BAE6FF;color:#00539A">LS</div><h3>Logistics &amp; Supply Chain</h3></div>
+      <p>Freight, warehousing, last-mile, 3PL</p>
+      <div class="icard-foot"><span>3,200 companies</span><span>421 events/mo</span></div>
+    </a>
+    <a href="/d/industry/energy-utilities/" class="icard">
+      <div class="icard-head"><div class="ico" style="background:#DEFBE6;color:#0E6027">EU</div><h3>Energy &amp; Utilities</h3></div>
+      <p>Oil &amp; gas, renewables, power, clean energy</p>
+      <div class="icard-foot"><span>4,100 companies</span><span>534 events/mo</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- 4. GEOGRAPHIC SIGNALS -->
+<section class="sec" id="geo">
+  <div class="sec-head">
+    <div class="sec-head-left">
+      <div class="sec-icon" style="background:#00539A">Geo</div>
+      <h2>Geographic Signals</h2>
+    </div>
+    <a href="/d/geo/" class="link-all">View all regions &rarr;</a>
+  </div>
+  <p class="sec-desc">Track business intelligence by country and region — M&A, partnerships, regulatory updates, and more.</p>
+  <div class="grid grid-4">
+    <a href="/d/geo/usa/" class="gcard"><div class="ico" style="background:#D0E2FF;color:#0043CE">US</div><div><h3>USA</h3><span class="gcard-sub">4,231 events/mo</span></div><span class="gcard-arrow">&rarr;</span></a>
+    <a href="/d/geo/india/" class="gcard"><div class="ico" style="background:#FFD6E8;color:#9F1853">IN</div><div><h3>India</h3><span class="gcard-sub">1,847 events/mo</span></div><span class="gcard-arrow">&rarr;</span></a>
+    <a href="/d/geo/uk/" class="gcard"><div class="ico" style="background:#E8DAFF;color:#6929C4">UK</div><div><h3>United Kingdom</h3><span class="gcard-sub">1,124 events/mo</span></div><span class="gcard-arrow">&rarr;</span></a>
+    <a href="/d/geo/uae/" class="gcard"><div class="ico" style="background:#DEFBE6;color:#198038">AE</div><div><h3>UAE</h3><span class="gcard-sub">687 events/mo</span></div><span class="gcard-arrow">&rarr;</span></a>
+    <a href="/d/geo/germany/" class="gcard"><div class="ico" style="background:#FFF1C2;color:#8E6A00">DE</div><div><h3>Germany</h3><span class="gcard-sub">912 events/mo</span></div><span class="gcard-arrow">&rarr;</span></a>
+    <a href="/d/geo/singapore/" class="gcard"><div class="ico" style="background:#BAE6FF;color:#00539A">SG</div><div><h3>Singapore</h3><span class="gcard-sub">534 events/mo</span></div><span class="gcard-arrow">&rarr;</span></a>
+    <a href="/d/geo/southeast-asia/" class="gcard"><div class="ico" style="background:#E5F6FF;color:#0072C3">SEA</div><div><h3>Southeast Asia</h3><span class="gcard-sub">1,672 events/mo</span></div><span class="gcard-arrow">&rarr;</span></a>
+    <a href="/d/geo/middle-east/" class="gcard"><div class="ico" style="background:#DDE1E6;color:#393939">ME</div><div><h3>Middle East</h3><span class="gcard-sub">923 events/mo</span></div><span class="gcard-arrow">&rarr;</span></a>
+  </div>
+</section>
+
+<!-- 5. TRENDING & INSIGHTS -->
+<section class="sec" id="insights">
+  <div class="sec-head">
+    <div class="sec-head-left">
+      <div class="sec-icon" style="background:#9F1853">Ins</div>
+      <h2>Trending &amp; Insights</h2>
+    </div>
+    <a href="/d/insights/" class="link-all">View all reports &rarr;</a>
+  </div>
+  <p class="sec-desc">Curated intelligence reports and trackers — delivered weekly. Stay ahead of market shifts.</p>
+  <div class="grid grid-3">
+    <a href="/d/insights/weekly-digest/" class="rcard">
+      <div class="rcard-badge" style="background:#DEFBE6;color:#198038">WEEKLY</div>
+      <h3>Weekly Intel Digest</h3>
+      <p>Top 20 events across all tracked companies — curated by Athena AI every Monday.</p>
+      <span class="rcard-latest">Latest: Week 24, Jun 2026</span>
+    </a>
+    <a href="/d/insights/ma-tracker/" class="rcard">
+      <div class="rcard-badge" style="background:#E8DAFF;color:#6929C4">TRACKER</div>
+      <h3>M&amp;A Tracker</h3>
+      <p>Every acquisition, merger, and divestiture — deal value, rationale, and competitive impact.</p>
+      <span class="rcard-latest">187 deals tracked this month</span>
+    </a>
+    <a href="/d/insights/partnership-tracker/" class="rcard">
+      <div class="rcard-badge" style="background:#D0E2FF;color:#0043CE">TRACKER</div>
+      <h3>Partnership Tracker</h3>
+      <p>Strategic alliances, JVs, distribution partnerships — who's teaming up and why.</p>
+      <span class="rcard-latest">342 partnerships this month</span>
+    </a>
+    <a href="/d/insights/funding-roundup/" class="rcard">
+      <div class="rcard-badge" style="background:#DEFBE6;color:#198038">WEEKLY</div>
+      <h3>Funding Round-up</h3>
+      <p>VC, PE, and growth equity deals — round size, investors, and sector breakdown.</p>
+      <span class="rcard-latest">$14.2B raised this week</span>
+    </a>
+    <a href="/d/insights/global-ci-report/" class="rcard">
+      <div class="rcard-badge" style="background:#FFD6E8;color:#9F1853">MONTHLY</div>
+      <h3>Global CI Report</h3>
+      <p>Monthly competitive intelligence landscape — macro trends, sector shifts, risk signals.</p>
+      <span class="rcard-latest">June 2026 edition</span>
+    </a>
+  </div>
+</section>
+
+<!-- 6. RECENT SIGNALS FEED -->
+<section class="sec signal-feed" id="signals">
+  <div class="sec-head">
+    <div class="sec-head-left">
+      <div class="sec-icon" style="background:#da1e28">Sig</div>
+      <h2>Recent Signals Feed</h2>
+    </div>
+    <a href="/d/signals/" class="link-all">View all signals &rarr;</a>
+  </div>
+  <p class="sec-desc">Live intelligence feed — the latest strategic events tracked by Contify across all companies and industries.</p>
+
+  <div style="background:#fff;border:1px solid #DDE1E6;border-radius:8px;padding:24px 28px">
+    <div class="signal-item">
+      <div class="signal-badge" style="background:#E8DAFF;color:#6929C4">M&amp;A</div>
+      <div class="signal-body">
+        <h4><a href="/d/events/mergers-acquisitions/google/">Google acquires cybersecurity startup Wiz for $32B</a></h4>
+        <p>Alphabet's largest acquisition to date aims to bolster Google Cloud's security posture and compete with Microsoft and AWS in enterprise cloud security.</p>
+        <div class="signal-meta"><a href="/company/google/">Google</a><span class="signal-dot"></span><span>Technology</span><span class="signal-dot"></span><span>2 hours ago</span></div>
+      </div>
+    </div>
+
+    <div class="signal-item">
+      <div class="signal-badge" style="background:#D0E2FF;color:#0043CE">P&amp;A</div>
+      <div class="signal-body">
+        <h4><a href="/d/events/partnerships/microsoft/">Microsoft and SAP expand strategic partnership for AI-powered ERP</a></h4>
+        <p>New integration brings Azure OpenAI Service directly into SAP S/4HANA, enabling AI copilots across finance, procurement, and supply chain workflows.</p>
+        <div class="signal-meta"><a href="/company/microsoft/">Microsoft</a><span class="signal-dot"></span><span>Technology</span><span class="signal-dot"></span><span>4 hours ago</span></div>
+      </div>
+    </div>
+
+    <div class="signal-item">
+      <div class="signal-badge" style="background:#DEFBE6;color:#198038">F&amp;I</div>
+      <div class="signal-body">
+        <h4><a href="/d/events/funding/stripe/">Stripe raises $694M Series J at $91.5B valuation</a></h4>
+        <p>Latest funding round led by Sequoia Capital and Andreessen Horowitz to accelerate expansion into embedded finance and cross-border payments.</p>
+        <div class="signal-meta"><a href="/company/stripe/">Stripe</a><span class="signal-dot"></span><span>Fintech</span><span class="signal-dot"></span><span>6 hours ago</span></div>
+      </div>
+    </div>
+
+    <div class="signal-item">
+      <div class="signal-badge" style="background:#FFD6E8;color:#9F1853">LC</div>
+      <div class="signal-body">
+        <h4><a href="/d/events/leadership-changes/pfizer/">Pfizer appoints new Chief AI Officer to accelerate drug discovery</a></h4>
+        <p>Former Google DeepMind researcher Dr. Sarah Chen joins Pfizer to lead AI-driven pharmaceutical R&D across oncology and rare diseases pipeline.</p>
+        <div class="signal-meta"><a href="/company/pfizer/">Pfizer</a><span class="signal-dot"></span><span>Healthcare</span><span class="signal-dot"></span><span>8 hours ago</span></div>
+      </div>
+    </div>
+
+    <div class="signal-item">
+      <div class="signal-badge" style="background:#A7F0BA;color:#0E6027">PL</div>
+      <div class="signal-body">
+        <h4><a href="/d/events/product-launches/tesla/">Tesla launches Full Self-Driving v13 with unsupervised highway mode</a></h4>
+        <p>Regulatory approval in 12 US states for highway autonomous driving marks Tesla's first unsupervised FSD deployment for consumer vehicles.</p>
+        <div class="signal-meta"><a href="/company/tesla/">Tesla</a><span class="signal-dot"></span><span>Automotive</span><span class="signal-dot"></span><span>12 hours ago</span></div>
+      </div>
+    </div>
+
+    <div class="signal-item">
+      <div class="signal-badge" style="background:#FFF1C2;color:#8E6A00">RU</div>
+      <div class="signal-body">
+        <h4><a href="/d/events/regulatory-updates/eu/">EU Digital Markets Act enforcement hits Apple with &euro;1.8B fine</a></h4>
+        <p>European Commission rules Apple's App Store steering practices violate DMA requirements, impacting app distribution and payment policies globally.</p>
+        <div class="signal-meta"><span>Regulatory</span><span class="signal-dot"></span><span>BFSI / Technology</span><span class="signal-dot"></span><span>1 day ago</span></div>
+      </div>
+    </div>
+
+    <a href="/d/signals/" class="signal-more">View all recent signals &rarr;</a>
+  </div>
+</section>
+
+<!-- CROSS-LINK HUB -->
+<div class="cross-hub">
+  <h2>Explore Event &times; Industry &times; Geography</h2>
+  <p>512+ unique intelligence pages — drill into specific event types by industry and region.</p>
+  <div class="cross-grid">
+    <a href="/d/events/mergers-acquisitions/healthcare-pharma/" class="cross-link">M&amp;A in Healthcare<span>87 events</span></a>
+    <a href="/d/events/funding/it-technology/" class="cross-link">Funding in Tech<span>234 events</span></a>
+    <a href="/d/events/partnerships/bfsi/" class="cross-link">Partnerships in BFSI<span>156 events</span></a>
+    <a href="/d/events/leadership-changes/consulting/" class="cross-link">Leadership in Consulting<span>42 events</span></a>
+    <a href="/d/events/mergers-acquisitions/india/" class="cross-link">M&amp;A in India<span>124 events</span></a>
+    <a href="/d/events/funding/usa/" class="cross-link">Funding in USA<span>312 events</span></a>
+    <a href="/d/events/cybersecurity/it-technology/" class="cross-link">Cybersecurity in Tech<span>48 events</span></a>
+    <a href="/d/events/hiring-layoffs/it-technology/" class="cross-link">Hiring &amp; Layoffs in Tech<span>178 events</span></a>
+    <a href="/d/events/regulatory-updates/bfsi/" class="cross-link">Regulations in BFSI<span>67 events</span></a>
+    <a href="/d/events/product-launches/healthcare-pharma/" class="cross-link">Launches in Healthcare<span>93 events</span></a>
+    <a href="/d/events/mergers-acquisitions/it-technology/india/" class="cross-link">Tech M&amp;A in India<span>34 events</span></a>
+    <a href="/d/events/funding/healthcare-pharma/usa/" class="cross-link">Healthcare Funding in USA<span>89 events</span></a>
+  </div>
+</div>
+
+<!-- 7. TRENDING COMPANIES -->
+<section class="sec">
+  <div class="sec-head">
+    <div class="sec-head-left">
+      <div class="sec-icon" style="background:#0072C3">Tr</div>
+      <h2>Trending Companies</h2>
+    </div>
+    <a href="/d/companies/trending/" class="link-all">View all trending &rarr;</a>
+  </div>
+  <p class="sec-desc">Real-time intelligence on the world's most-watched companies — ranked by signal volume and activity score.</p>
+  <div class="grid grid-6">
+    <a href="/company/google/" class="fcard"><div class="fcard-logo" style="background:#4285F4">G</div><h3>Google</h3><span class="fcard-ind">Technology</span><div class="fcard-row"><span>Score: <strong>87</strong></span><span>142/wk</span></div></a>
+    <a href="/company/microsoft/" class="fcard"><div class="fcard-logo" style="background:#00A1F1">M</div><h3>Microsoft</h3><span class="fcard-ind">Technology</span><div class="fcard-row"><span>Score: <strong>91</strong></span><span>168/wk</span></div></a>
+    <a href="/company/amazon/" class="fcard"><div class="fcard-logo" style="background:#FF9900">A</div><h3>Amazon</h3><span class="fcard-ind">E-Commerce</span><div class="fcard-row"><span>Score: <strong>84</strong></span><span>156/wk</span></div></a>
+    <a href="/company/jpmorgan/" class="fcard"><div class="fcard-logo" style="background:#003A70">JP</div><h3>JPMorgan</h3><span class="fcard-ind">BFSI</span><div class="fcard-row"><span>Score: <strong>79</strong></span><span>98/wk</span></div></a>
+    <a href="/company/pfizer/" class="fcard"><div class="fcard-logo" style="background:#0093D0">Pf</div><h3>Pfizer</h3><span class="fcard-ind">Healthcare</span><div class="fcard-row"><span>Score: <strong>73</strong></span><span>87/wk</span></div></a>
+    <a href="/company/tesla/" class="fcard"><div class="fcard-logo" style="background:#CC0000">T</div><h3>Tesla</h3><span class="fcard-ind">Automotive</span><div class="fcard-row"><span>Score: <strong>82</strong></span><span>134/wk</span></div></a>
+  </div>
+</section>
+
+</div>
+
+<!-- SIGNUP CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Get real-time intelligence on any company</h2>
+    <p>Join 1,500+ CI professionals tracking competitors, markets, and strategic moves with Contify.</p>
+    <div class="cta-form">
+      <input type="email" placeholder="Enter your work email" id="ctaEmail">
+      <button class="btn-cta-sm" type="button" onclick="openModal()">Start free trial</button>
+    </div>
+    <div class="cta-trust"><span>Trusted by teams at</span> <strong>Lenovo</strong> &middot; <strong>Ericsson</strong> &middot; <strong>PayPal</strong> &middot; <strong>Philips</strong> &middot; <strong>Deloitte</strong></div>
+  </div>
+</section>
+
+<!-- DUAL CTA + FOOTER -->
+<div class="dual-cta">
+  <div class="c1"><h4>Start free trial</h4><p>Full access to 50,000+ company profiles and intelligence feeds.</p><a href="/start-free-trial/" class="btn-outline-white">Get started &rarr;</a></div>
+  <div class="c2"><h4>Request a demo</h4><p>See how Contify powers CI for enterprise teams.</p><a href="/request-demo/" class="btn-outline-white">Book a demo &rarr;</a></div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col about"><img src="https://www.contify.com/wp-content/uploads/2026/02/contify-logo.svg" alt="Contify" height="28" style="filter:brightness(10)"><p class="desc">AI-powered Market and Competitive Intelligence platform. Track competitors, markets, and customers with real-time intelligence.</p></div>
+      <div class="footer-col links"><div class="ft-title">Products</div><a href="/platform/" class="footer-link">M&CI Platform</a><a href="/athena-ai/" class="footer-link">Athena AI</a><a href="/news-api/" class="footer-link">News API</a><a href="/d/companies/" class="footer-link">Company Profiles</a></div>
+      <div class="footer-col links"><div class="ft-title">Discover</div><a href="/d/events/" class="footer-link">Events</a><a href="/d/industry/" class="footer-link">Industries</a><a href="/d/geo/" class="footer-link">Geographies</a><a href="/d/insights/" class="footer-link">Insights &amp; Reports</a></div>
+      <div class="footer-col links"><div class="ft-title">Company</div><a href="/about/" class="footer-link">About us</a><a href="/resources/blog/" class="footer-link">Blog</a><a href="/resources/case-studies/" class="footer-link">Case studies</a><a href="/contact/" class="footer-link">Contact</a></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Contify. All rights reserved.</p><div><a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/security/">Security</a></div></div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <button class="x" onclick="closeModal()">&times;</button>
+    <h3>Sign up to unlock full intelligence</h3>
+    <p>Unlimited access to company profiles, real-time events, AI analysis, and weekly reports.</p>
+    <form onsubmit="event.preventDefault();alert('Thank you! Redirecting to dashboard...');closeModal()">
+      <input type="text" placeholder="Full name" required>
+      <input type="email" placeholder="Work email" required>
+      <input type="text" placeholder="Company name" required>
+      <select required><option value="">Select your role</option><option>Competitive Intelligence</option><option>Strategy / Corporate Development</option><option>Marketing / Product Marketing</option><option>Sales / Business Development</option><option>C-Suite / Executive</option><option>Other</option></select>
+      <button type="submit" class="btn-cta" style="width:100%;padding:13px;font-size:15px;text-align:center">Start free trial</button>
+    </form>
+    <p style="font-size:12px;color:#8D8D8D;margin-top:12px">No credit card required. 14-day free trial.</p>
+  </div>
+</div>
+
+<script>
+function doSearch(){var q=document.getElementById('heroSearch').value.trim();if(q)openModal()}
+function openModal(){document.getElementById('modal').classList.add('open');document.body.style.overflow='hidden'}
+function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow=''}
+document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal()});
+</script>
+
+</body>
+</html>
