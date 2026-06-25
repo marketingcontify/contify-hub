@@ -163,6 +163,24 @@
     .sidebar-cta h3{color:#fff;font-size:16px;font-weight:700;margin-bottom:6px;border:none;padding:0}
     .sidebar-cta p{color:rgba(255,255,255,.8);font-size:13px;margin-bottom:14px}
 
+    /* EXECUTIVE SUMMARY */
+    .exec-summary{max-width:1200px;margin:0 auto;padding:24px 24px 0}
+    .exec-summary-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+    .exec-summary-head h2{font-size:18px;font-weight:700;color:#121619;display:flex;align-items:center;gap:10px}
+    .exec-summary-head .ico{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0}
+    .exec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .exec-card{background:#fff;border:1px solid #DDE1E6;border-radius:12px;padding:20px 22px;display:flex;flex-direction:column}
+    .exec-card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+    .exec-card-head h3{font-size:15px;font-weight:700;color:#121619;display:flex;align-items:center;gap:8px}
+    .exec-card-head h3 svg{width:18px;height:18px}
+    .exec-card-date{font-size:12px;color:#8D8D8D;margin-bottom:12px}
+    .exec-card ul{list-style:disc;padding-left:18px;margin:0}
+    .exec-card li{font-size:13px;color:#525252;line-height:1.6;margin-bottom:8px}
+    .exec-card li:last-child{margin-bottom:0}
+    .exec-card li strong{color:#161616}
+    .exec-sparkle{color:#7C3AED;font-size:16px}
+    @media(max-width:768px){.exec-grid{grid-template-columns:1fr}}
+
     /* GATED */
     .gated{position:relative;overflow:hidden}
     .gated-blur{filter:blur(4px);pointer-events:none;user-select:none;opacity:.6}
@@ -316,12 +334,51 @@
   </div>
 </div>
 
+<!-- EXECUTIVE SUMMARY -->
+<div class="exec-summary">
+  <div class="exec-summary-head">
+    <h2><div class="ico" style="background:#F3F0FF;color:#7C3AED">Es</div> Executive Summary</h2>
+  </div>
+  <div class="exec-grid">
+    <div class="exec-card">
+      <div class="exec-card-head">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg> Strategic Objectives</h3>
+        <span class="exec-sparkle">&#10022;</span>
+      </div>
+      <div class="exec-card-date">Updated on: 29 Apr 2026</div>
+      <ul>
+        <li><strong>EPRI</strong> launched the <strong>Flex MOSAIC initiative</strong> to create a uniform flexibility classification framework for large electric loads, aiming to improve grid planning processes....</li>
+      </ul>
+    </div>
+    <div class="exec-card">
+      <div class="exec-card-head">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="#198038" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> Positive Updates</h3>
+        <span class="exec-sparkle">&#10022;</span>
+      </div>
+      <div class="exec-card-date">Updated on: 29 Apr 2026</div>
+      <ul>
+        <li><strong>EPRI</strong> launched the <strong>Flex MOSAIC initiative</strong> to create a uniform flexibility classification framework for large electric loads, collaborating with over 65 industry leaders....</li>
+      </ul>
+    </div>
+    <div class="exec-card">
+      <div class="exec-card-head">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="#da1e28" stroke-width="2"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg> Negative Updates</h3>
+        <span class="exec-sparkle">&#10022;</span>
+      </div>
+      <div class="exec-card-date">Updated on: 22 Jan 2026</div>
+      <ul>
+        <li><strong>Gemini AI</strong> has been implicated in <strong>leaking sensitive data</strong> from <strong>Google Calendar</strong>.</li>
+        <li>The leaks occurred due to a <strong>prompt injection vulnerability</strong> that allowed unauthorized access....</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <!-- PAGE LAYOUT -->
 <div class="page-layout">
   <!-- LEFT SIDEBAR NAV -->
   <nav class="left-nav">
-    <a href="#overview" class="active" onclick="scrollToSec('overview',this)">Overview</a>
-    <a href="#events" onclick="scrollToSec('events',this)">Business Events</a>
+    <a href="#events" class="active" onclick="scrollToSec('events',this)">Business Events</a>
     <a href="#leadership" onclick="scrollToSec('leadership',this)">Leadership</a>
     <a href="#conferences" onclick="scrollToSec('conferences',this)">Conferences</a>
     <a href="#layoffs" onclick="scrollToSec('layoffs',this)">Layoffs</a>
@@ -335,27 +392,7 @@
   </nav>
   <div class="main-col">
 
-    <!-- 1. COMPANY OVERVIEW -->
-    <div class="sec-card" id="overview">
-      <div class="sec-card-head">
-        <h2><div class="ico" style="background:#E5F6FF;color:#0072C3">Ov</div> Company Overview</h2>
-      </div>
-      <div class="sec-card-body">
-        <p style="font-size:15px;color:#525252;line-height:1.7;margin-bottom:16px">Google LLC is a subsidiary of Alphabet Inc. and the world's most widely used search engine, processing over 8.5 billion searches daily. Founded in 1998 by Larry Page and Sergey Brin at Stanford University, Google has evolved into a diversified technology conglomerate with products spanning cloud computing (Google Cloud Platform), mobile operating systems (Android), video streaming (YouTube), hardware (Pixel, Nest), and artificial intelligence (DeepMind, Gemini).</p>
-        <p style="font-size:15px;color:#525252;line-height:1.7;margin-bottom:20px">Alphabet's advertising business remains its primary revenue driver, contributing approximately 77% of total revenue. Google Cloud Platform is the company's fastest-growing segment, achieving $43B in annual revenue with 29% YoY growth in FY2025.</p>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:14px">
-          <div style="padding:10px 14px;background:#FAFAFA;border-radius:6px"><span style="color:#8D8D8D;font-size:12px;display:block">Legal name</span><strong>Alphabet Inc.</strong></div>
-          <div style="padding:10px 14px;background:#FAFAFA;border-radius:6px"><span style="color:#8D8D8D;font-size:12px;display:block">Stock ticker</span><strong style="color:#0072C3">GOOGL (NASDAQ)</strong></div>
-          <div style="padding:10px 14px;background:#FAFAFA;border-radius:6px"><span style="color:#8D8D8D;font-size:12px;display:block">CEO</span><strong>Sundar Pichai</strong></div>
-          <div style="padding:10px 14px;background:#FAFAFA;border-radius:6px"><span style="color:#8D8D8D;font-size:12px;display:block">Industry</span><strong>Technology / Cloud / AI</strong></div>
-          <div style="padding:10px 14px;background:#FAFAFA;border-radius:6px"><span style="color:#8D8D8D;font-size:12px;display:block">Founded</span><strong>September 4, 1998</strong></div>
-          <div style="padding:10px 14px;background:#FAFAFA;border-radius:6px"><span style="color:#8D8D8D;font-size:12px;display:block">Headquarters</span><strong>Mountain View, CA</strong></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2. BUSINESS EVENTS -->
+    <!-- 1. BUSINESS EVENTS -->
     <div class="sec-card" id="events">
       <div class="sec-card-head">
         <h2><div class="ico" style="background:#E8DAFF;color:#6929C4">Ev</div> Business Events</h2>
