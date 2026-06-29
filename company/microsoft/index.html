@@ -393,11 +393,86 @@
     <!-- SECTIONS WILL BE ADDED HERE -->
     <div class="sec-card" id="events">
       <div class="sec-card-head">
-        <h2><div class="ico" style="background:#E8DAFF;color:#6929C4">Ev</div> Business Events</h2>
-        <a href="events" class="link-all">View all events &rarr;</a>
+        <h2><div class="ico" style="background:#E8DAFF;color:#6929C4">Ev</div> News & Updates</h2>
+        <a href="news" class="link-all">View all updates &rarr;</a>
       </div>
-      <div class="sec-card-body">
-        <p style="color:#8D8D8D;font-size:14px">Content coming soon — awaiting instructions.</p>
+      <div class="sec-card-body" style="padding:0">
+        <!-- Tabs -->
+        <div style="display:flex;border-bottom:1px solid #F2F4F8;padding:0 24px">
+          <button onclick="switchTab('all',this)" style="padding:10px 18px;font-size:13px;font-weight:600;color:#0072C3;border:none;background:none;border-bottom:2px solid #0072C3;cursor:pointer;font-family:inherit">All Updates</button>
+          <button onclick="switchTab('news',this)" style="padding:10px 18px;font-size:13px;font-weight:500;color:#525252;border:none;background:none;border-bottom:2px solid transparent;cursor:pointer;font-family:inherit">News</button>
+          <button onclick="switchTab('facts',this)" style="padding:10px 18px;font-size:13px;font-weight:500;color:#525252;border:none;background:none;border-bottom:2px solid transparent;cursor:pointer;font-family:inherit">Facts</button>
+        </div>
+
+        <!-- All Updates Tab -->
+        <div id="tab-all">
+          <div class="news-item" style="padding:16px 24px">
+            <h4><a href="https://blogs.microsoft.com/blog/2026/06/20/microsoft-build-2026-recap/" target="_blank" rel="noopener">Microsoft Build 2026: Copilot Studio, Azure AI Foundry, and Windows AI APIs take center stage</a></h4>
+            <p>Microsoft unveiled major AI platform updates at Build 2026, including Copilot Studio extensibility, Azure AI Foundry for enterprise model deployment, and new Windows AI APIs for on-device inference.</p>
+            <div class="news-meta"><span class="news-tag" style="background:#A7F0BA;color:#0E6027">PRODUCT LAUNCH</span><span>Jun 20, 2026</span><span>Microsoft Blog</span></div>
+          </div>
+          <div class="news-item" style="padding:16px 24px">
+            <h4><a href="https://www.reuters.com/technology/microsoft-azure-revenue-growth-2026-06-18/" target="_blank" rel="noopener">Microsoft Azure revenue surges 31% as enterprise AI workloads accelerate</a></h4>
+            <p>Azure's intelligent cloud segment reported $28.5B in quarterly revenue, driven by surging demand for OpenAI-powered enterprise services and Copilot adoption.</p>
+            <div class="news-meta"><span class="news-tag" style="background:#D0E2FF;color:#0043CE">FINANCIAL</span><span>Jun 18, 2026</span><span>Reuters</span></div>
+          </div>
+          <div class="news-item" style="padding:16px 24px">
+            <h4><a href="https://www.ft.com/content/microsoft-openai-partnership-2026" target="_blank" rel="noopener">Microsoft considers legal action against Amazon over $50B OpenAI cloud deal</a></h4>
+            <p>Microsoft is evaluating legal options after reports that Amazon is negotiating a $50 billion infrastructure deal with OpenAI that could breach Microsoft's exclusive cloud partnership agreement.</p>
+            <div class="news-meta"><span class="news-tag" style="background:#FFD6E8;color:#9F1853">LEGAL</span><span>Jun 15, 2026</span><span>Financial Times</span></div>
+          </div>
+          <div class="news-item" style="padding:16px 24px">
+            <h4><a href="https://techcrunch.com/2026/06/12/microsoft-activision-integration/" target="_blank" rel="noopener">Microsoft completes full Activision Blizzard integration, merges Xbox and Activision studios</a></h4>
+            <p>Two years after the $69B acquisition, Microsoft has fully integrated Activision Blizzard into its Xbox division, consolidating game development studios and Game Pass content strategy.</p>
+            <div class="news-meta"><span class="news-tag" style="background:#E8DAFF;color:#6929C4">M&amp;A</span><span>Jun 12, 2026</span><span>TechCrunch</span></div>
+          </div>
+        </div>
+
+        <!-- News Tab (hidden by default) -->
+        <div id="tab-news" style="display:none">
+          <div class="news-item" style="padding:16px 24px">
+            <h4><a href="https://www.reuters.com/technology/microsoft-azure-revenue-growth-2026-06-18/" target="_blank" rel="noopener">Microsoft Azure revenue surges 31% as enterprise AI workloads accelerate</a></h4>
+            <p>Azure's intelligent cloud segment reported $28.5B in quarterly revenue, driven by surging demand for OpenAI-powered enterprise services and Copilot adoption.</p>
+            <div class="news-meta"><span class="news-tag" style="background:#D0E2FF;color:#0043CE">FINANCIAL</span><span>Jun 18, 2026</span><span>Reuters</span></div>
+          </div>
+          <div class="news-item" style="padding:16px 24px">
+            <h4><a href="https://www.ft.com/content/microsoft-openai-partnership-2026" target="_blank" rel="noopener">Microsoft considers legal action against Amazon over $50B OpenAI cloud deal</a></h4>
+            <p>Microsoft is evaluating legal options after reports that Amazon is negotiating a $50 billion infrastructure deal with OpenAI that could breach Microsoft's exclusive cloud partnership agreement.</p>
+            <div class="news-meta"><span class="news-tag" style="background:#FFD6E8;color:#9F1853">LEGAL</span><span>Jun 15, 2026</span><span>Financial Times</span></div>
+          </div>
+          <div class="news-item" style="padding:16px 24px">
+            <h4><a href="https://techcrunch.com/2026/06/12/microsoft-activision-integration/" target="_blank" rel="noopener">Microsoft completes full Activision Blizzard integration, merges Xbox and Activision studios</a></h4>
+            <p>Two years after the $69B acquisition, Microsoft has fully integrated Activision Blizzard into its Xbox division.</p>
+            <div class="news-meta"><span class="news-tag" style="background:#E8DAFF;color:#6929C4">M&amp;A</span><span>Jun 12, 2026</span><span>TechCrunch</span></div>
+          </div>
+        </div>
+
+        <!-- Facts Tab (hidden by default) -->
+        <div id="tab-facts" style="display:none">
+          <div class="news-item" style="padding:16px 24px">
+            <h4><a href="https://blogs.microsoft.com/blog/2026/06/20/microsoft-build-2026-recap/" target="_blank" rel="noopener">Microsoft Build 2026: Copilot Studio, Azure AI Foundry, and Windows AI APIs take center stage</a></h4>
+            <p>Microsoft unveiled major AI platform updates at Build 2026, including Copilot Studio extensibility and new Windows AI APIs for on-device inference.</p>
+            <div class="news-meta"><span class="news-tag" style="background:#A7F0BA;color:#0E6027">PRODUCT LAUNCH</span><span>Jun 20, 2026</span><span>Microsoft Blog</span></div>
+          </div>
+          <div class="news-item" style="padding:16px 24px">
+            <h4><a href="https://news.microsoft.com/2026/06/10/microsoft-datacenter-mount-pleasant/" target="_blank" rel="noopener">Microsoft completes data center in Mount Pleasant, Wisconsin</a></h4>
+            <p>Microsoft's new $1.2B hyperscale data center in Mount Pleasant is now operational, supporting Azure and Copilot workloads for Midwest enterprise customers.</p>
+            <div class="news-meta"><span class="news-tag" style="background:#DEFBE6;color:#198038">EXPANSION</span><span>Jun 10, 2026</span><span>Microsoft News</span></div>
+          </div>
+        </div>
+
+        <!-- GATED -->
+        <div class="gated" style="min-height:140px">
+          <div class="gated-blur">
+            <div class="news-item" style="padding:16px 24px"><h4>Microsoft partners with SAP to integrate Copilot across S/4HANA Cloud</h4><p>Strategic partnership to embed AI assistants into enterprise ERP workflows...</p></div>
+            <div class="news-item" style="padding:16px 24px"><h4>Microsoft announces $10B AI infrastructure investment in Southeast Asia</h4><p>New data centers planned for Indonesia, Malaysia, and Thailand...</p></div>
+          </div>
+          <div class="gated-overlay">
+            <div class="lock-ico">&#128274;</div>
+            <p><strong>Sign up to access 480+ more updates</strong></p>
+            <a href="#" class="btn-cta-sm" onclick="openModal();return false">Unlock all updates</a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -460,6 +535,15 @@ function scrollToSec(id,el){
   window.scrollTo({top:y,behavior:'smooth'});
   document.querySelectorAll('.left-nav a').forEach(function(a){a.classList.remove('active')});
   el.classList.add('active');
+}
+
+function switchTab(tab,el){
+  document.getElementById('tab-all').style.display=tab==='all'?'':'none';
+  document.getElementById('tab-news').style.display=tab==='news'?'':'none';
+  document.getElementById('tab-facts').style.display=tab==='facts'?'':'none';
+  var btns=el.parentElement.querySelectorAll('button');
+  btns.forEach(function(b){b.style.color='#525252';b.style.fontWeight='500';b.style.borderBottomColor='transparent'});
+  el.style.color='#0072C3';el.style.fontWeight='600';el.style.borderBottomColor='#0072C3';
 }
 
 var sections=document.querySelectorAll('.sec-card[id]');
