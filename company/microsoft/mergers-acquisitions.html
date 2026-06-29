@@ -66,9 +66,9 @@
     .insight-card strong{color:#161616}
 
     /* KEYWORD CLOUD */
-    .keyword-cloud{position:relative;width:100%;height:320px;margin-bottom:24px;background:#fff;border:1px solid #DDE1E6;border-radius:8px;overflow:hidden}
-    .kw{position:absolute;color:#0043CE;font-weight:600;white-space:nowrap;cursor:default;transition:all .2s}
-    .kw:hover{color:#6929C4;transform:scale(1.08)}
+    .keyword-cloud{position:relative;width:100%;height:380px;margin-bottom:24px;overflow:hidden}
+    .kw{position:absolute;font-weight:600;white-space:nowrap;cursor:default;transition:all .2s}
+    .kw:hover{opacity:.7}
 
     /* GEOGRAPHY */
     .geo-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
@@ -219,26 +219,62 @@
   <div>
     <h3 style="font-size:14px;font-weight:700;color:#121619;margin-bottom:10px">Industry Focus</h3>
     <div class="keyword-cloud">
-      <span class="kw" style="font-size:64px;font-weight:800;top:100px;left:22%;color:#0033A0">"Gaming"</span>
-      <span class="kw" style="font-size:36px;font-weight:700;top:28px;left:4%;transform:rotate(-3deg)">"Cloud Security"</span>
-      <span class="kw" style="font-size:48px;font-weight:800;top:175px;left:2%;color:#0033A0">"Artificial Intelligence"</span>
-      <span class="kw" style="font-size:24px;font-weight:700;top:15px;left:42%">"Healthcare AI"</span>
-      <span class="kw" style="font-size:32px;font-weight:700;top:120px;left:60%">"Developer Tools"</span>
-      <span class="kw" style="font-size:18px;top:62px;left:62%;color:#4A6CF7">"Enterprise Software"</span>
-      <span class="kw" style="font-size:28px;font-weight:700;top:210px;left:50%">"Communication"</span>
-      <span class="kw" style="font-size:15px;top:250px;left:12%;color:#4A6CF7">"Social Networking"</span>
-      <span class="kw" style="font-size:22px;font-weight:600;top:8px;left:72%">"Cybersecurity"</span>
-      <span class="kw" style="font-size:16px;top:170px;left:82%;color:#4A6CF7">"Productivity"</span>
-      <span class="kw" style="font-size:19px;top:265px;left:36%;color:#4A6CF7">"Cloud Services"</span>
-      <span class="kw" style="font-size:14px;top:85px;left:1%;color:#6B7EF7;transform:rotate(-2deg)">"Content Moderation"</span>
-      <span class="kw" style="font-size:17px;top:55px;left:44%;color:#4A6CF7">"Open Source"</span>
-      <span class="kw" style="font-size:13px;top:235px;left:72%;color:#6B7EF7">"Digital Advertising"</span>
-      <span class="kw" style="font-size:16px;top:148px;left:84%;color:#4A6CF7">"Mixed Reality"</span>
-      <span class="kw" style="font-size:20px;font-weight:600;top:270px;left:58%">"Data Analytics"</span>
-      <span class="kw" style="font-size:14px;top:42px;left:86%;color:#6B7EF7">"IoT"</span>
-      <span class="kw" style="font-size:15px;top:290px;left:2%;color:#6B7EF7">"Edge Computing"</span>
-      <span class="kw" style="font-size:13px;top:195px;left:46%;color:#6B7EF7">"Identity Security"</span>
-      <span class="kw" style="font-size:17px;font-weight:600;top:90px;left:82%">"SaaS"</span>
+      <!-- Center dominant keyword -->
+      <span class="kw" style="font-size:72px;font-weight:800;top:130px;left:18%;color:#0033A0">"Gaming"</span>
+      <!-- Large keywords -->
+      <span class="kw" style="font-size:20px;font-weight:600;top:30px;left:2%;color:#0043CE">"Cloud Security"</span>
+      <span class="kw" style="font-size:18px;font-weight:600;top:60px;left:28%;color:#0043CE">"software application management"</span>
+      <span class="kw" style="font-size:16px;top:85px;left:5%;color:#0043CE">"datacentre managed services"</span>
+      <span class="kw" style="font-size:14px;top:15px;left:22%;color:#9B6EF7">"ecommerce"</span>
+      <span class="kw" style="font-size:13px;top:8px;left:38%;color:#9B6EF7">"it"</span>
+      <span class="kw" style="font-size:15px;top:25px;left:44%;color:#9B6EF7">"aerospace"</span>
+      <!-- Top right cluster -->
+      <span class="kw" style="font-size:14px;top:5px;left:55%;color:#9B6EF7">"construction equipment"</span>
+      <span class="kw" style="font-size:15px;top:30px;left:60%;color:#9B6EF7">"business application services"</span>
+      <span class="kw" style="font-size:14px;top:52px;left:48%;color:#9B6EF7">"cobrowse"</span>
+      <span class="kw" style="font-size:13px;top:50px;left:58%;color:#9B6EF7">"logistics"</span>
+      <span class="kw" style="font-size:15px;top:48px;left:68%;color:#9B6EF7">"filmed entertainment"</span>
+      <span class="kw" style="font-size:14px;top:70px;left:72%;color:#9B6EF7">"customer experience"</span>
+      <!-- Left cluster -->
+      <span class="kw" style="font-size:13px;top:48px;left:1%;color:#9B6EF7">"cobrowse solution"</span>
+      <span class="kw" style="font-size:14px;top:68px;left:1%;color:#9B6EF7">"farm equipment"</span>
+      <span class="kw" style="font-size:13px;top:72px;left:16%;color:#9B6EF7">"customer journey"</span>
+      <span class="kw" style="font-size:14px;top:88px;left:32%;color:#9B6EF7">"industrial equipment"</span>
+      <span class="kw" style="font-size:15px;top:85px;left:50%;color:#9B6EF7">"digital customer service"</span>
+      <span class="kw" style="font-size:14px;top:108px;left:58%;color:#9B6EF7">"clean energy"</span>
+      <span class="kw" style="font-size:16px;top:92px;left:72%;color:#9B6EF7">"customer satisfaction"</span>
+      <span class="kw" style="font-size:14px;top:110px;left:78%;color:#9B6EF7">"customer support"</span>
+      <span class="kw" style="font-size:13px;top:25px;left:10%;color:#9B6EF7">"components"</span>
+      <span class="kw" style="font-size:14px;top:100px;left:2%;color:#9B6EF7">"aftermarket"</span>
+      <span class="kw" style="font-size:16px;top:110px;left:12%;color:#0043CE">"mobility"</span>
+      <span class="kw" style="font-size:13px;top:135px;left:52%;color:#9B6EF7">"boats"</span>
+      <!-- Below center -->
+      <span class="kw" style="font-size:13px;top:210px;left:1%;color:#9B6EF7">"magazines"</span>
+      <span class="kw" style="font-size:14px;top:218px;left:10%;color:#9B6EF7">"hospitality"</span>
+      <span class="kw" style="font-size:15px;top:220px;left:22%;color:#0043CE">"cloud services"</span>
+      <span class="kw" style="font-size:14px;top:215px;left:37%;color:#9B6EF7">"screen sharing"</span>
+      <span class="kw" style="font-size:14px;top:218px;left:52%;color:#9B6EF7">"mobile app support"</span>
+      <span class="kw" style="font-size:13px;top:230px;left:1%;color:#9B6EF7">"digital media"</span>
+      <span class="kw" style="font-size:14px;top:225px;left:12%;color:#9B6EF7">"agent video"</span>
+      <span class="kw" style="font-size:16px;top:240px;left:25%;color:#0043CE">"product and engineering services"</span>
+      <span class="kw" style="font-size:14px;top:210px;left:70%;color:#9B6EF7">"general news"</span>
+      <span class="kw" style="font-size:15px;top:210px;left:82%;color:#9B6EF7">"steel"</span>
+      <!-- Bottom cluster -->
+      <span class="kw" style="font-size:15px;top:260px;left:5%;color:#9B6EF7">"salesforce integration"</span>
+      <span class="kw" style="font-size:16px;top:258px;left:26%;color:#9B6EF7">"financial services"</span>
+      <span class="kw" style="font-size:14px;top:260px;left:45%;color:#9B6EF7">"retail"</span>
+      <span class="kw" style="font-size:13px;top:260px;left:52%;color:#9B6EF7">"agribusiness"</span>
+      <span class="kw" style="font-size:14px;top:252px;left:64%;color:#9B6EF7">"analytics and information management"</span>
+      <span class="kw" style="font-size:13px;top:280px;left:8%;color:#9B6EF7">"two wheelers"</span>
+      <span class="kw" style="font-size:15px;top:278px;left:20%;color:#9B6EF7">"business process outsourcing"</span>
+      <span class="kw" style="font-size:14px;top:278px;left:48%;color:#9B6EF7">"cobrowsing"</span>
+      <span class="kw" style="font-size:15px;top:298px;left:5%;color:#9B6EF7">"infrastructure management"</span>
+      <span class="kw" style="font-size:13px;top:298px;left:30%;color:#9B6EF7">"mobile content"</span>
+      <span class="kw" style="font-size:14px;top:300px;left:44%;color:#9B6EF7">"defence"</span>
+      <span class="kw" style="font-size:16px;top:296px;left:54%;color:#0043CE">"automotive"</span>
+      <span class="kw" style="font-size:15px;top:278px;left:62%;color:#9B6EF7">"real estate & infrastructure"</span>
+      <span class="kw" style="font-size:14px;top:318px;left:22%;color:#9B6EF7">"business news"</span>
+      <span class="kw" style="font-size:14px;top:320px;left:40%;color:#9B6EF7">"customer journey"</span>
     </div>
   </div>
 
