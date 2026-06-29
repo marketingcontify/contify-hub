@@ -66,8 +66,9 @@
     .insight-card strong{color:#161616}
 
     /* KEYWORD CLOUD */
-    .keyword-cloud{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
-    .kw-pill{display:inline-block;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:500;border:1px solid #DDE1E6;background:#fff;color:#161616}
+    .keyword-cloud{position:relative;width:100%;height:280px;margin-bottom:24px;background:#fff;border:1px solid #DDE1E6;border-radius:8px;overflow:hidden}
+    .kw{position:absolute;color:#0043CE;font-weight:600;white-space:nowrap;cursor:default;transition:color .15s}
+    .kw:hover{color:#6929C4}
 
     /* GEOGRAPHY */
     .geo-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
@@ -218,15 +219,21 @@
   <div>
     <h3 style="font-size:14px;font-weight:700;color:#121619;margin-bottom:10px">Industry Focus</h3>
     <div class="keyword-cloud">
-      <span class="kw-pill" style="font-size:18px;font-weight:700;color:#0072C3">Gaming</span>
-      <span class="kw-pill" style="font-size:16px;font-weight:700;color:#6929C4">Cloud Security</span>
-      <span class="kw-pill" style="font-size:17px;font-weight:700;color:#198038">Artificial Intelligence</span>
-      <span class="kw-pill" style="font-size:14px;font-weight:600;color:#da1e28">Healthcare AI</span>
-      <span class="kw-pill" style="font-size:15px;font-weight:600;color:#00539A">Developer Tools</span>
-      <span class="kw-pill" style="font-size:13px;font-weight:500;color:#525252">Enterprise Software</span>
-      <span class="kw-pill" style="font-size:14px;font-weight:600;color:#8E6A00">Communication</span>
-      <span class="kw-pill" style="font-size:12px;font-weight:500;color:#525252">Social Networking</span>
-      <span class="kw-pill" style="font-size:13px;font-weight:500;color:#525252">Cybersecurity</span>
+      <span class="kw" style="font-size:52px;font-weight:800;top:90px;left:28%">"Gaming"</span>
+      <span class="kw" style="font-size:38px;font-weight:700;top:40px;left:8%">"Cloud Security"</span>
+      <span class="kw" style="font-size:44px;font-weight:800;top:160px;left:5%">"Artificial Intelligence"</span>
+      <span class="kw" style="font-size:22px;font-weight:600;top:20px;left:52%">"Healthcare AI"</span>
+      <span class="kw" style="font-size:28px;font-weight:700;top:130px;left:62%">"Developer Tools"</span>
+      <span class="kw" style="font-size:18px;top:70px;left:68%">"Enterprise Software"</span>
+      <span class="kw" style="font-size:24px;font-weight:600;top:200px;left:55%">"Communication"</span>
+      <span class="kw" style="font-size:16px;top:230px;left:18%">"Social Networking"</span>
+      <span class="kw" style="font-size:20px;top:10px;left:78%">"Cybersecurity"</span>
+      <span class="kw" style="font-size:15px;top:180px;left:80%">"Productivity"</span>
+      <span class="kw" style="font-size:17px;top:240px;left:40%">"Cloud Services"</span>
+      <span class="kw" style="font-size:14px;top:100px;left:1%">"Content Moderation"</span>
+      <span class="kw" style="font-size:16px;top:60px;left:48%">"Open Source"</span>
+      <span class="kw" style="font-size:13px;top:210px;left:72%">"Digital Advertising"</span>
+      <span class="kw" style="font-size:15px;top:150px;left:85%">"Mixed Reality"</span>
     </div>
   </div>
 
