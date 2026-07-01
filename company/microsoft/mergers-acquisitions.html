@@ -11,6 +11,7 @@
   {"@context":"https://schema.org","@type":"CollectionPage","name":"Microsoft – M&A (Mergers & Acquisitions)","description":"Track Microsoft's mergers, acquisitions, and divestitures with real-time intelligence.","url":"https://www.contify.com/company/microsoft/mergers-acquisitions/","publisher":{"@type":"Organization","name":"Contify","url":"https://www.contify.com"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.contify.com/"},{"@type":"ListItem","position":2,"name":"Companies","item":"https://www.contify.com/d/companies/all/"},{"@type":"ListItem","position":3,"name":"Technology","item":"https://www.contify.com/d/industry/it-technology/"},{"@type":"ListItem","position":4,"name":"Microsoft","item":"https://www.contify.com/company/microsoft/"},{"@type":"ListItem","position":5,"name":"M&A","item":"https://www.contify.com/company/microsoft/mergers-acquisitions/"}]}}
   </script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.2.2/wordcloud2.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" href="https://www.contify.com/wp-content/uploads/2021/04/roundel-contify-cyan-dark.svg" sizes="32x32">
@@ -67,9 +68,8 @@
 
     /* KEYWORD CLOUD */
     .cloud-widget{background:#fff;border:1px solid #DDE1E6;border-radius:8px;margin-bottom:24px;overflow:hidden}
-    .keyword-cloud{padding:28px 24px;text-align:center;line-height:1}
-    .kw{display:inline-block;margin:5px 8px;cursor:default;transition:opacity .2s;line-height:1.3}
-    .kw:hover{opacity:.65}
+    .cloud-widget-body{padding:36px 48px}
+    #wc-canvas{width:100%;height:420px;display:block}
 
     /* GEOGRAPHY */
     .geo-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
@@ -227,57 +227,81 @@
   <!-- INDUSTRY KEYWORD CLOUD -->
   <h2 style="font-size:18px;font-weight:700;color:#121619;margin-bottom:12px">Industry Focus</h2>
   <div class="cloud-widget">
-    <div class="keyword-cloud">
-      <span class="kw" style="font-size:12px;color:#4589FF">"project management: cloud infrastructure"</span>
-      <span class="kw" style="font-size:12px;color:#4589FF">"mechanical: enterprise hardware"</span>
-      <span class="kw" style="font-size:12px;color:#4589FF">"services"</span>
-      <span class="kw" style="font-size:12px;color:#4589FF">"customer relationship management"</span>
-      <span class="kw" style="font-size:12px;color:#4589FF">"employee productivity"</span>
-      <span class="kw" style="font-size:26px;font-weight:700;color:#0033A0">"cloud computing"</span>
-      <span class="kw" style="font-size:12px;color:#4589FF">"safety management"</span>
-      <span class="kw" style="font-size:36px;font-weight:700;color:#0033A0">"data"</span>
-      <span class="kw" style="font-size:30px;font-weight:700;color:#0033A0">"gaming"</span>
-      <span class="kw" style="font-size:12px;color:#4589FF">"interoperable data lake"</span>
-      <span class="kw" style="font-size:22px;font-weight:700;color:#0033A0">"iot"</span>
-      <span class="kw" style="font-size:24px;font-weight:700;color:#0033A0">"enterprise software"</span>
-      <span class="kw" style="font-size:13px;color:#4589FF">"millwright rigging"</span>
-      <span class="kw" style="font-size:14px;color:#4589FF">"health equity"</span>
-      <span class="kw" style="font-size:14px;color:#4589FF">"quality reporting"</span>
-      <span class="kw" style="font-size:14px;color:#4589FF">"healthtech"</span>
-      <span class="kw" style="font-size:30px;font-weight:700;color:#0033A0">"sales"</span>
-      <span class="kw" style="font-size:12px;color:#4589FF">"defence aerospace"</span>
-      <span class="kw" style="font-size:14px;color:#4589FF">"licensed in 20+ states"</span>
-      <span class="kw" style="font-size:13px;color:#4589FF">"installation commercial"</span>
-      <span class="kw" style="font-size:72px;font-weight:800;color:#0033A0">"technology"</span>
-      <span class="kw" style="font-size:12px;color:#4589FF">"gmp"</span>
-      <span class="kw" style="font-size:28px;font-weight:700;color:#0033A0">"big data"</span>
-      <span class="kw" style="font-size:13px;color:#4589FF">"nec code"</span>
-      <span class="kw" style="font-size:13px;color:#4589FF">"power instrumentation"</span>
-      <span class="kw" style="font-size:12px;color:#4589FF">"drilled down contract performance"</span>
-      <span class="kw" style="font-size:14px;color:#4589FF">"value-based care"</span>
-      <span class="kw" style="font-size:12px;color:#4589FF">"operations"</span>
-      <span class="kw" style="font-size:12px;color:#4589FF">"internet"</span>
-      <span class="kw" style="font-size:13px;color:#4589FF">"power systems"</span>
-      <span class="kw" style="font-size:28px;font-weight:700;color:#0033A0">"real estate"</span>
-      <span class="kw" style="font-size:13px;color:#4589FF">"population health"</span>
-      <span class="kw" style="font-size:30px;font-weight:700;color:#0033A0">"digital transformation"</span>
-      <span class="kw" style="font-size:14px;color:#4589FF">"mechanical pneumatic"</span>
-      <span class="kw" style="font-size:13px;color:#4589FF">"maintenance & repair"</span>
-      <span class="kw" style="font-size:28px;font-weight:700;color:#0033A0">"marketing"</span>
-      <span class="kw" style="font-size:14px;color:#4589FF">"healthit"</span>
-      <span class="kw" style="font-size:30px;font-weight:700;color:#0033A0">"analytics"</span>
-      <span class="kw" style="font-size:14px;color:#4589FF">"hydraulic & robotic installation"</span>
-      <span class="kw" style="font-size:13px;color:#4589FF">"welding structural steel erection"</span>
-      <span class="kw" style="font-size:13px;color:#4589FF">"civil aerospace"</span>
-      <span class="kw" style="font-size:14px;color:#4589FF">"machinery & production line demolition"</span>
-      <span class="kw" style="font-size:28px;font-weight:700;color:#0033A0">"managed services"</span>
-      <span class="kw" style="font-size:13px;color:#4589FF">"electrical: wiring & testing systems & equipment"</span>
-    </div>
+    <div class="cloud-widget-body"><canvas id="wc-canvas"></canvas></div>
+    <script>
+    (function(){
+      var canvas = document.getElementById('wc-canvas');
+      var container = canvas.parentElement;
+      canvas.width = container.offsetWidth || 900;
+      canvas.height = 420;
+      var words = [
+        ['"technology"', 55],
+        ['"cloud computing"', 26],
+        ['"data"', 32],
+        ['"gaming"', 27],
+        ['"sales"', 27],
+        ['"iot"', 23],
+        ['"big data"', 24],
+        ['"real estate"', 24],
+        ['"digital transformation"', 24],
+        ['"marketing"', 24],
+        ['"analytics"', 26],
+        ['"managed services"', 24],
+        ['"enterprise software"', 22],
+        ['"research"', 22],
+        ['"consulting"', 22],
+        ['"manufacturing"', 24],
+        ['"retail"', 20],
+        ['"services"', 12],
+        ['"safety management"', 12],
+        ['"health equity"', 12],
+        ['"quality reporting"', 12],
+        ['"healthtech"', 12],
+        ['"defence aerospace"', 12],
+        ['"interoperable data lake"', 11],
+        ['"installation commercial"', 11],
+        ['"nec code"', 11],
+        ['"gmp"', 11],
+        ['"employee productivity"', 11],
+        ['"power instrumentation"', 11],
+        ['"population health"', 11],
+        ['"mechanical pneumatic"', 11],
+        ['"power systems"', 11],
+        ['"healthit"', 11],
+        ['"maintenance & repair"', 11],
+        ['"hydraulic & robotic installation"', 11],
+        ['"value-based care"', 11],
+        ['"civil aerospace"', 11],
+        ['"operations"', 11],
+        ['"internet"', 11],
+        ['"customer relationship management"', 11],
+        ['"drilled down contract performance"', 10],
+        ['"welding structural steel erection"', 10],
+        ['"machinery & production line demolition"', 10],
+        ['"electrical: wiring & testing systems"', 10],
+        ['"project management: cloud infrastructure"', 10],
+        ['"licensed in 20+ states"', 10],
+      ];
+      WordCloud(canvas, {
+        list: words,
+        fontFamily: "'Geist', 'Segoe UI', sans-serif",
+        color: function(word, weight) { return weight >= 32 ? '#0033A0' : '#4589FF'; },
+        rotateRatio: 0,
+        rotationSteps: 1,
+        backgroundColor: '#ffffff',
+        gridSize: Math.round(16 * canvas.width / 1024),
+        weightFactor: function(size) { return size * canvas.width / 900; },
+        ellipticity: 0.65,
+        drawOutOfBound: false,
+        shrinkToFit: true,
+      });
+    })();
+    </script>
   </div>
 
   <!-- GEOGRAPHY -->
   <div>
-    <h3 style="font-size:14px;font-weight:700;color:#121619;margin-bottom:10px">Geography of Acquired Companies</h3>
+    <h2 style="font-size:18px;font-weight:700;color:#121619;margin-bottom:12px">Geography of Acquired Companies</h2>
     <div class="geo-row">
       <span class="geo-pill">United States <span class="pct">75%</span></span>
       <span class="geo-pill">Israel <span class="pct">8%</span></span>
