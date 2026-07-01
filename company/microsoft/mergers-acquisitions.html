@@ -66,9 +66,15 @@
     .insight-card strong{color:#161616}
 
     /* KEYWORD CLOUD */
-    .keyword-cloud{position:relative;width:100%;height:380px;margin-bottom:24px;overflow:hidden}
-    .kw{position:absolute;font-weight:600;white-space:nowrap;cursor:default;transition:all .2s}
-    .kw:hover{opacity:.7}
+    .cloud-widget{background:#fff;border:1px solid #DDE1E6;border-radius:8px;margin-bottom:24px;overflow:hidden}
+    .cloud-widget-head{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid #F2F4F8}
+    .cloud-widget-head .title{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#161616}
+    .cloud-widget-head .ico-circle{width:22px;height:22px;border-radius:50%;background:#E8DAFF;display:flex;align-items:center;justify-content:center;font-size:11px;color:#6929C4}
+    .cloud-widget-head .info-ico{font-size:13px;color:#8D8D8D;cursor:default}
+    .cloud-widget-head .expand-ico{font-size:14px;color:#8D8D8D;cursor:pointer}
+    .keyword-cloud{position:relative;width:100%;height:400px;padding:16px;overflow:hidden}
+    .kw{position:absolute;white-space:nowrap;cursor:default;transition:opacity .2s;line-height:1.1}
+    .kw:hover{opacity:.65}
 
     /* GEOGRAPHY */
     .geo-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
@@ -216,79 +222,80 @@
   </div>
 
   <!-- INDUSTRY KEYWORD CLOUD -->
-  <div>
-    <h3 style="font-size:14px;font-weight:700;color:#121619;margin-bottom:10px">Industry Focus</h3>
+  <div class="cloud-widget">
+    <div class="cloud-widget-head">
+      <div class="title">
+        <span class="ico-circle">&#9898;</span>
+        Industry Themes
+        <span class="info-ico">&#9432;</span>
+      </div>
+      <span class="expand-ico">&#8599;</span>
+    </div>
     <div class="keyword-cloud">
-      <!-- DOMINANT -->
-      <span class="kw" style="font-size:68px;font-weight:800;top:140px;left:22%;color:#0033A0">Gaming</span>
-
-      <!-- ROW 1 - top -->
-      <span class="kw" style="font-size:13px;top:6px;left:3%;color:#9B6EF7">ecommerce</span>
-      <span class="kw" style="font-size:12px;top:4px;left:16%;color:#9B6EF7">components</span>
-      <span class="kw" style="font-size:13px;top:8px;left:28%;color:#9B6EF7">it</span>
-      <span class="kw" style="font-size:13px;top:5px;left:34%;color:#9B6EF7">aerospace</span>
-      <span class="kw" style="font-size:13px;top:3px;left:46%;color:#9B6EF7">construction equipment</span>
-      <span class="kw" style="font-size:13px;top:7px;left:65%;color:#9B6EF7">business application services</span>
+      <!-- TOP ROWS -->
+      <span class="kw" style="font-size:12px;top:8px;left:21%;color:#4589FF">"project management: cloud infrastructure"</span>
+      <span class="kw" style="font-size:12px;top:26px;left:22%;color:#4589FF">"mechanical: enterprise hardware"</span>
 
       <!-- ROW 2 -->
-      <span class="kw" style="font-size:22px;font-weight:700;top:28px;left:1%;color:#0043CE">Cloud Security</span>
-      <span class="kw" style="font-size:12px;top:30px;left:20%;color:#9B6EF7">cobrowse solution</span>
-      <span class="kw" style="font-size:20px;font-weight:600;top:32px;left:33%;color:#0043CE">software application management</span>
-      <span class="kw" style="font-size:13px;top:28px;left:65%;color:#9B6EF7">cobrowse</span>
-      <span class="kw" style="font-size:13px;top:26px;left:74%;color:#9B6EF7">logistics</span>
-      <span class="kw" style="font-size:14px;top:30px;left:83%;color:#9B6EF7">filmed entertainment</span>
+      <span class="kw" style="font-size:26px;font-weight:700;top:48px;left:11%;color:#0033A0">"cloud computing"</span>
+      <span class="kw" style="font-size:12px;top:52px;left:44%;color:#4589FF">"services"</span>
+      <span class="kw" style="font-size:12px;top:50px;left:50%;color:#4589FF">"customer relationship management"</span>
+      <span class="kw" style="font-size:13px;top:48px;left:79%;color:#4589FF">"employee productivity"</span>
 
       <!-- ROW 3 -->
-      <span class="kw" style="font-size:12px;top:62px;left:1%;color:#9B6EF7">farm equipment</span>
-      <span class="kw" style="font-size:14px;top:60px;left:15%;color:#9B6EF7">customer journey</span>
-      <span class="kw" style="font-size:16px;font-weight:600;top:64px;left:27%;color:#0043CE">datacentre managed services</span>
-      <span class="kw" style="font-size:14px;top:60px;left:54%;color:#9B6EF7">industrial equipment</span>
-      <span class="kw" style="font-size:15px;top:56px;left:68%;color:#9B6EF7">digital customer service</span>
-      <span class="kw" style="font-size:14px;top:58px;left:86%;color:#9B6EF7">customer experience</span>
+      <span class="kw" style="font-size:24px;font-weight:700;top:80px;left:1%;color:#0033A0">"enterprise software"</span>
+      <span class="kw" style="font-size:12px;top:84px;left:28%;color:#4589FF">"safety management"</span>
+      <span class="kw" style="font-size:36px;font-weight:700;top:72px;left:38%;color:#0033A0">"data"</span>
+      <span class="kw" style="font-size:30px;font-weight:700;top:72px;left:51%;color:#0033A0">"gaming"</span>
+      <span class="kw" style="font-size:12px;top:82px;left:73%;color:#4589FF">"interoperable data lake"</span>
+      <span class="kw" style="font-size:22px;font-weight:700;top:78px;left:82%;color:#0033A0">"iot"</span>
 
       <!-- ROW 4 -->
-      <span class="kw" style="font-size:12px;top:90px;left:1%;color:#9B6EF7">aftermarket</span>
-      <span class="kw" style="font-size:16px;font-weight:600;top:86px;left:10%;color:#0043CE">mobility</span>
-      <span class="kw" style="font-size:13px;top:94px;left:24%;color:#9B6EF7">enterprise software</span>
-      <span class="kw" style="font-size:13px;top:88px;left:51%;color:#9B6EF7">clean energy</span>
-      <span class="kw" style="font-size:16px;top:86px;left:62%;color:#9B6EF7">customer satisfaction</span>
-      <span class="kw" style="font-size:14px;top:88px;left:82%;color:#9B6EF7">customer support</span>
+      <span class="kw" style="font-size:13px;top:120px;left:1%;color:#4589FF">"millwright rigging"</span>
+      <span class="kw" style="font-size:14px;top:116px;left:14%;color:#4589FF">"health equity"</span>
+      <span class="kw" style="font-size:14px;top:118px;left:26%;color:#4589FF">"quality reporting"</span>
+      <span class="kw" style="font-size:14px;top:114px;left:38%;color:#4589FF">"healthtech"</span>
+      <span class="kw" style="font-size:30px;font-weight:700;top:108px;left:50%;color:#0033A0">"sales"</span>
+      <span class="kw" style="font-size:12px;top:120px;left:70%;color:#4589FF">"defence aerospace"</span>
+      <span class="kw" style="font-size:14px;top:112px;left:81%;color:#4589FF">"licensed in 20+ states"</span>
 
-      <!-- ROW 5 - boats sits alone above center -->
-      <span class="kw" style="font-size:12px;top:120px;left:57%;color:#9B6EF7">boats</span>
+      <!-- CENTER - dominant -->
+      <span class="kw" style="font-size:13px;top:148px;left:1%;color:#4589FF">"installation commercial"</span>
+      <span class="kw" style="font-size:72px;font-weight:800;top:130px;left:14%;color:#0033A0">"technology"</span>
+      <span class="kw" style="font-size:12px;top:148px;left:72%;color:#4589FF">"gmp"</span>
+      <span class="kw" style="font-size:14px;top:152px;left:78%;color:#4589FF">"maintenance contract"</span>
+      <span class="kw" style="font-size:28px;font-weight:700;top:144px;left:79%;color:#0033A0">"big data"</span>
 
-      <!-- ROW 6 - below Gaming -->
-      <span class="kw" style="font-size:13px;top:224px;left:1%;color:#9B6EF7">magazines</span>
-      <span class="kw" style="font-size:14px;top:220px;left:12%;color:#9B6EF7">hospitality</span>
-      <span class="kw" style="font-size:14px;top:222px;left:22%;color:#9B6EF7">agent video</span>
-      <span class="kw" style="font-size:17px;font-weight:600;top:218px;left:33%;color:#0043CE">cloud services</span>
-      <span class="kw" style="font-size:15px;top:220px;left:48%;color:#9B6EF7">screen sharing</span>
-      <span class="kw" style="font-size:15px;top:216px;left:62%;color:#9B6EF7">mobile app support</span>
-      <span class="kw" style="font-size:14px;top:220px;left:78%;color:#9B6EF7">general news</span>
-      <span class="kw" style="font-size:13px;top:222px;left:90%;color:#9B6EF7">steel</span>
+      <!-- ROW 6 -->
+      <span class="kw" style="font-size:13px;top:198px;left:1%;color:#4589FF">"nec code"</span>
+      <span class="kw" style="font-size:13px;top:202px;left:10%;color:#4589FF">"power instrumentation"</span>
+      <span class="kw" style="font-size:12px;top:200px;left:28%;color:#4589FF">"drilled down contract performance"</span>
+      <span class="kw" style="font-size:14px;top:196px;left:50%;color:#4589FF">"value-based care"</span>
+      <span class="kw" style="font-size:12px;top:202px;left:68%;color:#4589FF">"operations"</span>
+      <span class="kw" style="font-size:12px;top:198px;left:78%;color:#4589FF">"internet"</span>
 
       <!-- ROW 7 -->
-      <span class="kw" style="font-size:13px;top:250px;left:1%;color:#9B6EF7">digital media</span>
-      <span class="kw" style="font-size:18px;font-weight:600;top:246px;left:11%;color:#0043CE">product and engineering services</span>
-      <span class="kw" style="font-size:14px;top:250px;left:48%;color:#9B6EF7">retail</span>
-      <span class="kw" style="font-size:13px;top:252px;left:56%;color:#9B6EF7">agribusiness</span>
-      <span class="kw" style="font-size:14px;top:248px;left:68%;color:#9B6EF7">analytics and information management</span>
+      <span class="kw" style="font-size:13px;top:226px;left:1%;color:#4589FF">"power systems"</span>
+      <span class="kw" style="font-size:28px;font-weight:700;top:218px;left:10%;color:#0033A0">"real estate"</span>
+      <span class="kw" style="font-size:13px;top:228px;left:33%;color:#4589FF">"population health"</span>
+      <span class="kw" style="font-size:30px;font-weight:700;top:216px;left:42%;color:#0033A0">"digital transformation"</span>
+      <span class="kw" style="font-size:14px;top:226px;left:77%;color:#4589FF">"mechanical pneumatic"</span>
 
       <!-- ROW 8 -->
-      <span class="kw" style="font-size:16px;top:278px;left:1%;color:#9B6EF7">salesforce integration</span>
-      <span class="kw" style="font-size:17px;font-weight:600;top:274px;left:21%;color:#0043CE">financial services</span>
-      <span class="kw" style="font-size:15px;top:276px;left:40%;color:#9B6EF7">business process outsourcing</span>
-      <span class="kw" style="font-size:14px;top:278px;left:64%;color:#9B6EF7">cobrowsing</span>
-      <span class="kw" style="font-size:16px;font-weight:600;top:274px;left:75%;color:#0043CE">automotive</span>
-      <span class="kw" style="font-size:14px;top:278px;left:87%;color:#9B6EF7">real estate</span>
+      <span class="kw" style="font-size:13px;top:258px;left:1%;color:#4589FF">"maintenance & repair"</span>
+      <span class="kw" style="font-size:28px;font-weight:700;top:252px;left:13%;color:#0033A0">"marketing"</span>
+      <span class="kw" style="font-size:14px;top:260px;left:34%;color:#4589FF">"healthit"</span>
+      <span class="kw" style="font-size:30px;font-weight:700;top:250px;left:42%;color:#0033A0">"analytics"</span>
+      <span class="kw" style="font-size:14px;top:256px;left:64%;color:#4589FF">"hydraulic & robotic installation"</span>
 
-      <!-- ROW 9 - bottom -->
-      <span class="kw" style="font-size:15px;top:308px;left:3%;color:#9B6EF7">infrastructure management</span>
-      <span class="kw" style="font-size:13px;top:312px;left:24%;color:#9B6EF7">two wheelers</span>
-      <span class="kw" style="font-size:14px;top:308px;left:36%;color:#9B6EF7">mobile content</span>
-      <span class="kw" style="font-size:15px;top:310px;left:50%;color:#9B6EF7">business news</span>
-      <span class="kw" style="font-size:14px;top:308px;left:64%;color:#9B6EF7">defence</span>
-      <span class="kw" style="font-size:14px;top:310px;left:73%;color:#9B6EF7">customer journey</span>
+      <!-- ROW 9 - bottom area -->
+      <span class="kw" style="font-size:13px;top:290px;left:4%;color:#4589FF">"welding structural steel erection"</span>
+      <span class="kw" style="font-size:13px;top:292px;left:28%;color:#4589FF">"civil aerospace"</span>
+      <span class="kw" style="font-size:14px;top:288px;left:50%;color:#4589FF">"machinery & production line demolition"</span>
+      <span class="kw" style="font-size:28px;font-weight:700;top:308px;left:16%;color:#0033A0">"managed services"</span>
+
+      <!-- BOTTOM -->
+      <span class="kw" style="font-size:13px;top:348px;left:10%;color:#4589FF">"electrical: wiring & testing systems & equipment"</span>
     </div>
   </div>
 
