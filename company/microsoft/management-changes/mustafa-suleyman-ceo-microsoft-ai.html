@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft Appoints Mustafa Suleyman as CEO of Microsoft AI | Contify</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://www.contify.com/wp-content/uploads/2021/04/roundel-contify-cyan-dark.svg" sizes="32x32">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Geist',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F4F4F4;color:#161616;line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:#0072C3;text-decoration:none}a:hover{text-decoration:underline}
+
+    .strip{background:#9AF4CF;color:#161616;font-size:13px;text-align:center;padding:8px 0;font-weight:500}
+    .strip a{color:#161616;text-decoration:underline;font-weight:700}
+
+    .header{background:linear-gradient(99.62deg,#0072C3 0%,#00539A 100.4%);position:sticky;top:0;z-index:100}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:75px;max-width:1200px;margin:0 auto}
+    .navbar__logo img{height:36px}
+    .navbar__nav{display:flex;gap:32px;align-items:center}
+    .navbar__nav a{color:#fff;font-size:15px;font-weight:500;opacity:.9;transition:opacity .15s}
+    .navbar__nav a:hover,.navbar__nav a.active{opacity:1;text-decoration:none}
+    .navbar__actions{display:flex;align-items:center;gap:10px}
+    .btn-login{color:#fff;font-size:14px;font-weight:500;opacity:.9;padding:8px 16px}
+    .btn-login:hover{opacity:1;text-decoration:none}
+    .btn-cta{background:#FFCD3F;color:#000;font-weight:600;font-size:15px;padding:12px 22px;border-radius:4px;border:none;cursor:pointer;display:inline-block;transition:background .15s}
+    .btn-cta:hover{background:#FDDC69;text-decoration:none}
+    .btn-cta-sm{background:#FFCD3F;color:#000;font-weight:600;font-size:14px;padding:10px 20px;border-radius:4px;border:none;cursor:pointer;display:inline-block}
+    .btn-outline{display:inline-block;padding:10px 22px;border:1.5px solid #DDE1E6;color:#161616;border-radius:4px;font-size:14px;font-weight:600;background:#fff}
+    .btn-outline:hover{border-color:#0072C3;color:#0072C3;text-decoration:none}
+
+    /* BREADCRUMB BAR */
+    .bc-bar{background:#fff;border-bottom:1px solid #E0E0E0;padding:10px 0}
+    .bc{font-size:13px;color:#8D8D8D;display:flex;gap:6px;align-items:center;flex-wrap:wrap;max-width:1200px;margin:0 auto;padding:0 24px}
+    .bc a{color:#525252}.bc a:hover{color:#0072C3;text-decoration:none}
+    .bc .sep{color:#C6C6C6}.bc .cur{color:#161616;font-weight:500}
+
+    /* LAYOUT */
+    .page-wrap{max-width:1200px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+
+    /* MAIN CARD */
+    .main-card{background:#fff;border:1px solid #DDE1E6;border-radius:8px;overflow:hidden}
+
+    /* FACT HEADER */
+    .fact-header{padding:24px 28px;border-bottom:1px solid #F2F4F8;display:flex;gap:16px;align-items:flex-start}
+    .fact-co-logo{width:52px;height:52px;border-radius:10px;background:#fff;border:1px solid #DDE1E6;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .fact-co-logo img{width:36px;height:36px;object-fit:contain}
+    .fact-header-info h1{font-size:17px;font-weight:700;color:#161616;line-height:1.4;margin-bottom:5px}
+    .fact-dates{font-size:12px;color:#8D8D8D}
+    .fact-dates span{color:#525252}
+
+    /* KNOWLEDGE GRAPH */
+    .kg-section{background:#EBF5FF;padding:28px 36px;border-bottom:1px solid #D0E4F7;display:flex;align-items:center;justify-content:center;gap:0}
+    .kg-node{background:#fff;border:1px solid #DDE1E6;border-radius:6px;padding:10px 18px;min-width:160px;text-align:center}
+    .kg-node-label{font-size:10px;color:#8D8D8D;font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
+    .kg-node-val{font-size:14px;font-weight:700;color:#161616}
+    .kg-connector{display:flex;align-items:center;flex:1;gap:0;position:relative;min-width:60px}
+    .kg-line{flex:1;height:1px;background:#B0C8E4}
+    .kg-arrow{width:6px;height:6px;border-top:1.5px solid #B0C8E4;border-right:1.5px solid #B0C8E4;transform:rotate(45deg);margin-left:-3px}
+    .kg-badge{background:#0072C3;color:#fff;font-size:12px;font-weight:600;padding:7px 18px;border-radius:20px;white-space:nowrap;flex-shrink:0}
+    .kg-co-logo{width:52px;height:52px;border-radius:10px;background:#fff;border:1px solid #DDE1E6;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .kg-co-logo img{width:36px;height:36px;object-fit:contain}
+
+    /* META ROW */
+    .meta-row{display:flex;gap:0;padding:20px 28px;border-bottom:1px solid #F2F4F8;flex-wrap:wrap;row-gap:16px}
+    .meta-item{flex:1;min-width:140px;padding-left:12px;border-left:2px solid #0072C3}
+    .meta-item-label{font-size:11px;color:#0072C3;font-weight:600;margin-bottom:3px}
+    .meta-item-val{font-size:13px;font-weight:600;color:#161616}
+
+    /* HIGHLIGHTS */
+    .highlights{padding:24px 28px;border-bottom:1px solid #F2F4F8}
+    .highlights ul{list-style:disc;padding-left:18px;display:flex;flex-direction:column;gap:10px}
+    .highlights ul li{font-size:14px;color:#161616;line-height:1.65}
+    .highlights ul li a{color:#0072C3}
+
+    /* ACTIONS BAR */
+    .actions-bar{padding:14px 28px;display:flex;gap:20px;align-items:center;border-bottom:1px solid #F2F4F8}
+    .action-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#525252;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+    .action-btn svg{opacity:.6}
+    .action-btn:hover{color:#0072C3}
+    .action-sep{width:1px;height:16px;background:#E0E0E0}
+
+    /* INSIGHTS */
+    .insights-section{padding:24px 28px}
+    .insights-label{font-size:11px;font-weight:700;color:#8D8D8D;text-transform:uppercase;letter-spacing:.07em;margin-bottom:16px}
+    .insight-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:14px}
+    .insight-item:last-child{margin-bottom:0}
+    .insight-arrow{color:#8D8D8D;font-size:14px;margin-top:1px;flex-shrink:0}
+    .insight-item-title{font-size:13px;font-weight:600;color:#0072C3;margin-bottom:3px}
+    .insight-item-title a{color:#0072C3}
+    .insight-item-body{font-size:13px;color:#161616;line-height:1.55;font-weight:500}
+
+    /* STRATEGIC SIGNIFICANCE */
+    .strat-section{padding:24px 28px;border-top:1px solid #F2F4F8}
+    .strat-section h3{font-size:14px;font-weight:700;color:#121619;margin-bottom:12px}
+    .strat-section p{font-size:14px;color:#525252;line-height:1.7}
+
+    /* TIMELINE */
+    .timeline-section{padding:24px 28px;border-top:1px solid #F2F4F8}
+    .timeline-section h3{font-size:14px;font-weight:700;color:#121619;margin-bottom:16px}
+    .timeline{display:flex;flex-direction:column;gap:0;position:relative;padding-left:20px}
+    .timeline::before{content:'';position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:#DDE1E6}
+    .tl-item{position:relative;padding-bottom:20px;padding-left:16px}
+    .tl-item:last-child{padding-bottom:0}
+    .tl-dot{position:absolute;left:-15px;top:5px;width:10px;height:10px;border-radius:50%;background:#0072C3;border:2px solid #fff;box-shadow:0 0 0 1px #DDE1E6}
+    .tl-dot.exit{background:#DA1E28}
+    .tl-dot.promo{background:#6929C4}
+    .tl-date{font-size:11px;color:#8D8D8D;font-weight:600;margin-bottom:2px}
+    .tl-title{font-size:13px;font-weight:600;color:#161616;line-height:1.4}
+    .tl-badge{display:inline-block;margin-top:3px;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:600}
+    .tl-badge.hire{background:#DEFBE6;color:#198038}
+    .tl-badge.exit{background:#FFD6E8;color:#9F1853}
+    .tl-badge.promo{background:#D0E2FF;color:#0043CE}
+
+    /* OTHER DEVELOPMENTS */
+    .other-dev-section{background:#fff;border:1px solid #DDE1E6;border-radius:8px;overflow:hidden}
+    .other-dev-head{padding:16px 20px;border-bottom:1px solid #F2F4F8;display:flex;justify-content:space-between;align-items:center}
+    .other-dev-head h3{font-size:14px;font-weight:700;color:#121619}
+    .other-dev-head a{font-size:13px;color:#0072C3;font-weight:500}
+    .other-dev-list{padding:8px 0}
+    .other-dev-item{padding:12px 20px;border-bottom:1px solid #F8F8F8;display:flex;gap:10px;align-items:flex-start}
+    .other-dev-item:last-child{border-bottom:none}
+    .dev-date{font-size:11px;color:#8D8D8D;white-space:nowrap;margin-top:2px;min-width:60px}
+    .dev-title{font-size:13px;font-weight:500;color:#0072C3;line-height:1.45;cursor:pointer}
+    .dev-title:hover{text-decoration:underline}
+
+    /* GATED */
+    .gated{position:relative;overflow:hidden}
+    .gated-blur{filter:blur(3px);pointer-events:none;user-select:none;opacity:.55}
+    .gated-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(255,255,255,.82);text-align:center;padding:20px}
+    .lock-ico{width:36px;height:36px;border-radius:50%;background:#F2F4F8;display:flex;align-items:center;justify-content:center;font-size:16px;margin-bottom:8px}
+    .gated-overlay p{font-size:13px;color:#525252;margin-bottom:12px;max-width:260px}
+
+    /* SIDEBAR */
+    .sidebar{display:flex;flex-direction:column;gap:16px}
+    .side-card{background:#fff;border:1px solid #DDE1E6;border-radius:8px;overflow:hidden}
+    .side-card-head{padding:14px 18px;border-bottom:1px solid #F2F4F8}
+    .side-card-head h4{font-size:13px;font-weight:700;color:#121619}
+    .side-card-body{padding:14px 18px}
+    .side-meta{display:flex;flex-direction:column;gap:10px}
+    .side-meta-item label{font-size:11px;color:#8D8D8D;font-weight:600;display:block;margin-bottom:1px}
+    .side-meta-item span{font-size:13px;color:#161616;font-weight:500}
+    .side-co-pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:6px;background:#F4F4F4;border:1px solid #E0E0E0;font-size:13px;font-weight:600;color:#161616;width:100%}
+    .side-co-logo{width:28px;height:28px;border-radius:5px;border:1px solid #EBEBEB;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+    .side-co-logo img{width:20px;height:20px;object-fit:contain}
+    .insight-card-blue{background:#EDF5FF;border:1px solid #D0E2FF;border-radius:8px;padding:14px 18px}
+    .insight-card-blue p{font-size:13px;color:#525252;line-height:1.65}
+    .insight-card-blue strong{color:#161616}
+
+    .footer{background:#161616;color:#f4f4f4;padding:48px 0 0}
+    .footer-grid{display:flex;gap:0;flex-wrap:wrap}
+    .footer-col{padding:0 16px}
+    .footer-col.about{flex:0 0 34%;max-width:34%}
+    .footer-col.links{flex:0 0 22%;max-width:22%}
+    .footer .desc{color:#8D8D8D;font-size:13px;line-height:1.6;margin:14px 0 18px}
+    .footer .ft-title{font-size:14px;font-weight:700;color:#f4f4f4;margin-bottom:14px}
+    .footer-link{display:block;padding:5px 0;font-size:13px;color:#DADADA;transition:color .15s}
+    .footer-link:hover{color:#fff}
+    .footer-bottom{border-top:1px solid #393939;margin-top:36px;padding:18px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+    .footer-bottom p{font-size:12px;color:#8D8D8D;margin:0}
+    .footer-bottom a{color:#33b1ff;font-size:12px}
+
+    .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:1000;align-items:center;justify-content:center;padding:20px}
+    .modal-bg.open{display:flex}
+    .modal{background:#fff;border-radius:12px;padding:40px;max-width:440px;width:100%;position:relative;text-align:center}
+    .modal .x{position:absolute;top:14px;right:18px;background:none;border:none;font-size:28px;color:#8D8D8D;cursor:pointer;line-height:1}
+    .modal h3{font-size:22px;font-weight:800;color:#121619;margin-bottom:8px}
+    .modal>p{font-size:14px;color:#525252;margin-bottom:20px;line-height:1.55}
+    .modal form{display:flex;flex-direction:column;gap:10px;text-align:left}
+    .modal input,.modal select{width:100%;padding:11px 14px;border:1px solid #DDE1E6;border-radius:6px;font-size:14px;font-family:inherit}
+
+    @media(max-width:900px){.page-wrap{grid-template-columns:1fr}.navbar__nav{display:none}.meta-row{flex-wrap:wrap}.kg-section{flex-direction:column;gap:12px}}
+  </style>
+</head>
+<body>
+
+<div class="strip">Contify recognized as a Visionary in Gartner's 2026 Magic Quadrant for M&CI. <a href="#">Learn more &rarr;</a></div>
+
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar__logo"><a href="https://www.contify.com"><img src="https://www.contify.com/wp-content/uploads/2026/02/contify-logo.svg" alt="Contify" height="36"></a></div>
+    <div class="navbar__nav">
+      <a href="/platform/">Products</a>
+      <a href="/solutions/">Solutions</a>
+      <a href="/athena-ai/">Athena AI</a>
+      <a href="/resources/">Resources</a>
+      <a href="/how-it-works/">How It Works</a>
+      <a href="/discover" class="active">Discover</a>
+    </div>
+    <div class="navbar__actions">
+      <a href="/login/" class="btn-login">Log in</a>
+      <a href="/start-free-trial/" class="btn-cta">Free trial</a>
+    </div>
+  </nav>
+</header>
+
+<div class="bc-bar">
+  <div class="bc">
+    <a href="/">Home</a><span class="sep">/</span>
+    <a href="/discover">Discover</a><span class="sep">/</span>
+    <a href="/company/microsoft/">Microsoft</a><span class="sep">/</span>
+    <a href="/company/microsoft/management-changes">Management Changes</a><span class="sep">/</span>
+    <span class="cur">Mustafa Suleyman Appointed CEO of Microsoft AI</span>
+  </div>
+</div>
+
+<div class="page-wrap">
+
+  <!-- MAIN COLUMN -->
+  <div>
+    <div class="main-card">
+
+      <!-- FACT HEADER -->
+      <div class="fact-header">
+        <div class="fact-co-logo">
+          <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="Microsoft">
+        </div>
+        <div class="fact-header-info">
+          <h1>Microsoft Appoints Mustafa Suleyman as CEO of Microsoft AI</h1>
+          <div class="fact-dates">Reported on: <span>19 Mar 2024</span> &nbsp;&middot;&nbsp; Created on: <span>20 Mar 2024</span></div>
+        </div>
+      </div>
+
+      <!-- KNOWLEDGE GRAPH -->
+      <div class="kg-section">
+        <div class="kg-node">
+          <div class="kg-node-label">Executive Name</div>
+          <div class="kg-node-val">Mustafa Suleyman</div>
+        </div>
+        <div class="kg-connector">
+          <div class="kg-line"></div>
+          <div class="kg-arrow"></div>
+        </div>
+        <div class="kg-badge">Management Change</div>
+        <div class="kg-connector">
+          <div class="kg-line"></div>
+          <div class="kg-arrow"></div>
+        </div>
+        <div class="kg-co-logo">
+          <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="Microsoft">
+        </div>
+      </div>
+
+      <!-- META ROW -->
+      <div class="meta-row">
+        <div class="meta-item">
+          <div class="meta-item-label">Company</div>
+          <div class="meta-item-val">Microsoft Corporation</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-item-label">Executive Name</div>
+          <div class="meta-item-val">Mustafa Suleyman</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-item-label">Change Type</div>
+          <div class="meta-item-val">New Appointment</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-item-label">Date Reported</div>
+          <div class="meta-item-val">19 Mar 2024</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-item-label">Effective From</div>
+          <div class="meta-item-val">01 Apr 2024</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-item-label">Previous Organisation</div>
+          <div class="meta-item-val">Inflection AI</div>
+        </div>
+      </div>
+
+      <!-- KEY HIGHLIGHTS -->
+      <div class="highlights">
+        <ul>
+          <li>Microsoft has announced the appointment of <a href="#">Mustafa Suleyman</a> as CEO of Microsoft AI, a newly formed division consolidating all consumer AI products including Copilot, Bing, and Edge.</li>
+          <li>Suleyman co-founded DeepMind (acquired by Google in 2014) and most recently served as CEO of Inflection AI before joining Microsoft in March 2024.</li>
+          <li>He will report directly to CEO <a href="#">Satya Nadella</a> and lead product strategy, engineering, and go-to-market for Microsoft's consumer AI portfolio.</li>
+          <li>The appointment reflects Microsoft's aggressive push to build a unified AI consumer platform, positioning Copilot as a standalone product competing with ChatGPT and Google Gemini.</li>
+          <li>The announcement was made on 19 March 2024, with Suleyman's role effective from 1 April 2024.</li>
+        </ul>
+      </div>
+
+      <!-- ACTIONS -->
+      <div class="actions-bar">
+        <button class="action-btn" onclick="openModal()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          Sources (1)
+        </button>
+        <div class="action-sep"></div>
+        <button class="action-btn" onclick="openModal()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          Comments (0)
+        </button>
+        <div class="action-sep"></div>
+        <button class="action-btn" onclick="openModal()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3z"/><path d="M7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg>
+        </button>
+        <button class="action-btn" onclick="openModal()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 15v4a3 3 0 003 3l4-9V2H5.72a2 2 0 00-2 1.7l-1.38 9a2 2 0 002 2.3z"/><path d="M17 2h2.67A2.31 2.31 0 0122 4v7a2.31 2.31 0 01-2.33 2H17"/></svg>
+        </button>
+        <div class="action-sep"></div>
+        <button class="action-btn" onclick="openModal()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Share
+        </button>
+      </div>
+
+      <!-- INSIGHTS REFERENCED -->
+      <div class="insights-section">
+        <div class="insights-label">This fact is referenced in 2 insights</div>
+        <div class="insight-item">
+          <span class="insight-arrow">&#8594;</span>
+          <div>
+            <div class="insight-item-title">Management Changes</div>
+            <div class="insight-item-body">Microsoft has appointed Mustafa Suleyman as CEO of Microsoft AI, consolidating all consumer AI products under a unified leadership structure.</div>
+          </div>
+        </div>
+        <div class="insight-item">
+          <span class="insight-arrow">&#8594;</span>
+          <div>
+            <div class="insight-item-title"><a href="/company/microsoft/">Microsoft Corporation SWOT Analysis</a></div>
+            <div class="insight-item-body">Microsoft is strengthening its AI capabilities with seasoned leadership from DeepMind and Inflection AI to compete directly with OpenAI's consumer products.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STRATEGIC SIGNIFICANCE -->
+      <div class="strat-section">
+        <h3>Strategic Significance</h3>
+        <p>This appointment signals Microsoft's intent to treat consumer AI as a distinct business unit rather than a feature layer on top of existing products. By bringing in Mustafa Suleyman — a founder-level AI pioneer — Microsoft is betting on product-led growth in the AI assistant market. In the context of Microsoft's $13B investment in OpenAI and the rapid release cadence of Copilot across Microsoft 365, this hire centralises AI consumer strategy under a single P&L owner for the first time. It also reflects a broader talent war with Google (DeepMind) and Meta for frontier AI leadership.</p>
+      </div>
+
+      <!-- TIMELINE -->
+      <div class="timeline-section">
+        <h3>Timeline of Microsoft Management Changes (Last 5 Years)</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">Mar 2024</div>
+            <div class="tl-title">Mustafa Suleyman appointed CEO, Microsoft AI</div>
+            <span class="tl-badge hire">New Appointment</span>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">Feb 2024</div>
+            <div class="tl-title">Hossein Nowbar appointed Chief Legal Officer</div>
+            <span class="tl-badge hire">New Appointment</span>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot promo"></div>
+            <div class="tl-date">Jun 2024</div>
+            <div class="tl-title">Charles Lamanna named Chief Product Officer, Copilot</div>
+            <span class="tl-badge promo">Promotion</span>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot exit"></div>
+            <div class="tl-date">Sep 2023</div>
+            <div class="tl-title">Panos Panay exits; joins Amazon as devices chief</div>
+            <span class="tl-badge exit">Exit</span>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">Oct 2024</div>
+            <div class="tl-title">Jay Parikh elevated to lead Engineering &amp; Infrastructure</div>
+            <span class="tl-badge hire">New Appointment</span>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot exit"></div>
+            <div class="tl-date">Jan 2023</div>
+            <div class="tl-title">Jeff Teper transitions; Kevin Scott takes expanded AI Engineering role</div>
+            <span class="tl-badge promo">Promotion</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- OTHER DEVELOPMENTS (GATED) -->
+      <div style="border-top:1px solid #F2F4F8;padding:0">
+        <div class="other-dev-head" style="padding:16px 28px">
+          <h3 style="font-size:14px;font-weight:700;color:#121619">Other Developments at Microsoft</h3>
+          <a href="/company/microsoft/management-changes" onclick="openModal();return false" style="font-size:13px;color:#0072C3;font-weight:500">View all &#128274;</a>
+        </div>
+        <div class="gated">
+          <div class="gated-blur">
+            <div class="other-dev-list">
+              <div class="other-dev-item"><div class="dev-date">Jun 2026</div><div class="dev-title">Microsoft Expands Azure AI Foundry with 12 New Regional Data Centres</div></div>
+              <div class="other-dev-item"><div class="dev-date">May 2026</div><div class="dev-title">Microsoft and OpenAI Restructure Commercial Agreement; Microsoft Gets Expanded IP Rights</div></div>
+              <div class="other-dev-item"><div class="dev-date">Apr 2026</div><div class="dev-title">Microsoft Acquires Inflection AI's Enterprise Assets in $650M Deal</div></div>
+              <div class="other-dev-item"><div class="dev-date">Mar 2026</div><div class="dev-title">Microsoft Reports Q3 FY2026 Results: Cloud Revenue Surpasses $40B for First Time</div></div>
+              <div class="other-dev-item"><div class="dev-date">Feb 2026</div><div class="dev-title">Microsoft Lays Off 3,000 in Sales Restructuring; Doubles AI Engineering Headcount</div></div>
+            </div>
+          </div>
+          <div class="gated-overlay">
+            <div class="lock-ico">&#128274;</div>
+            <p>Subscribe to Contify to access all developments, insights, and management change history for Microsoft.</p>
+            <a href="#" class="btn-cta-sm" onclick="openModal();return false">Unlock full access</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <!-- COMPANY CARD -->
+    <div class="side-card">
+      <div class="side-card-head"><h4>Company</h4></div>
+      <div class="side-card-body">
+        <a href="/company/microsoft/" class="side-co-pill" style="text-decoration:none">
+          <div class="side-co-logo"><img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="Microsoft"></div>
+          Microsoft Corporation
+        </a>
+        <div class="side-meta" style="margin-top:14px">
+          <div class="side-meta-item"><label>Industry</label><span>Cloud Computing &amp; AI</span></div>
+          <div class="side-meta-item"><label>Headquarters</label><span>Redmond, WA, USA</span></div>
+          <div class="side-meta-item"><label>CEO</label><span>Satya Nadella</span></div>
+          <div class="side-meta-item"><label>Total Changes (2Y)</label><span>24</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INSIGHT CARD -->
+    <div class="insight-card-blue">
+      <p><strong>AI Leadership Insight:</strong> Microsoft's hire of Mustafa Suleyman from Inflection AI — alongside Jay Parikh from Meta — marks a strategic shift toward external frontier AI talent rather than promoting from within. This pattern mirrors Google's acquisition of DeepMind a decade earlier.</p>
+    </div>
+
+    <!-- RELATED CHANGES -->
+    <div class="side-card">
+      <div class="side-card-head"><h4>Related Management Changes</h4></div>
+      <div class="side-card-body" style="padding:0">
+        <div class="other-dev-list">
+          <div class="other-dev-item" style="padding:12px 18px">
+            <div class="dev-date">Oct 2024</div>
+            <div><div class="dev-title" onclick="openModal()">Jay Parikh elevated to lead Engineering &amp; Infrastructure</div></div>
+          </div>
+          <div class="other-dev-item" style="padding:12px 18px">
+            <div class="dev-date">Jun 2024</div>
+            <div><div class="dev-title" onclick="openModal()">Charles Lamanna named Chief Product Officer, Copilot</div></div>
+          </div>
+          <div class="other-dev-item" style="padding:12px 18px;border-bottom:none">
+            <div class="dev-date">Sep 2023</div>
+            <div><div class="dev-title" onclick="openModal()">Panos Panay exits Microsoft; joins Amazon</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRACK CTA -->
+    <div style="background:#0072C3;border-radius:8px;padding:20px;text-align:center">
+      <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:6px">Track Microsoft</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.8);margin-bottom:14px;line-height:1.5">Get instant alerts on management changes, M&amp;A, earnings, and competitor moves.</div>
+      <a href="#" class="btn-cta" onclick="openModal();return false" style="display:block;text-align:center">Start free trial</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- DUAL CTA -->
+<div style="background:#0F62FE;margin:0">
+  <div style="max-width:1200px;margin:0 auto;padding:48px 24px;display:flex;gap:48px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+    <div>
+      <div style="font-size:24px;font-weight:800;color:#fff;margin-bottom:6px">Stay ahead of leadership changes</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.8);max-width:480px">Contify tracks executive movements, board changes, and organisational restructuring across 200,000+ companies — so you never miss a strategic signal.</div>
+    </div>
+    <div style="display:flex;gap:12px;flex-shrink:0">
+      <a href="#" class="btn-cta" onclick="openModal();return false">Start free trial</a>
+      <a href="/how-it-works/" style="display:inline-block;padding:12px 22px;border:1.5px solid rgba(255,255,255,.4);color:#fff;border-radius:4px;font-size:14px;font-weight:600">See how it works</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container" style="max-width:1200px;margin:0 auto;padding:0 24px">
+    <div class="footer-grid">
+      <div class="footer-col about">
+        <img src="https://www.contify.com/wp-content/uploads/2026/02/contify-logo.svg" alt="Contify" height="30" style="filter:brightness(0) invert(1);opacity:.85">
+        <p class="desc">Contify is a Market and Competitive Intelligence platform that helps enterprises track competitors, customers, and industries.</p>
+      </div>
+      <div class="footer-col links"><p class="ft-title">Product</p><a href="#" class="footer-link">Platform</a><a href="#" class="footer-link">Athena AI</a><a href="#" class="footer-link">Integrations</a><a href="#" class="footer-link">Pricing</a></div>
+      <div class="footer-col links"><p class="ft-title">Solutions</p><a href="#" class="footer-link">Sales Intelligence</a><a href="#" class="footer-link">Market Research</a><a href="#" class="footer-link">M&amp;A Intelligence</a></div>
+      <div class="footer-col links"><p class="ft-title">Company</p><a href="#" class="footer-link">About</a><a href="#" class="footer-link">Blog</a><a href="#" class="footer-link">Careers</a><a href="#" class="footer-link">Contact</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Contify. All rights reserved.</p>
+      <div style="display:flex;gap:16px"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="x" onclick="closeModal()">&times;</button>
+    <div style="font-size:36px;margin-bottom:12px">&#128274;</div>
+    <h3>Unlock Full Access</h3>
+    <p>Subscribe to Contify to view sources, comments, full management change history, and real-time alerts.</p>
+    <form onsubmit="return false">
+      <input type="text" placeholder="Full name">
+      <input type="email" placeholder="Work email">
+      <input type="text" placeholder="Company name">
+      <button type="submit" class="btn-cta" style="width:100%;padding:13px">Get free trial access</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function openModal(){document.getElementById('modal').classList.add('open');document.body.style.overflow='hidden'}
+function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow=''}
+</script>
+</body>
+</html>
